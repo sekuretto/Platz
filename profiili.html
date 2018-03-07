@@ -20,7 +20,31 @@
         <button></button>
     </nav>
     <content>
-        
+        <form method="get" action="omattiedot.php">
+            <h2>Omat tiedot</h2>
+            <p>Käyttäjätunnus: xxxxxxxxx<br>
+            Nimi: <input type="text" size="30" name="kokonimi"><br>
+            Sähköposti: <input type="text" size="30" name="sahkoposti"><br>
+            Kaupunki: <input type="text" size="30" name="kaupunki"><br>
+            <input type="submit" value="Tallenna muutokset">
+            <input type="reset" value="Peruuta">
+            </p>
+        </form>
+            <hr>
+        <form method="get" action="salasana.php">
+            <h2>Vaihda salasana</h2>
+            <p>Käyttäjätunnus: xxxxxxxxx<br>
+            Uusi salasana: <input type="password" size="30" name="uusisalasana"><br>
+            Vahvista salasana: <input type="password" size="30" name="vahvistus"><br>
+            <input type="submit" value="Tallenna muutokset">
+            <input type="reset" value="Peruuta">
+            </p>
+        </form>
+            <hr>
+        <form method="get" action="salasana.php">
+            <h2>Poista käyttäjä</h2>
+            <input type="submit" value="Poista käyttäjä">
+        </form>
     </content>
     <footer>
     
