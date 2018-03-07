@@ -1,3 +1,39 @@
 * {
     margin: 0;
 }
+
+navbar {
+    background-color: lightgrey;
+    align-content: center;
+    padding: 10px;
+}
+
+.btn btn-outline-dark {
+    height: 30%;
+    padding: 10em;
+    margin: 10px;
+}
+
+article {
+    margin: 30px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+#container {
+    padding: 20 0 20 20;
+    width: 60%;
+    position: fixed;
+    float: right;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: lightgrey;
+   color: white;
+   text-align: center;
+}
