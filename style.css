@@ -1,31 +1,55 @@
 * {
-    margin: 0;
+    margin: 0px auto;
+}
+
+header.col img {
+    margin: 10 0 10 10;
 }
 
 navbar {
     background-color: lightgrey;
     align-content: center;
     padding: 10px;
+    right: 0;
+    top: 0;
+    height: 120px;
+    padding-bottom: 20px;
 }
 
-.btn btn-outline-dark {
-    height: 30%;
-    padding: 10em;
+.nav {
+    height: 50%;
+    cursor: pointer;
+    
+}
+
+.btn btn-primary {
+    height: 10%;
+    padding: 10%;
     margin: 10px;
+    cursor: pointer;
 }
 
 article {
     margin: 30px;
-    position: fixed;
     text-align: center;
     width: 100%;
+    margin-bottom:60px;
+}
+
+menu {
+    width: 20%;
+    margin: 0 0 0 3px;
+    padding-right: 10px;
+    position: relative;
 }
 
 #container {
-    padding: 20 0 20 20;
-    width: 60%;
-    position: fixed;
+    margin-right: 5%;
+    width: 65%;
+    height: auto;
+    text-overflow: ellipsis;
     float: right;
+    color: black;
 }
 
 footer {
