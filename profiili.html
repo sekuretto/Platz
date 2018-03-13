@@ -6,50 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-    <page>
-    <header>
-        <img href="platz.PNG" alt="logo"/>
-    </header>
-    <nav>
-        <button></button>
-        <button></button>
-        
-        
-        <button></button>
-    </nav>
-    <content>
-        <form method="get" action="omattiedot.php">
-            <h2>Omat tiedot</h2>
-            <p>Käyttäjätunnus: xxxxxxxxx<br>
-            Nimi: <input type="text" size="30" name="kokonimi"><br>
-            Sähköposti: <input type="text" size="30" name="sahkoposti"><br>
-            Kaupunki: <input type="text" size="30" name="kaupunki"><br>
-            <input type="submit" value="Tallenna muutokset">
-            <input type="reset" value="Peruuta">
-            </p>
-        </form>
-            <hr>
-        <form method="get" action="salasana.php">
-            <h2>Vaihda salasana</h2>
-            <p>Käyttäjätunnus: xxxxxxxxx<br>
-            Uusi salasana: <input type="password" size="30" name="uusisalasana"><br>
-            Vahvista salasana: <input type="password" size="30" name="vahvistus"><br>
-            <input type="submit" value="Tallenna muutokset">
-            <input type="reset" value="Peruuta">
-            </p>
-        </form>
-            <hr>
-        <form method="get" action="salasana.php">
-            <h2>Poista käyttäjä</h2>
-            <input type="submit" value="Poista käyttäjä">
-        </form>
-    </content>
-    <footer>
+    <div class="row">
+        <header class="col">
+            <img src="platz.PNG" alt="logo"/>
+        </header>
+        <navbar class="col-6" >
+            <div class="nav">
+                <button type="button" class="col" class="btn btn-primary" href="#" >Lisää ilmoitus</button>
+                <button type="button" class="col" class="btn btn-primary" href="#">Profiili</button>
+                    <form class="col">
+                         <div class="form-group">
+                             <input type="text" class="form-control" placeholder="Käyttäjätunnus" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Salasana">
+                          </div>     
+                    </form>
+                    <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>
+            </div>
+        </navbar>
+    </div>
+    <article>
+         <h1>Tervetuloa Platziin!</h1>
+        <h3>Vaihda, myy tai osta palveluja helposti ja luotettavasti.</h3>
+    </article>
+
+    <menu class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary">Myy</button>
+        <button type="button" class="btn btn-secondary">Osta</button>
+        <button type="button" class="btn btn-secondary">Vaihda</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Hae" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hae</button>
+    </menu>      
     
+    <div id="container">
+        <form method="get" action="omattiedot.php">
+            <div class="form-group">
+                <h2>Omat tiedot</h2>
+                <p>Käyttäjätunnus: xxxxxxxxx</p><br>
+                <label>Nimi:</label> 
+                <input type="text" size="30" name="kokonimi"><br>
+                <label>Sähköposti:</label> 
+                <input type="text" size="30" name="sahkoposti"><br>
+                <label>Kaupunki:</label>
+                <input type="text" size="30" name="kaupunki"><br>
+                <input type="submit" value="Tallenna muutokset">
+                <input type="reset" value="Peruuta">
+            </div>
+        </form>
+            <hr>
+        <form method="get" action="salasana.php">
+            <div class="form-group">
+                <h2>Vaihda salasana</h2>
+                <label>Uusi salasana:</label> 
+                <input type="password" size="30" name="uusisalasana"><br>
+                <label>Vahvista salasana:</label> 
+                <input type="password" size="30" name="vahvistus"><br>
+                <input type="submit" value="Tallenna muutokset">
+                <input type="reset" value="Peruuta">
+            </div>
+        </form>
+            <hr>
+        <form method="get" action="poistakayttaja.php">
+            <div class="form-group">
+                <h2>Poista käyttäjä</h2>
+                <input type="submit" value="Poista käyttäjä">
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        <button type="button">Lähetä palautetta</button>
     </footer>
-    </page>
+    
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
