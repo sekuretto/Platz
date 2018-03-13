@@ -15,7 +15,7 @@ Lisää ilmoitus
         </button>
       </div>
       <div class="modal-body">
-          <form>
+          <form action="#" method="post" enctype="multipart/form-data">
                  <div class="form-group col-md-5">
                      <label for="staticEmail">Ilmoituksen nimi: </label>
                      <input type="text" class="form-control" id="staticEmail">
@@ -40,11 +40,9 @@ Lisää ilmoitus
                         </select>
                     </div>
                     <div class="card" style="width: 15rem; float: right;">
-                      <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title">Lisää kuva</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Valitse kuva</a>
+                            <input type="file" name="fileToUpload" id="fileToUpload" value="Valitse kuva">
                       </div>
                     </div>
                     <div class="form-group col-md-5">
@@ -54,21 +52,11 @@ Lisää ilmoitus
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Lisää ilmoitus</button>
+        <input type="submit" class="btn btn-primary" name="submit" value="Lisää ilmoitus">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
       </div>
     </div>
   </div>
-    
-    
-    
-    
-    
-    <div class="modal-body">
-        <div class="container-fluid">
-                
-        </div>
-    </div> 
    
 </div>
 
@@ -82,3 +70,23 @@ Lisää ilmoitus
 })
     
 </script>
+
+
+<?php
+
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+}
+?>
