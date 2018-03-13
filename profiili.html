@@ -43,39 +43,57 @@
     </menu>      
     
     <div id="container">
-        <form method="get" action="omattiedot.php">
-            <div class="form-group">
-                <h2>Omat tiedot</h2>
-                <p>Käyttäjätunnus: xxxxxxxxx</p><br>
-                <label>Nimi:</label> 
-                <input type="text" size="30" name="kokonimi"><br>
-                <label>Sähköposti:</label> 
-                <input type="text" size="30" name="sahkoposti"><br>
-                <label>Kaupunki:</label>
-                <input type="text" size="30" name="kaupunki"><br>
-                <input type="submit" value="Tallenna muutokset">
-                <input type="reset" value="Peruuta">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#profiili">Profiili</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#omatilmoitukset">Omat ilmoitukset</a>
+            </li>
+        </ul>
+        
+        <div class="tab-content">
+            <div id="profiili" class="container tab-pane active"><br>
+                <form method="get" action="omattiedot.php">
+                    <div class="form-group">
+                        <h2>Omat tiedot</h2>
+                        <p>Käyttäjätunnus: xxxxxxxxx</p><br>
+                        <label>Nimi:</label> 
+                        <input type="text" size="30" name="kokonimi"><br>
+                        <label>Sähköposti:</label> 
+                        <input type="text" size="30" name="sahkoposti"><br>
+                        <label>Kaupunki:</label>
+                        <input type="text" size="30" name="kaupunki"><br>
+                        <input type="submit" class="btn" value="Tallenna muutokset">
+                        <input type="reset" class="btn" value="Peruuta">
+                    </div>
+                </form>
+                <hr>
+                <form method="get" action="salasana.php">
+                    <div class="form-group">
+                        <h2>Vaihda salasana</h2>
+                        <label>Uusi salasana:</label> 
+                        <input type="password" size="30" name="uusisalasana"><br>
+                        <label>Vahvista salasana:</label> 
+                        <input type="password" size="30" name="vahvistus"><br>
+                        <input type="submit" class="btn" value="Tallenna muutokset">
+                        <input type="reset" class="btn" value="Peruuta">
+                    </div>
+                </form>
+                <hr>
+                <form method="get" action="poistakayttaja.php">
+                    <div class="form-group">
+                        <h2>Poista käyttäjä</h2>
+                        <input type="submit" class="btn" value="Poista käyttäjä">
+                    </div>
+                </form>
             </div>
-        </form>
-            <hr>
-        <form method="get" action="salasana.php">
-            <div class="form-group">
-                <h2>Vaihda salasana</h2>
-                <label>Uusi salasana:</label> 
-                <input type="password" size="30" name="uusisalasana"><br>
-                <label>Vahvista salasana:</label> 
-                <input type="password" size="30" name="vahvistus"><br>
-                <input type="submit" value="Tallenna muutokset">
-                <input type="reset" value="Peruuta">
+            <div id="omatilmoitukset" class="container tab-pane fade"><br>
+                <h2>Omat ilmoitukset</h2>
+                    <p>Omia ilmoituksia.... </p>
             </div>
-        </form>
-            <hr>
-        <form method="get" action="poistakayttaja.php">
-            <div class="form-group">
-                <h2>Poista käyttäjä</h2>
-                <input type="submit" value="Poista käyttäjä">
-            </div>
-        </form>
+        </div>
     </div>
     
     <footer>
