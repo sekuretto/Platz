@@ -49,7 +49,6 @@ Luo tunnus
                         1.	Laittomat ja muuten sopimattomat ilmoitukset on kielletty. <br>
                         2.	Platzin ylläpitotiimillä on oikeus poistaa ilmoitus tai käyttäjä, lupaa tilin omistajalta kysymättä.<br>
                         3.	Platz ei ole vastuussa asiakkaiden välisistä sopimuksista koskien rahaa tai palveluita.
-
                     </div>
                   </div>
               </div>
