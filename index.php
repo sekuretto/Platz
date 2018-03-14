@@ -18,10 +18,6 @@
         <navbar class="col-7" >
             <div class="nav">
                 <button type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal" id="nappi" value="Lisää ilmoitus" name="lisaa">Lisää ilmoitus</button>    
-                    <div class="modal" id="ilmoitus" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                    </div></div></div>
                 <input type="button" class="col" class="btn btn-primary" href="profiili.html" value="Profiili">
                 <input type="button" class="col" class="btn btn-primary" href="#" value="Kirjaudu sisään">
             </div>
