@@ -46,7 +46,10 @@ Luo tunnus
                 </label>
                   <div class="collapse" id="collapseExample">
                     <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        1.	Laittomat ja muuten sopimattomat ilmoitukset on kielletty. <br>
+                        2.	Platzin ylläpitotiimillä on oikeus poistaa ilmoitus tai käyttäjä, lupaa tilin omistajalta kysymättä.<br>
+                        3.	Platz ei ole vastuussa asiakkaiden välisistä sopimuksista koskien rahaa tai palveluita.
+
                     </div>
                   </div>
               </div>
