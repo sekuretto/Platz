@@ -16,7 +16,11 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <input type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal" value="Lisää ilmoitus">
+                <button type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal" id="nappi" value="Lisää ilmoitus" name="lisaa">Lisää ilmoitus</button>
+                    <div class="modal" id="ilmoitus" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        </div></div></div>
                 <input type="button" class="col" class="btn btn-primary" href="profiili.html" value="Profiili">
                 <input type="button" class="col" class="btn btn-primary" href="#" value="Kirjaudu sisään">
             </div>
@@ -155,12 +159,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <script>
-    $('#notification').on('shown.bs.modal', function () {
-  $('#notification').trigger('focus')
+    $('#ilmoitus').on('shown.bs.modal', function () {
+  $('#nappi').trigger('focus')
 })
+</script>
+<!--<script>
+ $(document).ready(function(){
+        $("lisaa").click(function(){
+            $("#ilmoitus").modal();
+            load_page('lisaa_ilmoitus.php');
+        });
+    });
+
+    function load_page(url){
+        $('#modal-isi-body').load(url,function(){});
+    }
     
 </script>
-
+--> 
 </body>
 
 </html>
