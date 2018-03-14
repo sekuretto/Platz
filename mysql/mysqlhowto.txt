@@ -1,8 +1,10 @@
 1. Mene osoitteeseen localhost/phpmyadmin
-2. Valitse sql, ja vaihda salasana 
+2. Xampin phpmyadmin kansiosta config.inc.php tiedostoa muokataan ja vaihdetaan kohtaan 
+$cfg['Servers'][$i]['password'] =' Valitsemasi salasana ';
+3. Valitse sql, ja vaihda salasana 
 UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='root'; FLUSH PRIVILEGES;
 kohtaan 'password' haluamasi salasana ja paina Go.
-3. create database platz; ja Go
-4. use platz;
-5. Kopioi platz.sql tiedoston sisältö phpmyadminissa SQL-kohtaan ja sitten taas Go
-6. Nauti
+4. create database platz; ja Go
+5. use platz;
+6. Kopioi platz.sql tiedoston sisältö phpmyadminissa SQL-kohtaan ja sitten taas Go
+7. Nauti
