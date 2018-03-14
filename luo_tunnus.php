@@ -16,32 +16,39 @@ Luo tunnus
       </div>
       <div class="modal-body">
           <form action="#" method="post" enctype="multipart/form-data">
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                      <label for="staticEmail">Käyttäjätunnus </label>
                      <input type="text" class="form-control" id="statickt">
               </div>
               
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                      <label for="staticEmail">Sähköpostiosoite </label>
                      <input type="text" class="form-control" id="staticEmail">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                      <label for="staticEmail">Salasana </label>
                      <input type="text" class="form-control" id="passwd">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                      <label for="staticEmail">Vahvista salasana </label>
                      <input type="text" class="form-control" id="confirm-pass">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-7">
                     <label for="inputState">Kaupunki</label>
                     <input type="text" class="form-control" id="city">
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="dropdownCheck">
                 <label class="form-check-label" for="dropdownCheck">
-                    Hyväksyn käyttöehdot
+                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                       Hyväksyn käyttöehdot
+                    </a>
                 </label>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                  </div>
               </div>
             </form>
       </div>
@@ -64,23 +71,3 @@ Luo tunnus
 })
     
 </script>
-
-
-<?php
-
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-?>
