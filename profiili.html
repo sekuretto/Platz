@@ -55,30 +55,36 @@
         
         <div class="tab-content">
             <div id="profiili" class="container tab-pane active"><br>
-                <form method="post" action="tietoja_muutettu.php">
+                <h2>Omat tiedot</h2>
+                <p>Käyttäjätunnus: <!-- <?php hae userid mysql:stä ?> --> xxxxxxxxx</p>
+                <p>Nimi: <!-- <?php hae kokonimi mysql:stä ?> --></p>
+                <p>Sähköposti: <!-- <?php hae email mysql:stä ?> --></p>
+                <p>Kaupunki: <!-- <?php hae kaupunki mysql:stä ?> --></p>
+                <hr> 
+                <form method="post" action="platzform.php">
                     <div class="form-group">
-                        <h2>Omat tiedot</h2>
-                        <p>Käyttäjätunnus: <!-- userid --> xxxxxxxxx</p><br>
+                        <h2>Muokkaa omia tietojasi</h2>
                         <label>Nimi:</label> 
                         <input type="text" class="form-control" size="30" name="kokonimi"><br>
                         <label>Sähköposti:</label> 
-                        <input type="text" class="form-control" size="30" name="sahkoposti"><br>
+                        <input type="text" class="form-control" size="30" name="email"><br>
                         <label>Kaupunki:</label>
                         <input type="text" class="form-control" size="30" name="kaupunki"><br>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Tallenna muutokset</button>
+                        <button type="button" name="save" class="btn btn-primary" data-toggle="modal" data-target=".modal">Tallenna muutokset</button>
                         <input type="reset" class="btn btn-primary" value="Peruuta">
                         <br>
                     </div>
                 </form>
+                
                 <hr>
-                <form method="post" action="salasana_muutettu.php">
+                <form method="post" action="platzform.php">
                     <div class="form-group">
                         <h2>Vaihda salasana</h2>
                         <label>Uusi salasana:</label> 
                         <input type="password" class="form-control" size="30" name="uusisalasana"><br>
                         <label>Vahvista salasana:</label> 
                         <input type="password" class="form-control" size="30" name="vahvistus"><br>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Vaihda salasana</button>
+                        <button type="button" name="password" class="btn btn-primary" data-toggle="modal" data-target=".modal">Vaihda salasana</button>
                         <input type="reset" class="btn btn-primary" value="Peruuta">
                         <br>
                     </div>
