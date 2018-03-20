@@ -19,7 +19,7 @@
             <div class="nav">
                 <button type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal" id="nappi" value="Lisää ilmoitus" name="lisaa">Lisää ilmoitus</button>    
                 <input type="button" class="col" class="btn btn-primary" href="profiili.html" value="Profiili">
-                <input type="button" class="col" class="btn btn-primary" href="#" value="Kirjaudu sisään">
+                <input type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" value="Kirjaudu sisään">
             </div>
         </navbar>
     </div>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <!--<link rel="stylesheet" href="style/style.css" type="text/css"/> -->
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css"> 
+   
 </head>
 <body>
     <!-- Yläpalkki -->
@@ -17,10 +18,7 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal">Lisää ilmoitus</button>
-                    
-
-
+                <button type="button" class="col" class="btn btn-primary" href="../../../lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal">Lisää ilmoitus</button>
                 <button type="submit" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>
             </div>
         </navbar>
