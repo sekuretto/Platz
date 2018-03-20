@@ -14,7 +14,7 @@ if (!$conn) {
 echo "Connected successfully <br>";
 
 $sql = "INSERT INTO KAYTTAJA (kayttajanimi, salasana, email, kaupunki)
-VALUES ('John', 'Doe', 'john@example.com', MD5('kakka'))";
+VALUES ('nimi', MD5('salasana'), 'sähköposti@sposti.com', 'kaupunki')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

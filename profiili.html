@@ -55,39 +55,41 @@
         
         <div class="tab-content">
             <div id="profiili" class="container tab-pane active"><br>
-                <form method="get" action="omattiedot.php">
+                <form method="post" action="tietoja_muutettu.php">
                     <div class="form-group">
                         <h2>Omat tiedot</h2>
-                        <p>Käyttäjätunnus: xxxxxxxxx</p><br>
+                        <p>Käyttäjätunnus: <!-- userid --> xxxxxxxxx</p><br>
                         <label>Nimi:</label> 
-                        <input type="text" size="30" name="kokonimi"><br>
+                        <input type="text" class="form-control" size="30" name="kokonimi"><br>
                         <label>Sähköposti:</label> 
-                        <input type="text" size="30" name="sahkoposti"><br>
+                        <input type="text" class="form-control" size="30" name="sahkoposti"><br>
                         <label>Kaupunki:</label>
-                        <input type="text" size="30" name="kaupunki"><br>
-                        <input type="submit" class="btn" value="Tallenna muutokset">
-                        <input type="reset" class="btn" value="Peruuta">
+                        <input type="text" class="form-control" size="30" name="kaupunki"><br>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Tallenna muutokset</button>
+                        <input type="reset" class="btn btn-primary" value="Peruuta">
                         <br>
                     </div>
                 </form>
                 <hr>
-                <form method="get" action="salasana.php">
+                <form method="post" action="salasana_muutettu.php">
                     <div class="form-group">
                         <h2>Vaihda salasana</h2>
                         <label>Uusi salasana:</label> 
-                        <input type="password" size="30" name="uusisalasana"><br>
+                        <input type="password" class="form-control" size="30" name="uusisalasana"><br>
                         <label>Vahvista salasana:</label> 
-                        <input type="password" size="30" name="vahvistus"><br>
-                        <input type="submit" class="btn" value="Tallenna muutokset">
-                        <input type="reset" class="btn" value="Peruuta">
+                        <input type="password" class="form-control" size="30" name="vahvistus"><br>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Vaihda salasana</button>
+                        <input type="reset" class="btn btn-primary" value="Peruuta">
                         <br>
                     </div>
                 </form>
                 <hr>
-                <form method="get" action="poistakayttaja.php">
+                <form method="post" action="poista_kayttaja.php">
                     <div class="form-group">
                         <h2>Poista käyttäjä</h2>
-                        <input type="submit" class="btn" value="Poista käyttäjä">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">
+                            Poista käyttäjä
+                        </button>
                         <br>
                     </div>
                 </form>
@@ -98,15 +100,102 @@
                     <p>Kategoria<br>
                     <br>
                     Tarjoan....... </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Poista ilmoitus</button>
                 <hr>
                 <h2>Ilmoitus 2</h2>
                     <h3>Talvirenkaiden vaihto</h3>
                     <p>Kategoria<br>
                     <br>
                     Etsitään renkaidenvaihtajaa....... </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">Poista ilmoitus</button>
             </div>
         </div>
     </div>
+    
+    <!-- omia tietoja muutettu -->
+    <!-- <div class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Käyttäjätietoja on muutettu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Olet poistumassa sivulta, mutta olet muokannut käyttäjätietojasi ja niitä ei ole vielä tallennettu. Tallennetaanko muutokset ennen kuin poistut sivulta?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Tallenna muutokset</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Hylkää muutokset</button>
+        </div>
+        </div>
+    </div>
+    </div> -->
+    
+    <!-- salasanan vaihto -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Salasana on muutettu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Salasana on muutettu</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">OK</button>
+        </div>
+        </div>
+    </div>
+    </div> -->
+    
+    <!-- käyttäjän poisto -->
+    <!--
+    <!-- <div class="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Käyttäjän poisto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Haluatko varmasti poistaa käyttäjän?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Kyllä</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ei</button>
+        </div>
+        </div>
+    </div>
+    </div> -->
+    
+    <!-- ilmoituksen poisto -->
+    <!--
+    <div class="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Ilmoituksen poisto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Haluatko varmasti poistaa ilmoituksen?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Kyllä</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ei</button>
+        </div>
+        </div>
+    </div>
+    </div> -->
     
     <footer>
         <button type="button">Lähetä palautetta</button>
@@ -118,6 +207,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 </body>
 
 </html>

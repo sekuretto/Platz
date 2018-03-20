@@ -1,10 +1,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <meta charset="utf-8">
 
+<<<<<<< HEAD
 
 <div class="modal" tabindex="-1" role="dialog">
+=======
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">
+Lisää ilmoitus
+</button>
+-->
+<!--<div class="modal" id="ilmoitus" tabindex="-1" role="dialog">
+>>>>>>> 66b8fdb68007052782cc5343a0108a4815919200
     <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content">-->
       <div class="modal-header">
         <h5 class="modal-title">Lisää ilmoitus</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -52,10 +60,10 @@
         <input type="submit" class="btn btn-primary" name="submit" value="Lisää ilmoitus">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
       </div>
-    </div>
+   <!-- </div>
   </div>
    
-</div>
+</div>-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
