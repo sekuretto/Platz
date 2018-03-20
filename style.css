@@ -59,18 +59,23 @@ menu {
     position: relative;
 }
 
-menu .btn {
-    
-}
 
 #container {
     margin-right: 5%;
+    margin-bottom: 20px;
     width: 65%;
     height: auto;   
     float: right;
     color: black;
 }
 
+article {
+    cursor: pointer;
+}
+
+article h3 {
+    
+}
 .sivut
 {
     margin-bottom: 20px;

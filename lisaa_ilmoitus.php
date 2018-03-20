@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 
 
-<div class="modal" id="ilmoitus" tabindex="-1" role="dialog">
+<div class="modal hide fade" data-focus-on="input:first" id="ilmoitus" tabindex="-1" role="dialog">
 
     <div class="modal-dialog" role="document">
     <div class="modal-content">

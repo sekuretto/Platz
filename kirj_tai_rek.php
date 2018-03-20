@@ -1,11 +1,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <meta charset="utf-8">
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">
-Kirjaudu sisään
-</button>
 
-<div class="modal" tabindex="-1" role="dialog">
+<div class="modal hide fade" tabindex="-1" role="dialog" data-focus-on="input:first" id="kirjrek" >
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -16,7 +13,7 @@ Kirjaudu sisään
         </button>
       </div>
       <div class="modal-body">
-          <p>Lisätäksesi ilmoituksen, sinun tulee kirjautua sisään. Jos sinulla ei ole tunnuksia, voit luoda ne rekisteröitymällä.</p>
+          <h4>Lisätäksesi ilmoituksen, sinun tulee kirjautua sisään. Jos sinulla ei ole tunnuksia, voit luoda ne rekisteröitymällä.</h4>
           <form action="#" method="post" enctype="multipart/form-data">
               <div class="form-group col-md-6">
                      <label for="staticEmail">Käyttäjätunnus </label>
