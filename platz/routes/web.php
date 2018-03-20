@@ -25,3 +25,5 @@ Route::get('/', function () {
 Route::get('profiili', function () {
     return view('profiili');
 });
+
+Route::resource('posts', 'PostsController');
