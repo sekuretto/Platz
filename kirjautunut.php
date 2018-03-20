@@ -17,8 +17,8 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal">Lisää ilmoitus</button>
-                <button type="button" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       
+                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</button>
+                <button method="get"  action="profiili.html" type="button" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       
                 <button type="submit" class="col" class="btn btn-primary">Kirjaudu ulos</button>
             </div>
         </navbar>
@@ -89,7 +89,7 @@
         </div>
     </div>
     
-    <footer>
+    <footer class="fixed-bottom">
         <button type="button">Lähetä palautetta</button>
     </footer>
     

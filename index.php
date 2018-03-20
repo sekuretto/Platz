@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <?php include "lisaa_ilmoitus.php";?>
+    <?php include "kirjaudu_sisaan.php";?>
+    <?php include "luo_tunnus.php";?>
 </head>
 <body>
     <!-- Yläpalkki -->
@@ -17,20 +19,21 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target=".modal" id="nappi" value="Lisää ilmoitus" name="lisaa">Lisää ilmoitus</button>    
-                <input type="button" class="col" class="btn btn-primary" href="profiili.html" value="Profiili">
-                <input type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" value="Kirjaudu sisään">
+                <button type="button" class="col"  class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus" id="nappi" value="Lisää ilmoitus" name="lisaa">Lisää ilmoitus</button>
+                <button type="button" class="col" class="btn btn-primary" href="luo_tunnus.php" data-toggle="modal" data-target="#luotunnus" data-dismiss="modal" name="rekisteroidy" >Rekisteröidy</button>
+                <button type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" data-toggle="modal" data-target="#kirjaudu"value="Kirjaudu sisään">Kirjaudu sisään</button>
             </div>
         </navbar>
     </div>
-    <article>
+    <aside>
          <div class="jumbotron jumbotron-fluid">
               <div class="container">
                 <h1 class="display-4">Tervetuloa Platziin</h1>
                 <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
               </div>
         </div>
-    </article>
+    </aside>
+    
     <!-- Kategoriat -->
     <menu class="btn-group-vertical">
         <button type="button" class="btn btn-secondary">Myy</button>
@@ -40,7 +43,29 @@
         <button class="btn btn-dark" type="submit">Hae</button>
     </menu>      
     
-    <!-- Container -->
+    <div id="container">
+         <article>
+            <h3>Muumilaakson kevät</h3>
+            <p>Talvisin muumilaakso nukkuu syvällä kinoksissa, mutta keväällä laakson asukkaat heräävät. Lumen alta paljastuu yllätyksiä, Pikku Myy haluaisi jatkaa unta, jossa hänen kotinaan on vesimelooni. </p>
+        
+        </article>
+        <article>
+            <h3>Taikurin hattu</h3>
+            <p>Nuuskamuikkunen aikoo viettää koko kesän teltassa joen rannalla. Niiskuneiti putoaa muurahaisleijonan kuoppaan ja joen vesi on muuttunut vaapukkamehuksi. Muutakin kummaa tapahtuu ennen kuin Taikurin hattu palaa omistajalleen.</p>
+        </article>
+        <article>
+            <h3> Rannalta löytynyt hylky</h3>
+            <p>Muumimamma tarjoilee pannukakkuja, Niisku kehittelee lentohärveliä ja rannalta löytyy purjevene, joka on melkein ehjä.</p>
+        
+        </article>
+        <article>
+            <h3>Tervetuloa hattivattien saarelle</h3>
+            <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+        </article>
+
+    
+    </div>
+    <!-- Container 
     <div id="container">
         <div id="accordion" data-spy="scroll">
             <div class="card">
@@ -104,7 +129,7 @@
             <div class="card-header" id="headingThree">
               <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color:black">
-                  Ostetaan verhojen ompelu
+                  Ostetaan 
                 </button>
               </h5>
             </div>
@@ -128,8 +153,9 @@
               </div>
             </div>
             </div>
-        </div>
-        <nav aria-label="Page navigation example">
+</div></div>
+-->
+        <nav aria-label="Page navigation example" class="sivut">
           <ul class="pagination justify-content-end">
             <li class="page-item disabled">
               <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -142,7 +168,7 @@
             </li>
           </ul>
         </nav>
-    </div>
+    
     
     <footer class="fixed-bottom">
         <button type="button">Lähetä palautetta</button>
@@ -154,12 +180,27 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="jquery.js"></script>
     <script>
     $('#ilmoitus').on('shown.bs.modal', function () {
   $('#nappi').trigger('focus')
 })
 </script>
+   <!-- Postausten js --> 
+    <script>
+    $(document).ready(function() {
+    /*Piilottaa p-elementin*/
+    $("p").hide();
+    /*When article clicked, shows p-element*/
+    $("article").click(function() {
+        /*Finds closest p-element from article and shows it(animated)*/
+        $(this).closest("article").find("p").slideToggle(200);     
+        
+    });
+    
+    
+});
+    </script>
 
 </body>
 

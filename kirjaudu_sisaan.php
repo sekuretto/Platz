@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">
-Kirjaudu sisään
+Luo tunnus
 </button>
 
-<div class="modal" tabindex="-1" role="dialog">
+<div class="modal hide fade" id="kirjaudu" tabindex="-1" role="dialog" data-focus-on="input:first">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -28,8 +28,8 @@ Kirjaudu sisään
               <a href="#">Unohditko salasanasi?</a>
             </form>
       </div>
-      <div class="modal-footer">
-        <a href="#">Rekisteröidy</a>
+      <div class="modal-footer" data-focus-on="input:first">
+        <a class="col" class="btn btn-primary" href="luo_tunnus.php" data-dismiss="modal"data-target="#luotunnus" name="rekisteroidy">Rekisteröidy</a>
         <input type="submit" class="btn btn-primary" name="submit" value="Kirjaudu sisään">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
       </div>

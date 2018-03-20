@@ -2,13 +2,6 @@
 <meta charset="utf-8">
 
 
-
-<div class="modal" tabindex="-1" role="dialog">
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal">
-Lisää ilmoitus
-</button>
-
 <div class="modal" id="ilmoitus" tabindex="-1" role="dialog">
 
     <div class="modal-dialog" role="document">
