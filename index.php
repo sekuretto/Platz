@@ -10,26 +10,27 @@
     <?php include "kirjaudu_sisaan.php";?>
     <?php include "kirj_tai_rek.php";?>
     <?php include "luo_tunnus.php";?>
+    <?php include "lisaa_ilmoitus.php";?>
 </head>
 <body>
     <!-- Yläpalkki -->
     <div class="row">
-        <header class="col">
+        <header class="">
             <img src="platz.PNG" alt="logo" class="img-fluid" alt="Responsive image"/>
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col" class="btn btn-primary" href="kirj_tai_rek.php" data-toggle="modal" data-target="#kirjrek" value="Kirjaudu sisään">Lisää ilmoitus</button>
-                <button type="button" class="col" class="btn btn-primary" href="luo_tunnus.php" data-toggle="modal" data-target="#luotunnus" data-dismiss="modal" name="rekisteroidy" >Rekisteröidy</button>
+                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus" value="Kirjaudu sisään">Lisää ilmoitus</button>
+                <button type="button" class="col" class="btn btn-primary" href="luo_tunnus.php" data-toggle="modal" data-target="#luotunnus" data-dismiss="modal" name="rekisteroidy">Rekisteröidy</button>
                 <button type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" data-toggle="modal" data-target="#kirjaudu" value="Kirjaudu sisään">Kirjaudu sisään</button>
             </div>
         </navbar>
     </div>
     <aside>
-         <div class="jumbotron jumbotron-fluid">
+         <div class="jumbotron jumbotron-fluid" id="jumbo">
               <div class="container">
                 <h1 class="display-4">Tervetuloa Platziin</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
               </div>
         </div>
     </aside>
@@ -45,22 +46,49 @@
     
     <div id="container">
          <article>
-            <h3>Muumilaakson kevät</h3>
-            <p>Talvisin muumilaakso nukkuu syvällä kinoksissa, mutta keväällä laakson asukkaat heräävät. Lumen alta paljastuu yllätyksiä, Pikku Myy haluaisi jatkaa unta, jossa hänen kotinaan on vesimelooni. </p>
+            <h3>Ikkunan pesua</h3> <p>Ostetaan</p>
+             <div class="box">
+                <p>Ilmoitus jätett: 22.2.2222</p>
+                <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+            <img src="platz.PNG">
+                <p>Ilmoituksen jättäjä: Minä</p><a>OIKEA ILMOOTUS</a>
+                
+            </div>
+            
         
         </article>
         <article>
-            <h3>Taikurin hattu</h3>
-            <p>Nuuskamuikkunen aikoo viettää koko kesän teltassa joen rannalla. Niiskuneiti putoaa muurahaisleijonan kuoppaan ja joen vesi on muuttunut vaapukkamehuksi. Muutakin kummaa tapahtuu ennen kuin Taikurin hattu palaa omistajalleen.</p>
+            <h3>Renkaiden vaihto</h3> <p>Myydään</p>
+            <div class="box">
+                <p>Ilmoitus jätett: 22.2.2222</p>
+                <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+            <img src="platz.PNG">
+                <p>Ilmoituksen jättäjä: Minä</p>
+                
+            </div>
         </article>
         <article>
-            <h3> Rannalta löytynyt hylky</h3>
-            <p>Muumimamma tarjoilee pannukakkuja, Niisku kehittelee lentohärveliä ja rannalta löytyy purjevene, joka on melkein ehjä.</p>
+            
+            <h3>Siivous apua</h3><p>Ostetaan</p>
+            <div class="box">
+                <p>Ilmoitus jätett: 22.2.2222</p>
+                <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+            <img src="platz.PNG">
+                <p>Ilmoituksen jättäjä: Minä</p>
+                
+            </div>
         
         </article>
         <article>
-            <h3>Tervetuloa hattivattien saarelle</h3>
-            <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+            <div class="box-head"><h3>Pienet rakennustyöt</h3><p>Myydään</p></div>
+            
+            <div class="box">
+                <p>Ilmoitus jätett: 22.2.2222</p>
+                <p>Muumipeikko perheineen ja ystävineen lähtee vesille rannalta löytyneellä veneellä. Nipsu jää kotimieheksi. Jonkin aikaa purjehdittuaan veneilijät löytävät saaren.</p>
+            <img src="platz.PNG">
+                <p>Ilmoituksen jättäjä: Minä</p>
+                
+            </div>
         </article>
 
     
@@ -186,11 +214,11 @@
     <script>
     $(document).ready(function() {
     /*Piilottaa p-elementin*/
-    $("p").hide();
+    $(".box").hide();
     /*When article clicked, shows p-element*/
     $("article").click(function() {
         /*Finds closest p-element from article and shows it(animated)*/
-        $(this).closest("article").find("p").slideToggle(200);     
+        $(this).closest("article").find(".box").slideToggle(200);     
         
     });
     
