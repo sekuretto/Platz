@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <?php include "kirjaudu_sisaan.php";?>
     <?php include "kirj_tai_rek.php";?>
     <?php include "luo_tunnus.php";?>
@@ -29,7 +30,7 @@
     <aside>
          <div class="jumbotron jumbotron-fluid" id="jumbo">
               <div class="container">
-                <h1 class="display-4">Tervetuloa Platziin</h1>
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
                 <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
               </div>
         </div>
