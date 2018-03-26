@@ -7,6 +7,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <?php include "kirjaudu_sisaan.php";?>
+    <?php include "kirj_tai_rek.php";?>
+    <?php include "luo_tunnus.php";?>
+    <?php include "lisaa_ilmoitus.php";?>
 </head>
 <body>
      <!-- Yläpalkki -->
@@ -16,9 +20,9 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus" value="Kirjaudu sisään">Lisää ilmoitus</button>
-                <button type="button" class="col" class="btn btn-primary" href="luo_tunnus.php" data-toggle="modal" data-target="#luotunnus" data-dismiss="modal" name="rekisteroidy">Rekisteröidy</button>
-                <button type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" data-toggle="modal" data-target="#kirjaudu" value="Kirjaudu sisään">Kirjaudu sisään</button>
+                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</button>
+                <button href="profiili.php" type="button" class="col" class="btn btn-primary">Profiili</button>       
+                <button type="submit" class="col" class="btn btn-primary">Kirjaudu ulos</button>
             </div>
         </navbar>
     </div>
