@@ -33,4 +33,10 @@ class PagesController extends Controller
 	]);
 	*/
     }
+    public function add2()
+    {
+        //return "POOO";
+        return view('add.index');
+    }
+    
 }

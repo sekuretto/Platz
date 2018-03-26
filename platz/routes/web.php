@@ -12,12 +12,15 @@
 */
 Route::get('aboutesim', 'PagesController@about');
 Route::get('aboutesim2', 'PagesController@about2');
+Route::get('add2', 'PagesController@add2');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');
 
 Route::get('profiili1folder', 'profiilicontroller@viewfromfolder');
 Route::get('profiili2folder', 'profiilicontroller@viewfromfolder2');
+
+Route::get('add', 'PagesController@add');
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,4 +29,5 @@ Route::get('profiili', function () {
     return view('profiili');
 });
 
-Route::resource('posts', 'PostsController');
+
+Route::resource('/', 'PostsController');
