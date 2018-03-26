@@ -18,8 +18,10 @@
         <navbar class="col-7" >
             <div class="nav">
                 <a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                <a data-toggle="modal" data-target="#profiili" style="margin-left: 100px">Profiili</a>
+                <a data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
 
-                <button type="submit" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>
+                <!--<button type="submit" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>-->
             </div>
         </navbar>
     </div>
@@ -129,7 +131,41 @@
     </div>
   </div>
    
-</div>    
+</div>  
+    
+<!-- KIRJAUTUMISIKKUNA -->
+<div class="modal hide fade" id="kirjaudu" tabindex="-1" role="dialog" data-focus-on="input:first">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Kirjaudu sisään</h5>
+          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="#" method="post" enctype="multipart/form-data">
+              <div class="form-group col-md-6">
+                     <label for="staticEmail">Käyttäjätunnus </label>
+                     <input type="text" class="form-control" id="statickt">
+              </div>
+              <div class="form-group col-md-6">
+                     <label for="staticEmail">Salasana </label>
+                     <input type="text" class="form-control" id="passwd">
+              </div>
+              <a href="#">Unohditko salasanasi?</a>
+            </form>
+      </div>
+      <div class="modal-footer" data-focus-on="input:first">
+        <a class="col" class="btn btn-primary" href="luo_tunnus.php" data-dismiss="modal"data-target="#luotunnus" name="rekisteroidy">Rekisteröidy</a>
+        <input type="submit" class="btn btn-primary" name="submit" value="Kirjaudu sisään">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+      </div>
+    </div>
+  </div>
+   
+</div>
     
 </body>
 
