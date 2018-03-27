@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
     <?php include "kirjaudu_sisaan.php";?>
     <?php include "kirj_tai_rek.php";?>
     <?php include "luo_tunnus.php";?>
@@ -21,7 +23,8 @@
         </header>
         <navbar class="col-7" >
             <div class="nav">
-                <button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus" value="Kirjaudu sisään">Lisää ilmoitus</button>
+                <!--<button type="button" class="col" class="btn btn-primary" href="lisaa_ilmoitus.php" data-toggle="modal" data-target="#ilmoitus" value="Kirjaudu sisään">Lisää ilmoitus</button>-->
+                <button type="button" class="col" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Lisätäksesi ilmoituksen, kirjaudu sisään tai luo tunnus.">Lisää ilmoitus</button>
                 <button type="button" class="col" class="btn btn-primary" href="luo_tunnus.php" data-toggle="modal" data-target="#luotunnus" data-dismiss="modal" name="rekisteroidy">Rekisteröidy</button>
                 <button type="button" class="col" class="btn btn-primary" href="kirjaudu_sisaan.php" data-toggle="modal" data-target="#kirjaudu" value="Kirjaudu sisään">Kirjaudu sisään</button>
             </div>
