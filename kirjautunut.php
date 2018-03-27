@@ -12,7 +12,7 @@
 <body>
     <!-- Yläpalkki -->
     <div class="row">
-        <header class="col">
+        <header class="">
             <img src="platz.PNG" alt="logo" class="img-fluid" alt="Responsive image"/>
         </header>
         <navbar class="col-7" >
