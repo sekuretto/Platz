@@ -4,15 +4,12 @@
 }
 
 body {
-    background-color: #e3efef;
+    background-color: #f2f2f2;
 }
 
 header.col img {
     margin-top: 20px;
     margin-left: 20px;
-}
-
-.row {
 }
 
 .col {
@@ -26,12 +23,12 @@ header.col img {
       font-size:2rem;
       letter-spacing:1px;
       outline:none;
-    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
+     /*border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
 }
 
 .col:hover{
-    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3); }
+    box-shadow:1px 6px 2px -4px hsla(0,0%,0%,.3); }
 
 
 
@@ -72,12 +69,16 @@ aside {
 }
 
 #jumbo {
-    background-color: transparent;
+    background-color: transparent!important;
 
 }
 
 #jumbo-h1 {
-    font-family: 'Roboto Condensed', sans-serif;
+    /*font-family: 'Work Sans', sans-serif;
+    
+    font-family: 'Roboto Condensed', sans-serif;*/
+    font-family: 'Podkova', serif;
+    letter-spacing: 0.1em;
 }
 
 menu {
@@ -106,8 +107,8 @@ article {
       transition:all .5s ease;
       color:#41403E;
       outline:none;
-      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
+      /*border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
 }
 
 article h3 {
