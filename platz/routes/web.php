@@ -31,3 +31,7 @@ Route::get('profiili', function () {
 
 
 Route::resource('/', 'PostsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -66,7 +66,7 @@
                         <label>Kaupunki:</label>
                         <input type="text" class="form-control" size="30" name="kaupunki"><br>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tiedot">Tallenna muutokset</button>
-                        <!-- jos tietoja täytetty mutta yritetään poistua sivulta -->
+                        <!-- jos tietoja täytetty mutta yritetään poistua sivulta alert data-target="#tiedot" -->
                         <!-- kun tietoa oikeasti tallennetaan, käytetään button type="submit" ja data-target="#tietoja_muutettu.php" -->
                         <input type="reset" class="btn btn-secondary" value="Peruuta">
                         <br>
@@ -158,7 +158,7 @@
     </div>
     
     <!-- käyttäjän poisto -->
-    <div class="modal hide fade" id="#poistakayttaja" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal hide fade" id="poistakayttaja" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
         <div class="modal-header">

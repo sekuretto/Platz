@@ -2,9 +2,9 @@
 
 @section('main')
 <div id="container">
-    <h3>kaikki postaukset</h3>
+    <h3>kaikki ggfgfgfgfgf</h3>
     <hr>
-    @if(count($posts) > 1)
+    @if(count($posts) >= 1)
         @foreach($posts as $post)
     
             <article>

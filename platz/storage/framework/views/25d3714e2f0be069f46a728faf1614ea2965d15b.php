@@ -2,9 +2,9 @@
 
 <?php $__env->startSection('main'); ?>
 <div id="container">
-    <h3>kaikki postaukset</h3>
+    <h3>kaikki ggfgfgfgfgf</h3>
     <hr>
-    <?php if(count($posts) > 1): ?>
+    <?php if(count($posts) >= 1): ?>
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     
             <article>
