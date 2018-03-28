@@ -10,7 +10,6 @@
 
 body {
 
-
     background-color: #f2f2f2;
 
     font-family: 'News Cycle', sans-serif;
@@ -162,7 +161,7 @@ head {
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
-    background-color: #F5CF8E; /* Yellow */
+    /*background-color: #F5CF8E;  Yellow */
   }
 }
 
@@ -172,4 +171,3 @@ head {
     background-color: white; /* Blue */
   }
 }
-
