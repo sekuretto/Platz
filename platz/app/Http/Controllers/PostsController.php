@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use Auth;
+
 class PostsController extends Controller
 {
     /**
@@ -46,7 +48,7 @@ class PostsController extends Controller
         $post->body = $request->input('body');
         $post->image = 'putty';
         $post->category = $request->input('category');
-        $post->user_id = 1;
+        $post->user_id = Auth::user()->id;
         $post->save();
         
         return redirect('/');

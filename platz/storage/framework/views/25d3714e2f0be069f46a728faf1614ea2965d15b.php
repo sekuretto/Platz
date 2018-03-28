@@ -9,6 +9,7 @@
     
             <article>
             <h3><?php echo e($post->title); ?></h3><h2><?php echo e($post->user->name); ?></h2><span><?php echo e($post->category); ?></span>
+            <p><?php echo e($post->created_at); ?></p>
             <p><?php echo e($post->body); ?></p>
             </article>
     
