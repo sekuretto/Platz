@@ -2,13 +2,13 @@
 
 @section('main')
 <div id="container">
-    <h3>kaikki ggfgfgfgfgf</h3>
+    <h3>Kaikki ilmoitukset</h3>
     <hr>
     @if(count($posts) >= 1)
         @foreach($posts as $post)
     
             <article>
-            <h3>{{$post->title}}</h3><span>{{$post->category}}</span>
+            <h3>{{$post->title}}</h3><h2>{{$post->user->name}}</h2><span>{{$post->category}}</span>
             <p>{{$post->body}}</p>
             </article>
     

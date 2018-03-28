@@ -2,13 +2,13 @@
 
 <?php $__env->startSection('main'); ?>
 <div id="container">
-    <h3>kaikki ggfgfgfgfgf</h3>
+    <h3>Kaikki ilmoitukset</h3>
     <hr>
     <?php if(count($posts) >= 1): ?>
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     
             <article>
-            <h3><?php echo e($post->title); ?></h3><span><?php echo e($post->category); ?></span>
+            <h3><?php echo e($post->title); ?></h3><h2><?php echo e($post->user->name); ?></h2><span><?php echo e($post->category); ?></span>
             <p><?php echo e($post->body); ?></p>
             </article>
     

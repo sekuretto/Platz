@@ -18,27 +18,20 @@
         <navbar class="col-7" >
             <div class="nav">
                 @guest
-                <a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                <a data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
-                <a data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
+                    <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
+                    <a data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
+                    <a data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
                 @else
-                <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Kirjaudu ulos') }}
-                                    </a>
+                    <h2>{{ Auth::user()->name }}</h2>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu Ulos</a>    
+                    <a data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
+                                
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
+                                
+                          
                 @endguest
                 <!--<button type="submit" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>-->
             </div>
@@ -47,18 +40,15 @@
     <article>
          <div class="jumbotron jumbotron-fluid">
               <div class="container">
-                <h1 class="display-4">Tervetuloa Platziin</h1>
-                <p class="lead">THIS IS A MAIN LAYOUT</p>
+                @guest
+                <h2>Tervetuloa. Kirjaudu sisään tai luo tunnus</h2>
+                @else
+                <h2>Tervetuloa, {{ Auth::user()->name }}!</h2>
+                @endguest
               </div>
         </div>
     </article>
     <!-- Kategoriat -->
-    @guest
-    <h2>Terve        tuloa</h2>
-    @else
-    <h2>terve tuloa, {{ Auth::user()->name }} !</h2>
-    <h2>kaupunkisi on, {{ Auth::user()->city }} !</h2>
-    @endguest
     <menu class="btn-group-vertical">
         <button type="button" class="btn btn-secondary">Myy</button>
         <button type="button" class="btn btn-secondary">Osta</button>
@@ -113,40 +103,21 @@
         </button>
       </div>
       <div class="modal-body">
-          <form action="#" method="post" enctype="multipart/form-data">
-                 <div class="form-group col-md-5">
-                     <label for="staticEmail">Ilmoituksen nimi: </label>
-                     <input type="text" class="form-control" id="staticEmail">
-                 </div>
-                    <div class="form-group col-md-5">
-                        <label for="inputState">Myydään/Ostetaan</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Valitse vaihtoehdoista</option>
-                            <option>Myydään</option>
-                            <option>Ostetaan</option>
-                            <option>Vaihdetaan</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-5">
-                        <label for="inputState">Kategoria</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Valitse vaihtoehdoista</option>
-                            <option>Kotityöt</option>
-                            <option>Auton huolto</option>
-                            <option>Rakentaminen</option>
-                            <option>Muut</option>
-                        </select>
-                    </div>
-                    <div class="card" style="width: 15rem; float: right;">
-                      <div class="card-body">
-                        <h5 class="card-title">Lisää kuva</h5>
-                            <input type="file" name="fileToUpload" id="fileToUpload" value="Valitse kuva">
-                      </div>
-                    </div>
-                    <div class="form-group col-md-5">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Lisätietoja"></textarea>
-                    </div>
-            </form>
+        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+            <div class="form-group row">
+                {{Form::label('title', 'Otsikko')}}
+                {{Form::text('title', '', ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group row">
+                {{Form::label('body', 'Ilmoituksen sisältö')}}
+                {{Form::textarea('body', '', ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group row">
+                {{Form::label('category', 'Kategoria')}}
+                {{Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])}}
+            </div>
+                {{Form::submit('Lähetä', ['class' => 'btn btn-primary'])}}
+        {!! Form::close() !!}
 
       </div>
       <div class="modal-footer">
