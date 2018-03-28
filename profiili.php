@@ -25,6 +25,14 @@
                 <button type="submit" class="col" class="btn btn-primary">Kirjaudu ulos</button>
             </div>
         </navbar>
+        <aside>
+             <div class="jumbotron jumbotron-fluid" id="jumbo">
+                  <div class="container">
+                    <h3>Tervetuloa käyttäjä!</h3>
+                    <p class="lead">Täällä pääset muokkaamaan tiliäsi ja omia ilmoituksiasi.</p>
+                  </div>
+            </div>
+        </aside>
     </div>
     
     <!-- Kategoriat -->
