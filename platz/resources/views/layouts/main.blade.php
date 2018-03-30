@@ -2,11 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ass</title>
+    <title>cheese sticks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    <!--<link rel="stylesheet" href="style/style.css" type="text/css"/> -->
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
 </head>
 <body>
@@ -15,7 +14,7 @@
         <header class="col">
             <img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/>
         </header>
-        <navbar class="col-7" >
+        <navbar class="col-7">
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
@@ -23,31 +22,24 @@
                     <a data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
                 @else
                     <h2>{{ Auth::user()->name }}</h2>
+                    <a href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu Ulos</a>    
                     <a data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
-                                
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                
-                          
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                        </form>          
                 @endguest
-                <!--<button type="submit" class="col" class="btn btn-primary" href="profiili.html">Profiili</button>       <button type="submit" class="col" class="btn btn-primary">Kirjaudu sisään</button>-->
             </div>
         </navbar>
     </div>
-    <article>
          <div class="jumbotron jumbotron-fluid">
-              <div class="container">
                 @guest
                 <h2>Tervetuloa. Kirjaudu sisään tai luo tunnus</h2>
                 @else
                 <h2>Tervetuloa, {{ Auth::user()->name }}!</h2>
                 @endguest
-              </div>
+             @include('inc.messages')
         </div>
-    </article>
     <!-- Kategoriat -->
     <menu class="btn-group-vertical">
         <button type="button" class="btn btn-secondary">Myy</button>
@@ -64,8 +56,7 @@
     <footer>
         <button type="button">Lähetä palautetta</button>
     </footer>
-    
-        
+          
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

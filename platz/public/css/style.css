@@ -1,20 +1,27 @@
 * {
     margin: 0px;
 }
-header.col img {
+body {
+    margin: 0 auto;
+}
+header.col {
     margin-top: 20px;
     margin-left: 20px;
 }
 
 navbar {
-    background-color: lightgrey;
-    align-content: center;
-    padding: 10px;
+    background-color: #c48d8d;
+    align-content: center; 
     right: 0;
-    top: 5;
     height: 190px;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px; 
+}
+.subinfo {
+    margin-left: 70px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav {
@@ -22,7 +29,6 @@ navbar {
     margin-bottom: 5%;
     height: 50%;
     cursor: pointer;
-    
 }
 
 .nav .btn {
@@ -36,26 +42,26 @@ navbar {
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
-
+.btn-group-vertical {
+    position: fixed;
+    padding-left: 0px;
+}
 article {
     margin: 30px;
     text-align: center;
     width: 100%;
-    margin-bottom:60px;
-    border: 1px solid black;
+    margin-bottom: 60px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 2px 1px;
 }
 
 .jumbotron {
     background-color: white;
-    align-content: center;
-    margin-right: 5%;
-    margin-left: 2.5%;
 }
 
 menu {
     width: 20%;
     margin: 0 0 0 3px;
-    padding-right: 10px;
     position: relative;
 }
 
@@ -63,7 +69,7 @@ menu .btn {
     
 }
 
-#container {
+.container {
     margin-right: 5%;
     width: 65%;
     height: auto;   
