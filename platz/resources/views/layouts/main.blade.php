@@ -26,8 +26,8 @@
                     <a class="col" data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
                     <a class="col" data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
                 @else
-                    <a class="col" href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
-                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu Ulos</a>    
+                    <a class="col" data-toggle="modal" href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu ulos</a>    
                     <a class="col" data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
@@ -61,17 +61,33 @@
         <button type="button" class="btn btn-secondary">Myy</button>
         <button type="button" class="btn btn-secondary">Osta</button>
         <button type="button" class="btn btn-secondary">Vaihda</button>
-        <input class="form-control mr-sm-2" type="search" placeholder="Hae" aria-label="Search">
-        <button class="btn btn-dark" type="submit">Hae</button>
+        <div id="search" class="form-control mr-sm-2" type="search" placeholder="Hae" aria-label="Search">
+        <input id="input" placeholder="Hae" aria-label="Search"><img id="icon" src="<?php echo asset('images/search-icon.png')?>"></div>
     </menu>      
     
     <!-- Container -->
     <div id="container">
     @yield('main')
+        <nav aria-label="Page navigation example" class="sivut">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+        
     </div>
+    
     <footer>
         <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a">lähetä palautetta</a></p>
     </footer>
+    
           
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -86,7 +102,7 @@
     /*Piilottaa box-elementin*/
     $(".box").hide();
     /*When article clicked, shows box-element*/
-    $("article").click(function() {
+    $(".subinfo").click(function() {
         /*Finds closest box-element from article and shows it(animated)*/
         $(this).closest("article").find(".box").slideToggle(200);     
         
@@ -138,6 +154,13 @@
 <div class="modal hide fade" id="register" tabindex="-1" role="dialog" data-focus-on="input:first">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
+        
+        <div class="modal-header">
+        <h5 class="modal-title">Luo tunnus</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" name="nappi">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
         <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -209,7 +232,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Luo tunnus') }}
                                 </button>
                             </div>
                         </div>
@@ -223,11 +246,18 @@
 <div class="modal hide fade" id="kirjaudu" tabindex="-1" role="dialog" data-focus-on="input:first">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Kirjaudu sisään</h5>
+          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
         <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Sähköpostiosoite') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -241,7 +271,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Salasana') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
