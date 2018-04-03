@@ -51,7 +51,7 @@ class PostsController extends Controller
         $post->user_id = Auth::user()->id;
         $post->save();
         
-        return redirect('/');
+        return redirect('/')->with('success', 'Ilmoitus luotu.');
     }
 
     /**
@@ -85,7 +85,16 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required',
+            'city' => 'required'
+        ]);
+        $user = User::find($id);
+        $user->email = $request->input('email');
+        $user->city = $request->input('city');
+        $user->save();
+        
+        return redirect('/')->with('success','Tiedot muutettu onnistuneesti.');
     }
 
     /**

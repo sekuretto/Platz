@@ -12,7 +12,7 @@
     <!-- Yläpalkki -->
     <div class="row">
         <header class="col">
-            <img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/>
+            <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
         <navbar class="col-7">
             <div class="nav">
