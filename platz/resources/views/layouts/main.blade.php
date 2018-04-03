@@ -2,29 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>cheese sticks</title>
+    <title>Platz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
 </head>
 <body>
     <!-- Yläpalkki -->
     <div class="row">
-        <header class="col">
+        <header>
             <img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/>
         </header>
         <navbar class="col-7">
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
-                    <a data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
+                    <a class="col" data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
+                    <a class="col" data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
                 @else
-                    <h2>{{ Auth::user()->name }}</h2>
-                    <a href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu Ulos</a>    
-                    <a data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
+                    <a class="col" href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu Ulos</a>    
+                    <a class="col" data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                         </form>          
@@ -32,14 +36,26 @@
             </div>
         </navbar>
     </div>
-         <div class="jumbotron jumbotron-fluid">
+    <!-- JUMBO -->
+    <aside>
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+            
                 @guest
-                <h2>Tervetuloa. Kirjaudu sisään tai luo tunnus</h2>
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
+                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
+                
+            </div>
                 @else
-                <h2>Tervetuloa, {{ Auth::user()->name }}!</h2>
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
+                </div>
                 @endguest
              @include('inc.messages')
+            
         </div>
+    </aside>
+         
     <!-- Kategoriat -->
     <menu class="btn-group-vertical">
         <button type="button" class="btn btn-secondary">Myy</button>
@@ -50,11 +66,11 @@
     </menu>      
     
     <!-- Container -->
-    
+    <div id="container">
     @yield('main')
-    
+    </div>
     <footer>
-        <button type="button">Lähetä palautetta</button>
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a">lähetä palautetta</a></p>
     </footer>
           
     <!-- Optional JavaScript -->
@@ -67,18 +83,16 @@
     
 
     $(document).ready(function() {
-        /*Piilottaa p-elementin*/
-        $("p").hide();
-        /*When article clicked, shows p-element*/
-        $("article").click(function() {
-            /*Finds closest p-element from article and shows it(animated)*/
-            $(this).closest("article").find("p").slideToggle(200);     
-
-        $('#notification').on('shown.bs.modal', function () {
-            $('#notification').trigger('focus')
-        });
-
+    /*Piilottaa box-elementin*/
+    $(".box").hide();
+    /*When article clicked, shows box-element*/
+    $("article").click(function() {
+        /*Finds closest box-element from article and shows it(animated)*/
+        $(this).closest("article").find(".box").slideToggle(200);     
+        
     });
+    
+    
 });
 </script>
 

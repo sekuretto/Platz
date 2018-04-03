@@ -145,7 +145,7 @@
    <!-- Postausten js --> 
     <script>
     $(document).ready(function() {
-    /*Piilottaa p-elementin*/
+    /*Piilottaa box-elementin*/
     $(".box").hide();
     /*When article clicked, shows p-element*/
     $("article").click(function() {

@@ -1,16 +1,15 @@
 ;
 
 <?php $__env->startSection('main'); ?>
-<div id="container">
+<div class="container">
     <h3>Kaikki ilmoitukset</h3>
     <hr>
     <?php if(count($posts) >= 1): ?>
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     
             <article>
-            <h3><?php echo e($post->title); ?></h3><h2><?php echo e($post->user->name); ?></h2><span><?php echo e($post->category); ?></span>
-            <p><?php echo e($post->created_at); ?></p>
-            <p><?php echo e($post->body); ?></p>
+            <h3 class="subinfo"><?php echo e($post->category); ?> - <?php echo e($post->title); ?> | <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
+            <p class="box"><?php echo e($post->body); ?></p>
             </article>
     
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
