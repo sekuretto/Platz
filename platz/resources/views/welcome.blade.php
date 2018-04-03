@@ -9,7 +9,7 @@
     
             <article>
             <h3 class="subinfo">{{$post->category}} - {{$post->title}} | {{$post->user->name}} - {{$post->created_at}}</h3>
-            <p>{{$post->body}}</p>
+            <p class="box">{{$post->body}}</p>
             </article>
     
         @endforeach

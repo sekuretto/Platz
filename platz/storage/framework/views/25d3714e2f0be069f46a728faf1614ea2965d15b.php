@@ -9,7 +9,7 @@
     
             <article>
             <h3 class="subinfo"><?php echo e($post->category); ?> - <?php echo e($post->title); ?> | <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
-            <p><?php echo e($post->body); ?></p>
+            <p class="box"><?php echo e($post->body); ?></p>
             </article>
     
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
