@@ -23,12 +23,12 @@
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="col" data-toggle="modal" data-target="#kirjaudu" style="margin-left: 100px">Kirjaudu sisään</a>
-                    <a class="col" data-toggle="modal" data-target="#register" style="margin-left: 100px">Luo tunnus</a>
+                    <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
                     <a class="col" href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
-                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="margin-left: 100px">Kirjaudu ulos</a>    
-                    <a class="col" data-toggle="modal" data-target="#ilmoitus" style="margin-left: 100px">Lisää ilmoitus</a>
+                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                         </form>          
