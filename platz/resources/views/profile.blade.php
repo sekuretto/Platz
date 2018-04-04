@@ -5,8 +5,8 @@
         <div class="tab-content">
             <div id="profiili" class="container tab-pane active"><br>
                 <h2>Omat tiedot</h2>
-                <h5>Sähköposti: {{ Auth::user()->email }}</h5>
-                <h5>Kaupunki: {{ Auth::user()->city }}</h5>
+                <h5>Sähköposti: {{ $user->email }}</h5>
+                <h5>Kaupunki: {{ $user->city }}</h5>
                 <hr>
                         <h2>Muokkaa omia tietojasi</h2>
                     {!! Form::open(['action' => ['PostsController@update', Auth::user()->id], 'method' => 'POST']) !!}

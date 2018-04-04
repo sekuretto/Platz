@@ -9,9 +9,10 @@ use App\User;
 use Auth;
 class ProfileController extends Controller
 {
-    public function show($name)
+    public function show($id)
     {
-        return view('profile');
+        $user = User::find($id);
+        return view('profile')->with('user', $user);
     }
     public function update(Request $request, $id)
     {

@@ -26,7 +26,7 @@
                     <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
-                    <a class="col" href="/{{ Auth::user()->name }}" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="/{{ Auth::user()->id }}" style="margin-left: 100px">Profiili</a>
                     <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
