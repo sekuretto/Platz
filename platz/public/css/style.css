@@ -45,8 +45,8 @@ header img {
     box-shadow:1px 6px 2px -4px hsla(0,0%,0%,.3); }
 
 .btn-group-vertical {
-    position: fixed;
-    top: 300px;
+    /*position: fixed;*/
+    top: 50px;
 }
 
 .btn {
@@ -121,7 +121,7 @@ menu {
     width: 20%;
     margin: 0 0 0 3px;
     padding-right: 10px;
-    position: relative;
+    /*position: relative;*/
 }
 
 
@@ -186,16 +186,26 @@ head {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-  body {
-    background-color: #F09A9D; /* Red */
-  }
+    body {
+        background-color: #F09A9D; /* Red */
+    }
+    
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
-    /*background-color: #F5CF8E;  Yellow */
+    background-color: #F5CF8E;
+      height: 250px;
+      margin: auto;
   }
+    footer {
+        order: -1;
+    }
+    menu {
+        order: 4;
+        align-content: center;
+    }
     
     
 }
