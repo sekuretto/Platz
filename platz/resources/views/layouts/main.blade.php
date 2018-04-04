@@ -85,7 +85,11 @@
     </div>
     
     <footer>
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a">lähetä palautetta</a></p>
+        @guest
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
+        @else
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
+        @endguest
     </footer>
     
           
@@ -310,7 +314,39 @@
   </div>
    
 </div>
+    <!-- LÄHETÄ PALAUTETTA -->
+<div class="modal hide fade" tabindex="-1" role="dialog" id="palaute">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Palautelomake</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+                <div class="form-group col-md-6">
+                     <label for="staticEmail">Otsikko </label>
+                     <input type="text" class="form-control" id="staticEmail">
+                </div>
+                <div class="form-group col-md-6">
+                     <label for="staticEmail">Sähköpostiosoitteesi </label>
+                     <input type="text" class="form-control" id="staticEmail">
+                 </div>
+                    <div class="form-group col-md-7">Kerro palautteesi
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+                    </div>
+            </form>
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Lähetä palaute</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+      </div>
+    </div>
+  </div>       
+</div>
 </body>
 
 </html>
