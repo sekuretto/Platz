@@ -9,7 +9,7 @@
                 <h5>Kaupunki: {{ $user->city }}</h5>
                 <hr>
                         <h2>Muokkaa omia tietojasi</h2>
-                    {!! Form::open(['action' => ['PostsController@update', Auth::user()->id], 'method' => 'POST']) !!}
+                    {!! Form::open(['action' => ['ProfileController@update', Auth::user()->id], 'method' => 'POST']) !!}
                         <div class="form-group">
                         {{Form::label('email', 'Sähköposti')}}
                         {{Form::text('email', Auth::user()->email, ['class' => 'form-control'])}}

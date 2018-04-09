@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Auth;
+use Illuminate\Facades\Support\Validator;
+
+    
 
 class PostsController extends Controller
 {
@@ -85,7 +88,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
+      /*  $this->validate($request, [
             'email' => 'required',
             'city' => 'required'
         ]);
@@ -94,7 +97,7 @@ class PostsController extends Controller
         $user->city = $request->input('city');
         $user->save();
         
-        return redirect('/')->with('success','Tiedot muutettu onnistuneesti.');
+        return redirect('/')->with('success','Tiedot muutettu onnistuneesti.');*/
     }
 
     /**

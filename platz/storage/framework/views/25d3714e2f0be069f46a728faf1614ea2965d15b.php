@@ -9,7 +9,10 @@
     
             <article>
             <h3 class="subinfo"><?php echo e($post->category); ?> - <?php echo e($post->title); ?> | <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
-            <p class="box"><?php echo e($post->body); ?></p>
+            <p class="box"><?php echo e($post->body); ?><br>
+            <b>Sähköposti: <?php echo e($post->user->email); ?></b><br>
+            <b>Kotikaupunki: <?php echo e($post->user->city); ?></b><br>
+            </p>
             </article>
     
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

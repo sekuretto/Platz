@@ -13,7 +13,7 @@
 Route::get('aboutesim', 'PagesController@about');
 Route::get('aboutesim2', 'PagesController@about2');
 Route::get('add2', 'PagesController@add2');
-Route::get('/{id}', 'ProfileController@show');
+Route::get('/profiles/{id}', 'ProfileController@show');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');
@@ -32,6 +32,7 @@ Route::get('profiili', function () {
 
 
 Route::resource('/', 'PostsController');
+Route::resource('profiles', 'ProfileController');
 
 Auth::routes();
 
