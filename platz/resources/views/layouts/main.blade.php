@@ -68,7 +68,7 @@
     <!-- Container -->
     <div id="container">
     @yield('main')
-        <nav aria-label="Page navigation example" class="sivut">
+        <!--<nav aria-label="Page navigation example" class="sivut">
               <ul class="pagination justify-content-end">
                 <li class="page-item disabled">
                   <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -80,7 +80,7 @@
                   <a class="page-link" href="#">Next</a>
                 </li>
               </ul>
-            </nav>
+            </nav>-->
         
     </div>
     
@@ -141,14 +141,14 @@
                 {{Form::label('category', 'Kategoria')}}
                 {{Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])}}
             </div>
-                {{Form::submit('Lähetä', ['class' => 'btn btn-primary'])}}
+                {{Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])}}
         {!! Form::close() !!}
 
       </div>
-      <div class="modal-footer">
+      <!--<div class="modal-footer">
         <input type="submit" class="btn btn-primary" name="submit" value="Lisää ilmoitus">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
-      </div>
+      </div>-->
     </div>
   </div>
    
@@ -261,14 +261,14 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Sähköpostiosoite') }}</label>
+                            <label for="name" class="col-sm-4 col-form-label text-md-right">{{ __('Käyttäjänimi') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="name" type="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>

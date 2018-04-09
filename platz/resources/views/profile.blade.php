@@ -19,7 +19,7 @@
                         {{Form::text('city', Auth::user()->city, ['class' => 'form-control'])}}
                         </div>
                         {{Form::hidden('_method','PUT')}}
-                        {{Form::submit('Lähetä', ['class' => 'btn btn-primary'])}}
+                        {{Form::submit('Tallenna muutokset', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}
                         <br>
                 <hr>
