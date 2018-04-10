@@ -9,7 +9,7 @@
 8	    <h3>Haku</h3> 
 9	    <p>Hae ilmoituksista</p> 
 10	    <form  method="post" action="search.php"  id="searchform"> 
-11	      <input  type="text" name="ilmoitus"> 
+11	      <input  type="text" name="haku"> 
 12	      <input  type="submit" name="submit" value="Hae"> 
 13	    </form> 
 14	  </body> 
@@ -20,8 +20,8 @@
 /* search.php */
 <?php 
 2	  if(isset($_POST['submit'])){ 
-3	      if(preg_match("^/[A-Za-z]+/", $_POST['ilmoitus'])){ 
-          $name=$_POST['ilmoitus'];
+3	      if(preg_match("^/[A-Za-z]+/", $_POST['haku'])){ 
+          $name=$_POST['haku'];
           // yhdistä tietokantaan
           $db=mysql_connect ("servername",  "<username>", "<password>") or die ('I cannot connect  to the database because: ' . mysql_error());
           // valitse käytettävä tietokanta 
