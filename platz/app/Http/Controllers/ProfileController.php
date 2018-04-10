@@ -12,6 +12,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        
         return view('profile')->with('user', $user);
     }
     public function update(Request $request, $id)
@@ -26,5 +27,11 @@ class ProfileController extends Controller
         $user->save();
         
         return redirect('/')->with('success','Tiedot muutettu onnistuneesti.');
+    }
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('/', 'Ilmoitus poistettu');
     }
 }

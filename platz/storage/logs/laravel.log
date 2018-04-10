@@ -5394,6 +5394,7 @@
 #57 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 06:45:40] local.ERROR: Parse error: syntax error, unexpected ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ']' at D:\\xampp\\htdocs\\platz\\platz\outes\\web.php:42)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(350): Illuminate\\Routing\\Router->loadRoutes('D:\\\\xampp\\\\htdocs...')
@@ -7005,6 +7006,11 @@
 [2018-04-10 07:25:59] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 05:58:59] local.ERROR: Undefined variable: post (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined variable: post (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:71, ErrorException(code: 0): Undefined variable: post at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:71)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7061,9 +7067,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:26:33] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 06:01:32] local.ERROR: Parse error: syntax error, unexpected end of file (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected end of file (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:84, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected end of file at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:84)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7120,6 +7132,7 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:26:34] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
@@ -7160,10 +7173,53 @@
 #35 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
 #36 D:\\xampp\\htdocs\\platz\\platz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #37 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+=======
+[2018-04-10 06:39:22] local.ERROR: Undefined variable: posts {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined variable: posts at D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php:16)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php(16): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'D:\\\\xampp\\\\htdocs...', 16, Array)
+#1 [internal function]: App\\Http\\Controllers\\ProfileController->show('1')
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
+#4 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'show')
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(67): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(661): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#28 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#29 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(602): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#30 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(591): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#31 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#32 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\xampp\\htdocs\\platz\\platz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #38 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
 #39 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #40 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
 #41 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+<<<<<<< HEAD
 #42 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #43 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
 #44 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
@@ -7182,6 +7238,23 @@
 [2018-04-10 07:26:35] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+#42 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 {main}
+"} 
+[2018-04-10 06:39:38] local.ERROR: Undefined variable: post (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined variable: post (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70, ErrorException(code: 0): Undefined variable: post at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7238,9 +7311,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:26:37] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 06:40:03] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Relations\HasMany::$name (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$name (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70, ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$name at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7297,9 +7376,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:26:40] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 06:40:22] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Relations\HasMany::$title (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$title (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70, ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$title at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7356,9 +7441,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:30:08] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 06:40:32] local.ERROR: Undefined property: Illuminate\Database\Eloquent\Relations\HasMany::$body (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$body (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70, ErrorException(code: 0): Undefined property: Illuminate\\Database\\Eloquent\\Relations\\HasMany::$body at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:70)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7415,9 +7506,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:30:09] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+=======
+[2018-04-10 07:11:55] local.ERROR: Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:73, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\9215ce7ff30cd84a98d4758e0cda7160b9069c36.php:73)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7474,7 +7571,11 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:30:11] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
+=======
+[2018-04-10 07:13:12] local.ERROR: Action App\Http\Controllers\ProfileController@Destroy not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Action App\\Http\\Controllers\\ProfileController@Destroy not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:338, InvalidArgumentException(code: 0): Action App\\Http\\Controllers\\ProfileController@Destroy not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:338)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
@@ -7533,9 +7634,15 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:30:47] local.ERROR: Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\680082f8b2fdf4257e30d3cb30e6d219e255b70f.php:13, ErrorException(code: 0): Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\680082f8b2fdf4257e30d3cb30e6d219e255b70f.php:13)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
+=======
+[2018-04-10 07:13:46] local.ERROR: Action App\Http\Controllers\PostsController@Destroy not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\profile.blade.php) {"userId":1,"email":"mies@mies.fi","exception":"[object] (ErrorException(code: 0): Action App\\Http\\Controllers\\PostsController@Destroy not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\profile.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:338, InvalidArgumentException(code: 0): Action App\\Http\\Controllers\\PostsController@Destroy not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:338)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xampp\\\\htdocs...', Array)
 #2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(137): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xampp\\\\htdocs...', Array)
 #3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(120): Illuminate\\View\\View->getContents()
@@ -7592,6 +7699,7 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:30:50] local.ERROR: Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\680082f8b2fdf4257e30d3cb30e6d219e255b70f.php:13, ErrorException(code: 0): Use of undefined constant route - assumed 'route' (this will throw an Error in a future version of PHP) at D:\\xampp\\htdocs\\platz\\platz\\storage\\framework\\views\\680082f8b2fdf4257e30d3cb30e6d219e255b70f.php:13)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -7604,6 +7712,20 @@
 #7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(727): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View))
 #8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(699): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
 #9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+=======
+[2018-04-10 07:23:30] local.ERROR: Type error: Argument 2 passed to Symfony\Component\HttpFoundation\RedirectResponse::__construct() must be of the type integer, string given, called in D:\xampp\htdocs\platz\platz\vendor\laravel\framework\src\Illuminate\Routing\Redirector.php on line 184 {"userId":1,"email":"mies@mies.fi","exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Type error: Argument 2 passed to Symfony\\Component\\HttpFoundation\\RedirectResponse::__construct() must be of the type integer, string given, called in D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php on line 184 at D:\\xampp\\htdocs\\platz\\platz\\vendor\\symfony\\http-foundation\\RedirectResponse.php:35)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(184): Symfony\\Component\\HttpFoundation\\RedirectResponse->__construct('http://localhos...', 'Ilmoitus poiste...', Array)
+#1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(117): Illuminate\\Routing\\Redirector->createRedirect('http://localhos...', 'Ilmoitus poiste...', Array)
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(677): Illuminate\\Routing\\Redirector->to('/profiles/{id}', 'Ilmoitus poiste...', Array, NULL)
+#3 D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php(35): redirect('/profiles/{id}', 'Ilmoitus poiste...')
+#4 [internal function]: App\\Http\\Controllers\\ProfileController->destroy('1')
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('destroy', Array)
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'destroy')
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
@@ -7651,6 +7773,7 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:31:13] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
@@ -7722,6 +7845,75 @@
 #7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(727): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View))
 #8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(699): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
 #9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+=======
+[2018-04-10 07:24:41] local.ERROR: Call to a member function delete() on null {"userId":1,"email":"mies@mies.fi","exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function delete() on null at D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php:34)
+[stacktrace]
+#0 [internal function]: App\\Http\\Controllers\\ProfileController->destroy('1')
+#1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('destroy', Array)
+#3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'destroy')
+#4 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(67): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(661): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(602): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(591): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xampp\\htdocs\\platz\\platz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 {main}
+"} 
+[2018-04-10 07:27:51] local.ERROR: Type error: Argument 2 passed to Symfony\Component\HttpFoundation\RedirectResponse::__construct() must be of the type integer, string given, called in D:\xampp\htdocs\platz\platz\vendor\laravel\framework\src\Illuminate\Routing\Redirector.php on line 184 {"userId":1,"email":"mies@mies.fi","exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Type error: Argument 2 passed to Symfony\\Component\\HttpFoundation\\RedirectResponse::__construct() must be of the type integer, string given, called in D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php on line 184 at D:\\xampp\\htdocs\\platz\\platz\\vendor\\symfony\\http-foundation\\RedirectResponse.php:35)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(184): Symfony\\Component\\HttpFoundation\\RedirectResponse->__construct('http://localhos...', 'Ilmoitus poiste...', Array)
+#1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(117): Illuminate\\Routing\\Redirector->createRedirect('http://localhos...', 'Ilmoitus poiste...', Array)
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(677): Illuminate\\Routing\\Redirector->to('/', 'Ilmoitus poiste...', Array, NULL)
+#3 D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php(34): redirect('/', 'Ilmoitus poiste...')
+#4 [internal function]: App\\Http\\Controllers\\ProfileController->destroy('1')
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('destroy', Array)
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'destroy')
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
@@ -7769,6 +7961,7 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:31:33] local.ERROR: Route [contact.store] not defined. (View: D:\xampp\htdocs\platz\platz\resources\views\contact.blade.php) {"exception":"[object] (ErrorException(code: 0): Route [contact.store] not defined. (View: D:\\xampp\\htdocs\\platz\\platz\esources\\views\\contact.blade.php) at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305, InvalidArgumentException(code: 0): Route [contact.store] not defined. at D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:305)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(InvalidArgumentException), 1)
@@ -7781,6 +7974,20 @@
 #7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(727): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View))
 #8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(699): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
 #9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+=======
+[2018-04-10 07:30:32] local.ERROR: Type error: Argument 2 passed to Symfony\Component\HttpFoundation\RedirectResponse::__construct() must be of the type integer, string given, called in D:\xampp\htdocs\platz\platz\vendor\laravel\framework\src\Illuminate\Routing\Redirector.php on line 184 {"userId":1,"email":"mies@mies.fi","exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Type error: Argument 2 passed to Symfony\\Component\\HttpFoundation\\RedirectResponse::__construct() must be of the type integer, string given, called in D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php on line 184 at D:\\xampp\\htdocs\\platz\\platz\\vendor\\symfony\\http-foundation\\RedirectResponse.php:35)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(184): Symfony\\Component\\HttpFoundation\\RedirectResponse->__construct('http://localhos...', 'Ilmoitus poiste...', Array)
+#1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Redirector.php(117): Illuminate\\Routing\\Redirector->createRedirect('http://localhos...', 'Ilmoitus poiste...', Array)
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(677): Illuminate\\Routing\\Redirector->to('/', 'Ilmoitus poiste...', Array, NULL)
+#3 D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php(34): redirect('/', 'Ilmoitus poiste...')
+#4 [internal function]: App\\Http\\Controllers\\ProfileController->destroy('1')
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('destroy', Array)
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'destroy')
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 #10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
 #12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
@@ -7828,6 +8035,7 @@
 #54 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+<<<<<<< HEAD
 [2018-04-10 07:36:35] local.ERROR: Parse error: syntax error, unexpected ''as'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Parse error: syntax error, unexpected ''as'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' at D:\\xampp\\htdocs\\platz\\platz\outes\\web.php:46)
 [stacktrace]
 #0 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(350): Illuminate\\Routing\\Router->loadRoutes('D:\\\\xampp\\\\htdocs...')
@@ -7858,4 +8066,60 @@
 #25 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #26 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #27 {main}
+=======
+[2018-04-10 07:31:50] local.ERROR: Call to a member function delete() on null {"userId":1,"email":"mies@mies.fi","exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function delete() on null at D:\\xampp\\htdocs\\platz\\platz\\app\\Http\\Controllers\\ProfileController.php:34)
+[stacktrace]
+#0 [internal function]: App\\Http\\Controllers\\ProfileController->destroy('1')
+#1 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('destroy', Array)
+#3 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProfileController), 'destroy')
+#4 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+#6 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(67): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(63): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(661): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(602): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(591): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xampp\\htdocs\\platz\\platz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#49 D:\\xampp\\htdocs\\platz\\platz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#50 D:\\xampp\\htdocs\\platz\\platz\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#51 {main}
+>>>>>>> 72873127b30a926a47c213c5ed50f096fe385099
 "} 
