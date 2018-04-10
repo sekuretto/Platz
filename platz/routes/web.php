@@ -37,3 +37,11 @@ Route::resource('profiles', 'ProfileController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contact', [
+    'uses' => 'ContactMessageController@create'
+]);
+Route::get('/contact', [
+    'uses' => 'ContactMessageController@store',
+    'as' => 'contact.store'
+]);
