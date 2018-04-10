@@ -2,6 +2,14 @@
 
 @section('main')
 <div id="container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#profiili">Profiili</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#omatilmoitukset">Omat ilmoitukset</a>
+            </li>
+        </ul>
         <div class="tab-content">
             <div id="profiili" class="container tab-pane active"><br>
                 <h2>Omat tiedot</h2>
@@ -48,20 +56,19 @@
             </div>
             <br>
             <div id="omatilmoitukset" class="container tab-pane fade"><br>
-                <h2>Ilmoitus 1</h2>
-                    <h3>Ikkunoiden pesu</h3>
-                    <p>Kategoria<br>
-                    <br>
-                    Tarjoan....... </p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ilmoituksenpoisto">Poista ilmoitus</button>
-                <hr>
-                <h2>Ilmoitus 2</h2>
-                    <h3>Talvirenkaiden vaihto</h3>
-                    <p>Kategoria<br>
-                    <br>
-                    Etsitään renkaidenvaihtajaa....... </p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ilmoituksenpoisto">Poista ilmoitus</button>
-                <br>
+                
+                
+                            @foreach($user->posts as $post)
+                                <article>
+                                <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
+                                <p class="box">{{$post->body}}<br>
+                                {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
+                                {!!Form::close()!!}
+                                </p>
+                                </article>
+                            @endforeach
             </div>
         </div>
     </div>
