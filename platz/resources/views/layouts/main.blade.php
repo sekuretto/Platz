@@ -329,23 +329,25 @@
             </button>
           </div>
           <div class="modal-body">
-              <form>
+              <form action="{{ url('contact') }}" method="post">
+                  {{ csrf_field() }}
                     <div class="form-group col-md-6">
                          <label for="staticEmail">Otsikko </label>
-                         <input type="text" class="form-control" id="staticEmail">
+                         <input name="subject" type="text" class="form-control" id="staticEmail">
                     </div>
                     <div class="form-group col-md-6">
                          <label for="staticEmail">Sähköpostiosoitteesi </label>
-                         <input type="text" class="form-control" id="staticEmail">
+                         <input name="email" type="text" class="form-control" id="staticEmail">
                      </div>
                         <div class="form-group col-md-7">Kerro palautteesi
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
                         </div>
+                  <button type="submit" class="btn btn-primary">Lähetä palaute</button>
                 </form>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Lähetä palaute</button>
+            
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
           </div>
         </div>
