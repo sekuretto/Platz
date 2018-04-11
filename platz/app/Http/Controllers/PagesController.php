@@ -41,14 +41,14 @@ class PagesController extends Controller
     }
     
     public function getContact() {
-        return view('pages.contact');
+        return view('contact');
     }
     
     public function postContact(Request $request) {
         $this->validate($request, [
             'email' => 'required|email',
             'subject' => 'min:3',
-            'message' => 'min:10']);
+            'message' => 'min:5']);
         
         $data = array(
         'email' => $request->email,
@@ -57,7 +57,7 @@ class PagesController extends Controller
         );
         
         Mail::send('emails.contact', $data, function($message) use ($data){
-            $message->from($data['email']);
+            $message->to($data['email']);
             $message->subject($data['subject']);
         });
     }
