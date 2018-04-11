@@ -18,7 +18,8 @@ body {
 
 header {
     margin: auto;
-
+    float:left;
+    width: 30%;
 }
 header img {
     margin: auto;
@@ -69,18 +70,17 @@ header img {
 }
 
 navbar {
-    align-content: center;
+
     padding: 10px;
     right: 0;
     height: auto;
-    padding-bottom: 20px;
     margin: auto;
-    order:1;
+    
+    float:right;
 }
 
 .nav {
     cursor: pointer;
-    
 }
 
 .nav .btn {
@@ -121,28 +121,22 @@ aside {
     letter-spacing: 0.1em;
 }
 
-menu {
+.menu {
     width: 20%;
-    margin: 0 0 0 3px;
-    padding-right: 10px;
-    /*position: relative;*/
+    
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    margin: 10px;
+    float:left;
 }
 
-
-/*
 .menu.responsive a {
     float: none;
     display: block;
     text-align: left;
 }
-.menu {
-    width: 20%;
-    order: 4;
-    overflow: hidden;
-    display: block;
-    text-decoration: none;
-    margin: 10px;
-}
+
 .menu .btn {
     width:100%;
 }
@@ -160,18 +154,22 @@ menu {
 .menu .icon {
     display: none;
 }
-
-*/
+.menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
 
 #container {
     margin-right: 5%;
     margin-bottom: 20px;
     width: 65%;
     height: auto;   
-    float: right;
+    float: left;
     color: black;
     height: 100%;
     cursor: pointer;
+    order:5;
 }
 
 article {
@@ -239,9 +237,10 @@ head {
     }   
     navbar {
         order:1;
+        width: 100%;
     }
     
-    /*.menu {
+    .menu {
         order: 4;
          height: auto;
     }
@@ -265,7 +264,7 @@ head {
     .menu a.icon {
         float: right;
         display: block;
-    }*/
+    }
     
 }
 
@@ -273,12 +272,19 @@ head {
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
       width: 100%;
-      height: 250px;
       margin: auto;
   }
-    header {
-        order:2;
+    .menu, aside {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-content: center;
         display: block;
+        vertical-align: middle;
+    }
+    header {
+        display: block;
+        width: 100%;
     }
     navbar {
         padding: 10px;
@@ -290,28 +296,25 @@ head {
         order: 1;
         background-color: ghostwhite;
         }
-    
-    menu {
-        order: 4;
-        align-content: center;
-    }
+   
     #container {
         width:100%;
         float: left;
-        left: 2;
         right: 0;
         overflow: auto;
-        padding-left: 20%;
-        margin-left: 10%;
         order:5;
     }
-    footer {
-        order: -1;
+    article {
+        width: 100%;
+        float:left;
     }
     
-    /*.menu {
+    
+    .menu {
         order: 4;
-         height: auto;
+        height: auto;
+        width: 100%;
+        align-content: center;
     }
     
     .menu.responsive {
@@ -333,7 +336,7 @@ head {
     .menu a.icon {
         float: right;
         display: block;
-    }*/
+    }
     
 }
 

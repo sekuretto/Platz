@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
 </head>
 <body>
+    <div class="page">
     <!-- Yläpalkki -->
-    <div class="row">
+ 
         <header>
             <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
@@ -35,7 +36,7 @@
                 @endguest
             </div>
         </navbar>
-    </div>
+ 
     <!-- JUMBO -->
     <aside>
         <div class="jumbotron jumbotron-fluid" id="jumbo">
@@ -57,13 +58,13 @@
     </aside>
          
     <!-- Kategoriat -->
-    <menu class="btn-group-vertical">
-        <button type="button" class="btn btn-secondary">Myy</button>
-        <button type="button" class="btn btn-secondary">Osta</button>
-        <button type="button" class="btn btn-secondary">Vaihda</button>
+    <div class="menu" id="myTopnav">
+        <a class="btn btn-secondary">Myy</a>
+        <a class="btn btn-secondary">Osta</a>
+        <a type="button" class="btn btn-secondary">Vaihda</a>
         <div id="search" class="form-control mr-sm-2" type="search" placeholder="Hae" aria-label="Search">
-        <input id="input" placeholder="Hae" aria-label="Search"><img id="icon" src="<?php echo asset('images/search-icon.png')?>"></div>
-    </menu>      
+        <a><input id="input" placeholder="Hae" aria-label="Search"><img id="icon" src="<?php echo asset('images/search-icon.png')?>"></a></div>
+    </div>      
     
     <!-- Container -->
     <div id="container">
@@ -91,7 +92,7 @@
         <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
         @endguest
     </footer>
-    
+    </div>
           
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -99,9 +100,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="<?php echo asset('js/jquery.js')?>"></script>
+    <!-- RESPONSIIVINEN MENU -->    
     <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "menu") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "menu";
+                }
+            }
+    </script>
     
-
+    <script>
     $(document).ready(function() {
     /*Piilottaa box-elementin*/
     $(".box").hide();
