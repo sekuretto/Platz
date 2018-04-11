@@ -37,11 +37,5 @@ Route::resource('profiles', 'ProfileController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/contact', [
-    'uses' => 'ContactMessageController@create'
-]);
-Route::get('/contact', [
-    'uses' => 'ContactMessageController@store',
-    'as' => 'contact.store'
-]);
+Route::get('contact', 'PagesController@getContact');
+Route::post('contact', 'PagesController@postContact');

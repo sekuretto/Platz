@@ -21,18 +21,18 @@
         </header>
         <navbar class="col-7">
             <div class="nav">
-                @guest
+                <?php if(auth()->guard()->guest()): ?>
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
                     <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
-                @else
-                    <a class="col" href="/profiles/{{ Auth::user()->id }}" style="margin-left: 100px">Profiili</a>
-                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                <?php else: ?>
+                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
+                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                                <?php echo csrf_field(); ?>
                         </form>          
-                @endguest
+                <?php endif; ?>
             </div>
         </navbar>
     </div>
@@ -40,18 +40,18 @@
     <aside>
         <div class="jumbotron jumbotron-fluid" id="jumbo">
             
-                @guest
+                <?php if(auth()->guard()->guest()): ?>
             <div class="container">
                 <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
                 <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
                 
             </div>
-                @else
+                <?php else: ?>
             <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa, <?php echo e(Auth::user()->name); ?>!</h1>
                 </div>
-                @endguest
-             @include('inc.messages')
+                <?php endif; ?>
+             <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             
         </div>
     </aside>
@@ -67,7 +67,7 @@
     
     <!-- Container -->
     <div id="container">
-    @yield('main')
+    <?php echo $__env->yieldContent('main'); ?>
         <!--<nav aria-label="Page navigation example" class="sivut">
               <ul class="pagination justify-content-end">
                 <li class="page-item disabled">
@@ -85,11 +85,11 @@
     </div>
     
     <footer>
-        @guest
+        <?php if(auth()->guard()->guest()): ?>
         <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        @else
+        <?php else: ?>
         <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        @endguest
+        <?php endif; ?>
     </footer>
     
           
@@ -128,25 +128,43 @@
         </button>
       </div>
       <div class="modal-body">
-        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+<<<<<<< HEAD
+        <?php echo Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']); ?>
+=======
+        <?php echo Form::open(['action' => 'PostsController@store', 'method' => 'POST']); ?>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
+
             <div class="form-group row">
-                {{Form::label('title', 'Otsikko')}}
-                {{Form::text('title', '', ['class' => 'form-control'])}}
+                <?php echo e(Form::label('title', 'Otsikko')); ?>
+
+                <?php echo e(Form::text('title', '', ['class' => 'form-control'])); ?>
+
             </div>
             <div class="form-group row">
-                {{Form::label('body', 'Ilmoituksen sisältö')}}
-                {{Form::textarea('body', '', ['class' => 'form-control'])}}
+                <?php echo e(Form::label('body', 'Ilmoituksen sisältö')); ?>
+
+                <?php echo e(Form::textarea('body', '', ['class' => 'form-control'])); ?>
+
             </div>
             <div class="form-group row">
-                {{Form::label('category', 'Kategoria')}}
-                {{Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])}}
+                <?php echo e(Form::label('category', 'Kategoria')); ?>
+
+                <?php echo e(Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])); ?>
+
             </div>
+<<<<<<< HEAD
             <div class="form-group row">
-                {{Form::label('img', 'Lataa kuva')}}
-                {{Form::file('img', null,  ['class' => 'form-control'])}}
+                <?php echo e(Form::label('img', 'Lataa kuva')); ?>
+
+                <?php echo e(Form::file('img', null,  ['class' => 'form-control'])); ?>
+
             </div>
-                {{Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])}}
-        {!! Form::close() !!}
+=======
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
+                <?php echo e(Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])); ?>
+
+        <?php echo Form::close(); ?>
+
 
       </div>
       <!--<div class="modal-footer">
@@ -169,67 +187,67 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <form method="POST" action="{{ route('register') }}">
-                        @csrf
+        <form method="POST" action="<?php echo e(route('register')); ?>">
+                        <?php echo csrf_field(); ?>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nimi') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Nimi')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control<?php echo e($errors->has('name') ? ' is-invalid' : ''); ?>" name="name" value="<?php echo e(old('name')); ?>" required autofocus>
 
-                                @if ($errors->has('name'))
+                                <?php if($errors->has('name')): ?>
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong><?php echo e($errors->first('name')); ?></strong>
                                     </span>
-                                @endif
+                                <?php endif; ?>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('S-Postiosoite') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('S-Postiosoite')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?>" name="email" value="<?php echo e(old('email')); ?>" required>
 
-                                @if ($errors->has('email'))
+                                <?php if($errors->has('email')): ?>
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong><?php echo e($errors->first('email')); ?></strong>
                                     </span>
-                                @endif
-                            </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Kotikaupunki') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="city" type="city" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ old('city') }}" required>
-
-                                @if ($errors->has('city'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                                @endif
+                                <?php endif; ?>
                             </div>
                         </div>
                         
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Salasana') }}</label>
+                            <label for="city" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Kotikaupunki')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="city" type="city" class="form-control<?php echo e($errors->has('city') ? ' is-invalid' : ''); ?>" name="city" value="<?php echo e(old('city')); ?>" required>
 
-                                @if ($errors->has('password'))
+                                <?php if($errors->has('city')): ?>
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong><?php echo e($errors->first('city')); ?></strong>
                                     </span>
-                                @endif
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Salasana')); ?></label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?>" name="password" required>
+
+                                <?php if($errors->has('password')): ?>
+                                    <span class="invalid-feedback">
+                                        <strong><?php echo e($errors->first('password')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Vahvista salasana') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Vahvista salasana')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -240,7 +258,8 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Luo tunnus') }}
+                                    <?php echo e(__('Luo tunnus')); ?>
+
                                 </button>
                             </div>
                         </div>
@@ -261,34 +280,34 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <form method="POST" action="{{ route('login') }}">
-                        @csrf
+        <form method="POST" action="<?php echo e(route('login')); ?>">
+                        <?php echo csrf_field(); ?>
 
                         <div class="form-group row">
-                            <label for="name" class="col-sm-4 col-form-label text-md-right">{{ __('Käyttäjänimi') }}</label>
+                            <label for="name" class="col-sm-4 col-form-label text-md-right"><?php echo e(__('Käyttäjänimi')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="name" class="form-control<?php echo e($errors->has('name') ? ' is-invalid' : ''); ?>" name="name" value="<?php echo e(old('name')); ?>" required autofocus>
 
-                                @if ($errors->has('name'))
+                                <?php if($errors->has('name')): ?>
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong><?php echo e($errors->first('name')); ?></strong>
                                     </span>
-                                @endif
+                                <?php endif; ?>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Salasana') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Salasana')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?>" name="password" required>
 
-                                @if ($errors->has('password'))
+                                <?php if($errors->has('password')): ?>
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong><?php echo e($errors->first('password')); ?></strong>
                                     </span>
-                                @endif
+                                <?php endif; ?>
                             </div>
                         </div>
 
@@ -296,7 +315,8 @@
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Muista minut') }}
+                                        <input type="checkbox" name="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>> <?php echo e(__('Muista minut')); ?>
+
                                     </label>
                                 </div>
                             </div>
@@ -305,11 +325,13 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Kirjaudu') }}
+                                    <?php echo e(__('Kirjaudu')); ?>
+
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Unhoititko salasanasi?') }}
+                                <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                    <?php echo e(__('Unhoititko salasanasi?')); ?>
+
                                 </a>
                             </div>
                         </div>
@@ -329,8 +351,10 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="{{ url('contact') }}" method="post">
-                  {{ csrf_field() }}
+<<<<<<< HEAD
+              <form action="<?php echo e(url('contact')); ?>" method="post">
+                  <?php echo e(csrf_field()); ?>
+
                     <div class="form-group col-md-6">
                          <label for="staticEmail">Otsikko </label>
                          <input name="subject" type="text" class="form-control" id="staticEmail">
@@ -343,11 +367,29 @@
                             <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
                         </div>
                   <button type="submit" class="btn btn-primary">Lähetä palaute</button>
+=======
+              <form>
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Otsikko </label>
+                         <input type="text" class="form-control" id="staticEmail">
+                    </div>
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Sähköpostiosoitteesi </label>
+                         <input type="text" class="form-control" id="staticEmail">
+                     </div>
+                        <div class="form-group col-md-7">Kerro palautteesi
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+                        </div>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
                 </form>
 
           </div>
           <div class="modal-footer">
+<<<<<<< HEAD
             
+=======
+            <button type="button" class="btn btn-primary">Lähetä palaute</button>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
           </div>
         </div>
