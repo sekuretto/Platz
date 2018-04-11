@@ -128,7 +128,11 @@
         </button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
         <?php echo Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']); ?>
+=======
+        <?php echo Form::open(['action' => 'PostsController@store', 'method' => 'POST']); ?>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
 
             <div class="form-group row">
                 <?php echo e(Form::label('title', 'Otsikko')); ?>
@@ -148,12 +152,15 @@
                 <?php echo e(Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])); ?>
 
             </div>
+<<<<<<< HEAD
             <div class="form-group row">
                 <?php echo e(Form::label('img', 'Lataa kuva')); ?>
 
                 <?php echo e(Form::file('img', null,  ['class' => 'form-control'])); ?>
 
             </div>
+=======
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
                 <?php echo e(Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])); ?>
 
         <?php echo Form::close(); ?>
@@ -344,6 +351,7 @@
             </button>
           </div>
           <div class="modal-body">
+<<<<<<< HEAD
               <form action="<?php echo e(url('contact')); ?>" method="post">
                   <?php echo e(csrf_field()); ?>
 
@@ -359,11 +367,29 @@
                             <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
                         </div>
                   <button type="submit" class="btn btn-primary">Lähetä palaute</button>
+=======
+              <form>
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Otsikko </label>
+                         <input type="text" class="form-control" id="staticEmail">
+                    </div>
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Sähköpostiosoitteesi </label>
+                         <input type="text" class="form-control" id="staticEmail">
+                     </div>
+                        <div class="form-group col-md-7">Kerro palautteesi
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+                        </div>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
                 </form>
 
           </div>
           <div class="modal-footer">
+<<<<<<< HEAD
             
+=======
+            <button type="button" class="btn btn-primary">Lähetä palaute</button>
+>>>>>>> b5894cbd8c92bbdbb030f6762680a8cc090cecd8
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
           </div>
         </div>
