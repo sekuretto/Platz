@@ -128,7 +128,7 @@
         </button>
       </div>
       <div class="modal-body">
-        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+        {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group row">
                 {{Form::label('title', 'Otsikko')}}
                 {{Form::text('title', '', ['class' => 'form-control'])}}
@@ -140,6 +140,10 @@
             <div class="form-group row">
                 {{Form::label('category', 'Kategoria')}}
                 {{Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])}}
+            </div>
+            <div class="form-group row">
+                {{Form::label('img', 'Lataa kuva')}}
+                {{Form::file('img', null,  ['class' => 'form-control'])}}
             </div>
                 {{Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])}}
         {!! Form::close() !!}

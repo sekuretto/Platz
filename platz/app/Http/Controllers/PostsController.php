@@ -47,6 +47,10 @@ class PostsController extends Controller
             'body' => 'required',
             'category' => 'required'
         ]);
+        if($request->hasFile('img')){
+            
+            
+        }
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
