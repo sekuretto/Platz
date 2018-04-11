@@ -68,7 +68,6 @@
                                     {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
                                 {!!Form::close()!!}
                                 </p>
-                                <img src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva">
                                 </article>
                             @endforeach
             </div>
