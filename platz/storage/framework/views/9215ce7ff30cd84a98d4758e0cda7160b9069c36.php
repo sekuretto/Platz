@@ -80,6 +80,7 @@
                                 <?php echo Form::close(); ?>
 
                                 </p>
+                                <img src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva">
                                 </article>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
