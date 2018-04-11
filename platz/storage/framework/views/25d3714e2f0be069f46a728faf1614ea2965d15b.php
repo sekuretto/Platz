@@ -12,7 +12,7 @@
             <p class="box"><?php echo e($post->body); ?><br>
             <b>Sähköposti: <?php echo e($post->user->email); ?></b><br>
             <b>Kotikaupunki: <?php echo e($post->user->city); ?></b><br>
-                <img src="storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva">
+            <img src="storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva">
             </p>
             
             </article>
