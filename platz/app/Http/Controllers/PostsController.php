@@ -47,10 +47,21 @@ class PostsController extends Controller
             'body' => 'required',
             'category' => 'required'
         ]);
+        if($request->hasFile('img')){
+            $name = Auth::user()->name;
+            $filenameWithExt = $request->file('img')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('img')->getClientOriginalExtension();
+            $filenamestored = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('img')->storeAs('public/'.$name, $filenamestored);
+        }
+        else {
+            $filenamestored = 'noimage.png';
+        }
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->image = 'putty';
+        $post->image = $filenamestored;
         $post->category = $request->input('category');
         $post->user_id = Auth::user()->id;
         $post->save();
