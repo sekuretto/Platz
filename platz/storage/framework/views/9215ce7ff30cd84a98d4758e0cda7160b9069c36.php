@@ -70,7 +70,7 @@
                                 <article>
                                 <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
                                 <p class="box"><?php echo e($post->body); ?><br>
-                                <img src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva">
+                                <img class="img-fluid" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva">
                                 <?php echo Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
 
                                     <?php echo e(Form::hidden('_method', 'DELETE')); ?>

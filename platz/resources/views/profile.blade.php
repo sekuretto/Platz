@@ -62,7 +62,7 @@
                                 <article>
                                 <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
                                 <p class="box">{{$post->body}}<br>
-                                <img src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva">
+                                <img class="img-fluid" src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva">
                                 {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
                                     {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
