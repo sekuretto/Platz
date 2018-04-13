@@ -355,7 +355,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="<?php echo e(url('contact')); ?>" method="post">
+              <form action="<?php echo e(url('contact')); ?>" method="POST">
                   <?php echo e(csrf_field()); ?>
 
                     <div class="form-group col-md-6">

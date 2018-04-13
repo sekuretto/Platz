@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Mail;
 use App\Post;
+use Mail;
 
 class PagesController extends Controller
 {
@@ -29,7 +29,8 @@ class PagesController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'subject' => 'min:3',
-            'message' => 'min:5']);
+            'message' => 'min:5'
+        ]);
         
         $data = array(
         'email' => $request->email,
@@ -38,8 +39,10 @@ class PagesController extends Controller
         );
         
         Mail::send('emails.contact', $data, function($message) use ($data){
-            $message->to($data['email']);
+            $message->from($data['email']);
+            $message->to('hello@moi.fi');
             $message->subject($data['subject']);
         });
+         
     }
 }

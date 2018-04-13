@@ -340,7 +340,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="{{ url('contact') }}" method="post">
+              <form action="{{ url('contact') }}" method="POST">
                   {{ csrf_field() }}
                     <div class="form-group col-md-6">
                          <label for="staticEmail">Otsikko </label>
