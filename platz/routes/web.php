@@ -10,10 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('aboutesim', 'PagesController@about');
-Route::get('aboutesim2', 'PagesController@about2');
+
 Route::get('add2', 'PagesController@add2');
 Route::get('/profiles/{id}', 'ProfileController@show');
+
+Route::get('vaihto', 'PagesController@vaihto');
+Route::get('myynti', 'PagesController@myynti');
+Route::get('osto', 'PagesController@osto');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');
