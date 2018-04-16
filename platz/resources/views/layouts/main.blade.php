@@ -62,8 +62,14 @@
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        <div id="search" class="form-control mr-sm-2" type="search" placeholder="Hae" aria-label="Search">
-        <a><input id="input" placeholder="Hae" aria-label="Search"><img id="icon" src="<?php echo asset('images/search-icon.png')?>"></a></div>
+        {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
+
+                {{Form::text('haku', '', ['class' => 'form-control'])}}
+
+                {{Form::submit('Hae', ['class' => 'btn btn-primary'])}}
+                
+        {!! Form::close() !!}
+
     </div>      
     
     <!-- Container -->

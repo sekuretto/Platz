@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('main'); ?>
 <div class="container">
-    <h3>Ilmoitukset: Myynti</h3>
+    <h3>Ilmoitukset: Myydään</h3>
     <hr>
     <?php if(count($posts) >= 1): ?>
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

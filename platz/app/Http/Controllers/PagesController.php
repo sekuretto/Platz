@@ -9,16 +9,21 @@ use Mail;
 class PagesController extends Controller
 {
     public function myynti() {  
-        $posts = Post::all();
+        $posts = Post::where('category', 'myynti')->get();
         return view('myynti')->with('posts', $posts);
     }
     public function osto() {
-        $posts = Post::all();
+        $posts = Post::where('category', 'osto')->get();
         return view('osto')->with('posts', $posts);
     }
     public function vaihto() {
-        $posts = Post::all();
+        $posts = Post::where('category', 'vaihto')->get();
         return view('vaihto')->with('posts', $posts);
+    }
+    public function haku(Request $request) {
+        $haku = $request->input('haku');
+        $posts = Post::where('body', 'like', '%' . $haku . '%')->orWhere('title', 'like', '%' . $haku . '%')->get();
+        return view('haku')->with('posts', $posts);;
     }
     
     public function getContact() {

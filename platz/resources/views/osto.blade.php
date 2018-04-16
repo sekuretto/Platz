@@ -2,7 +2,7 @@
 
 @section('main')
 <div class="container">
-    <h3>Ilmoitukset: Osto</h3>
+    <h3>Ilmoitukset: Ostetaan</h3>
     <hr>
     @if(count($posts) >= 1)
         @foreach($posts as $post)
