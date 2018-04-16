@@ -1,7 +1,7 @@
 @extends('layouts.main');
 
 @section('main')
-<div id="container">
+<div id="containerprofile">
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#profiili">Profiili</a>
@@ -17,14 +17,14 @@
                 <h5>Kaupunki: {{ $user->city }}</h5>
                 <hr>
                         <h2>Muokkaa omia tietojasi</h2>
-                    {!! Form::open(['action' => ['ProfileController@update', Auth::user()->id], 'method' => 'POST']) !!}
+                    {!! Form::open(['action' => ['ProfileController@update', $user->id], 'method' => 'POST']) !!}
                         <div class="form-group">
                         {{Form::label('email', 'Sähköposti')}}
-                        {{Form::text('email', Auth::user()->email, ['class' => 'form-control'])}}
+                        {{Form::text('email', $user->email, ['class' => 'form-control'])}}
                         </div>
                         <div class="form-group">
                         {{Form::label('city', 'Kotikaupunki')}}
-                        {{Form::text('city', Auth::user()->city, ['class' => 'form-control'])}}
+                        {{Form::text('city', $user->city, ['class' => 'form-control'])}}
                         </div>
                         {{Form::hidden('_method','PUT')}}
                         {{Form::submit('Tallenna muutokset', ['class' => 'btn btn-primary'])}}
@@ -61,14 +61,22 @@
                             @foreach($user->posts as $post)
                                 <article>
                                 <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
-                                <p class="box">{{$post->body}}<br>
-                                <img class="img-fluid" src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva">
-                                {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                    {{Form::hidden('_method', 'DELETE')}}
-                                    {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
-                                {!!Form::close()!!}
-                                </p>
+                                <hr>
+                                <div class="box">{{$post->body}}<br>
+                                    @if($post->image == 'noimage.png')
+                                        <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
+                                    @else
+                                        <img class="img-fluid articleimg" src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva"><br>
+                                    @endif
+                                    <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
+                                    <p><b>Kotikaupunki: {{$post->user->city}}</b></p>  
+                                    {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                        {{Form::hidden('_method', 'DELETE')}}
+                                        {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
+                                    {!!Form::close()!!}
+                                </div>
                                 </article>
+                                <br>
                             @endforeach
             </div>
         </div>

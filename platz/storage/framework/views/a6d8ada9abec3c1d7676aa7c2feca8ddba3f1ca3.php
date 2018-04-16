@@ -58,7 +58,8 @@
     </aside>
          
     <!-- Kategoriat -->
-    <div class="menu" id="myTopnav">
+    <?php echo $__env->yieldContent('nav'); ?>
+    <!--<div class="menu" id="myTopnav">
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
@@ -74,7 +75,7 @@
         <?php echo Form::close(); ?>
 
 
-    </div>      
+    </div>     --> 
     
     <!-- Container -->
     <div id="container">

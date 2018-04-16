@@ -168,7 +168,14 @@ aside {
     float: left;
     color: black;
     height: 100%;
-    cursor: pointer;
+    order:5;
+}
+#containerprofile {
+    margin: auto;
+    width: 65%;
+    height: auto;   
+    color: black;
+    height: 100%;
     order:5;
 }
 
@@ -186,7 +193,13 @@ article {
 }
 
 article h3 {
-    
+    cursor: pointer;
+}
+.articleimg {
+    margin: auto;
+    width: 350px;
+    display: block;
+    margin: 20 auto;
 }
 .sivut
 {
