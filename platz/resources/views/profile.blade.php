@@ -70,7 +70,7 @@
                                     @endif
                                     <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                                     <p><b>Kotikaupunki: {{$post->user->city}}</b></p>  
-                                    {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                         {{Form::hidden('_method', 'DELETE')}}
                                         {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
                                     {!!Form::close()!!}

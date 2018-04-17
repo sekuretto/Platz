@@ -18,6 +18,7 @@ Route::get('vaihto', 'PagesController@vaihto');
 Route::get('myynti', 'PagesController@myynti');
 Route::get('osto', 'PagesController@osto');
 Route::post('haku', 'PagesController@haku');
+Route::delete('{postid}', 'PostsController@destroy');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');

@@ -78,7 +78,7 @@
                                     <?php endif; ?>
                                     <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                                     <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p>  
-                                    <?php echo Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
+                                    <?php echo Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
 
                                         <?php echo e(Form::hidden('_method', 'DELETE')); ?>
 

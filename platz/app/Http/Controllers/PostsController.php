@@ -122,6 +122,6 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $post->delete();
-        return redirect('/profiles/{id}', 'Ilmoitus poistettu');
+        return redirect('/profiles/'.Auth::user()->id)->with('success', 'Ilmoitus poistettu.');
     }
 }
