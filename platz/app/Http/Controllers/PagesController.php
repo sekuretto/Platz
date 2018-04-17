@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Mail;
+use Storage;
 
 class PagesController extends Controller
 {
@@ -31,7 +32,27 @@ class PagesController extends Controller
     }
     
     public function postContact(Request $request) {
+        
         $this->validate($request, [
+            'email' => 'required|email',
+            'subject' => 'min:3',
+            'message' => 'min:5'
+        ]);
+        
+        $email = $request->input('email');
+        $subject = $request->input('subject');
+        $message = $request->input('message');
+        
+        Storage::put('palaute'.time().'.txt', 'Otsikko: '.$subject.', Email: '.$email.', Palaute: '.$message);
+        return redirect('/')->with('success','Palaute lähetetty onnistuneesti.');
+         
+    }
+}
+
+
+/* 
+
+$this->validate($request, [
             'email' => 'required|email',
             'subject' => 'min:3',
             'message' => 'min:5'
@@ -48,6 +69,5 @@ class PagesController extends Controller
             $message->to('hello@moi.fi');
             $message->subject($data['subject']);
         });
-         
-    }
-}
+
+*/
