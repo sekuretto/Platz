@@ -22,7 +22,7 @@ class PagesController extends Controller
     }
     public function haku(Request $request) {
         $haku = $request->input('haku');
-        $posts = Post::where('body', 'like', '%' . $haku . '%')->orWhere('title', 'like', '%' . $haku . '%')->get();
+        $posts = Post::where('body', 'like', '%' . $haku . '%')-orWhere('title', 'like', '%' . $haku . '%')->get();
         return view('haku')->with('posts', $posts)->with('haku', $haku);
     }
     
