@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Mail;
 use Storage;
+use Illuminate\Validation\Validator;
 
 class PagesController extends Controller
 {
@@ -64,6 +65,21 @@ class PagesController extends Controller
         return redirect('/')->with('success','Ilmianto lähetetty onnistuneesti.');
         
     }
+    
+    public function sendpsw(Request $request) {
+        
+        $this->validate($request, [
+            'resetemail' => 'required|email'
+        ]);
+        
+        $email = $request->input('resetemail');
+        
+        Storage::put('resetointi'.time().'.txt', 'Sähköposti: '.$email);
+        return redirect('/')->with('success','Sähköposti lähetetty onnistuneesti.');
+        
+        
+    }
+   
 }
 
 
@@ -86,5 +102,8 @@ $this->validate($request, [
             $message->to('hello@moi.fi');
             $message->subject($data['subject']);
         });
+        
+        
+        
 
 */

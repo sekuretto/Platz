@@ -327,7 +327,7 @@
                                     {{ __('Kirjaudu') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" data-toggle="modal" data-target="#reset">
                                     {{ __('Unhoititko salasanasi?') }}
                                 </a>
                             </div>
@@ -372,6 +372,37 @@
         </div>
       </div>       
     </div>
+    <!-- RESET PASSWORD -->
+    <div class="modal hide fade" tabindex="-1" role="dialog" id="reset">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Lähetä salasana sähköpostiin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form action="{{ url('sendpsw') }}" method="POST">
+                  {{ csrf_field() }}
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Sähköpostiosoitteesi </label>
+                         <input name="resetemail" type="text" class="form-control" id="staticEmail">
+                     </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Lähetä salasana sähköpostiin</button>
+            
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+                    </div>
+                  
+                </form>
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+    
 </body>
 
 </html>
