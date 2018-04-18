@@ -19,9 +19,10 @@ class PostsController extends Controller
      */
     public function index()
     {
+        $foo = 5;
         $posts = Post::all();
         $posts = Post::orderBy('created_at', 'desc')->get();
-        return view('welcome')->with('posts', $posts);
+        return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
 
     /**

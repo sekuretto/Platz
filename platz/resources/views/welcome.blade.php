@@ -10,6 +10,8 @@
     <h3>Vaihto</h3>
     @elseif($foo == 4)
     <h3>Tulokset haulla <b>{{$haku}}</b></h3>
+    @elseif($foo == 5)
+    <h3>Kaikki ilmoitukset</h3>
     @endif
     <hr>
     @if(count($posts) >= 1)

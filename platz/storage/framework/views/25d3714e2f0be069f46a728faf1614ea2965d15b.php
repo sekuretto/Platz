@@ -10,6 +10,8 @@
     <h3>Vaihto</h3>
     <?php elseif($foo == 4): ?>
     <h3>Tulokset haulla <b><?php echo e($haku); ?></b></h3>
+    <?php elseif($foo == 5): ?>
+    <h3>Kaikki ilmoitukset</h3>
     <?php endif; ?>
     <hr>
     <?php if(count($posts) >= 1): ?>
