@@ -44,3 +44,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('contact', 'PagesController@getContact');
 Route::post('contact', 'PagesController@postContact');
+Route::post('report', 'PagesController@report');

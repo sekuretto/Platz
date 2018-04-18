@@ -28,48 +28,49 @@
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 
-                <a data-toggle="modal" data-target="#ilmianna">Ilmianna ilmoitus</a>
+                <a data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline">Ilmianna ilmoitus</a>
             </div>
             </article>
             <br>
+    <div class="modal" id="{{$post->id}}" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Ilmianna ilmoitus: {{ $post->title }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  {!! Form::open(['action' => 'PagesController@report', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+
+                            <div class="form-group">
+                                {{Form::label('reason', 'Valitse ilmiannon tyyppi')}}
+                {{Form::select('reason', ['Valitse' => 'Valitse', 'Laiton' => 'Laiton', 'Sopimaton' => 'Sopimaton', 'Vilpillinen' => 'Vilpillinen', 'Muu syy' => 'Muu syy'])}}
+                            </div>
+                            <div class="form-group">
+                                {{Form::label('body', 'Lisätietoja')}}
+                                {{Form::textarea('body', '', ['class' => 'form-control'])}}
+                                {{Form::textarea('id', $post->id, ['style' => 'display:none'])}}
+                                {{Form::textarea('title', $post->title, ['style' => 'display:none'])}}
+                                {{Form::textarea('postBody', $post->body, ['style' => 'display:none'])}}
+                            </div>
+                  
+
+              </div>
+              <div class="modal-footer">
+                  {{Form::submit('Lähetä ilmianto', ['class' => 'btn btn-primary'])}}
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+              </div>
+                {!! Form::close() !!}
+            </div>
+      </div>
+</div>
         @endforeach
     @else
         <p>NO POSTS</p>
     @endif
-    <div class="modal" id="ilmianna" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Ilmianna</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <form>
-                    <div class="form-group col-md-6">
-                        <label for="inputState">Valitse ilmiannon tyyppi</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Valitse vaihtoehdoista</option>
-                            <option>Laiton</option>
-                            <option>Sopimaton</option>
-                            <option>Vilpillinen</option>
-                            <option>Muu syy</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-5">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Lisätietoja"></textarea>
-                    </div>
-            </form>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Lisää ilmoitus</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
-      </div>
-    </div>
-  </div>
-</div>
 @endsection
 @section('nav')
 <div class="menu" id="myTopnav">
@@ -86,4 +87,3 @@
 
 </div>  
 @endsection
-    

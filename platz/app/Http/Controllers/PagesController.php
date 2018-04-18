@@ -51,6 +51,19 @@ class PagesController extends Controller
         return redirect('/')->with('success','Palaute lähetetty onnistuneesti.');
          
     }
+    
+    public function report(Request $request) {
+        
+        $reason = $request->input('reason');
+        $body = $request->input('body');
+        $id = $request->input('id');
+        $title = $request->input('title');
+        $postBody = $request->input('postBody');
+        
+        Storage::put('ilmianto'.time().'.txt', 'Ilmiannon syy: '.$reason.', Lisätietoja: '.$body.', ID: '.$id.', Ilmoituksen otsikko: '.$title.', Ilmoituksen teksti: '.$postBody);
+        return redirect('/')->with('success','Ilmianto lähetetty onnistuneesti.');
+        
+    }
 }
 
 
