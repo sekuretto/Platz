@@ -75,7 +75,6 @@ navbar {
     right: 0;
     height: auto;
     margin: auto;
-    
     float:right;
 }
 
@@ -263,6 +262,7 @@ head {
     
     .nav a {
         height: auto;
+        width: 100%;
         font-size: 12px;
         border: box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
     }
@@ -288,8 +288,6 @@ head {
         width: 100%;
         justify-content: center;
         align-content: center;
-        display: block;
-        vertical-align: middle;
     }
     
     .menu.responsive {
@@ -297,6 +295,7 @@ head {
     }
     .menu.responsive .icon {
         position: absolute;
+        display: block;
         right: 0;
         top: 0;
         color: black;
@@ -356,6 +355,7 @@ head {
     .nav a {
         height: auto;
         font-size: 20px;
+        width: 50%;
     }
    
     #container {
@@ -401,7 +401,7 @@ head {
     }
     .menu a.icon {
         float: right;
-        display: inline-block;
+        display: block;
         color: black;
     }
    
