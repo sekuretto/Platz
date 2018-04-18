@@ -28,7 +28,7 @@
                     <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 <?php else: ?>
-                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
                     <a class="col" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
@@ -114,14 +114,14 @@
     <script src="<?php echo asset('js/jquery.js')?>"></script>
     <!-- RESPONSIIVINEN MENU -->    
     <script>
-            
+         function myFunction() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "menu") {
                     x.className += " responsive";
                 } else {
                     x.className = "menu";
                 }
-            
+         }
     </script>
     
     <script>
