@@ -27,7 +27,8 @@
                     <img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva"><br>
                 <?php endif; ?>
                 <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
-                <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p>  
+                <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p> 
+                <a data-toggle="modal" data-target="#ilmianna">Ilmianna ilmoitus</a>
             </div>
             </article>
             <br>
@@ -35,6 +36,39 @@
     <?php else: ?>
         <p>NO POSTS</p>
     <?php endif; ?>
+    <div class="modal" id="ilmianna" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ilmianna</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Valitse ilmiannon tyyppi</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Valitse vaihtoehdoista</option>
+                            <option>Laiton</option>
+                            <option>Sopimaton</option>
+                            <option>Vilpillinen</option>
+                            <option>Muu syy</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Lisätietoja"></textarea>
+                    </div>
+            </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Lisää ilmoitus</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+      </div>
+    </div>
+  </div>
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('nav'); ?>
