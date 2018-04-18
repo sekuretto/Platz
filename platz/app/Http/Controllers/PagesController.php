@@ -10,21 +10,25 @@ use Storage;
 class PagesController extends Controller
 {
     public function myynti() {  
+        $foo = 1;
         $posts = Post::where('category', 'myynti')->get();
-        return view('myynti')->with('posts', $posts);
+        return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function osto() {
+        $foo = 2;
         $posts = Post::where('category', 'osto')->get();
-        return view('osto')->with('posts', $posts);
+        return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function vaihto() {
+        $foo = 3;
         $posts = Post::where('category', 'vaihto')->get();
-        return view('vaihto')->with('posts', $posts);
+        return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function haku(Request $request) {
+        $foo = 4;
         $haku = $request->input('haku');
-        $posts = Post::where('body', 'like', '%' . $haku . '%')-orWhere('title', 'like', '%' . $haku . '%')->get();
-        return view('haku')->with('posts', $posts)->with('haku', $haku);
+        $posts = Post::where('body', 'like', '%' . $haku . '%')->orWhere('title', 'like', '%' . $haku . '%')->get();
+        return view('welcome')->with('posts', $posts)->with('haku', $haku)->with('foo', $foo);
     }
     
     public function getContact() {

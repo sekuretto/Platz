@@ -2,7 +2,15 @@
 
 <?php $__env->startSection('main'); ?>
 <div class="container">
-    <h3>Kaikki ilmoitukset</h3>
+    <?php if($foo == 1): ?>
+    <h3>Myynti</h3>
+    <?php elseif($foo == 2): ?>
+    <h3>Osto</h3>
+    <?php elseif($foo == 3): ?>
+    <h3>Vaihto</h3>
+    <?php elseif($foo == 4): ?>
+    <h3>Tulokset haulla <b><?php echo e($haku); ?></b></h3>
+    <?php endif; ?>
     <hr>
     <?php if(count($posts) >= 1): ?>
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

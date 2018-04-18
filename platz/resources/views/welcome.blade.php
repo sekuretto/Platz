@@ -2,7 +2,15 @@
 
 @section('main')
 <div class="container">
-    <h3>Kaikki ilmoitukset</h3>
+    @if($foo == 1)
+    <h3>Myynti</h3>
+    @elseif($foo == 2)
+    <h3>Osto</h3>
+    @elseif($foo == 3)
+    <h3>Vaihto</h3>
+    @elseif($foo == 4)
+    <h3>Tulokset haulla <b>{{$haku}}</b></h3>
+    @endif
     <hr>
     @if(count($posts) >= 1)
         @foreach($posts as $post)
