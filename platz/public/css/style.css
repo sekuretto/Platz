@@ -299,6 +299,7 @@ head {
         position: absolute;
         right: 0;
         top: 0;
+        color: black;
     }
     .menu.responsive a {
         float: none;
@@ -310,7 +311,8 @@ head {
     }
     .menu a.icon {
         float: right;
-        display: block;
+        display: inline-block;
+        color: black;
     }
     
 }
@@ -385,6 +387,7 @@ head {
     }
     .menu.responsive .icon {
         position: absolute;
+        color:black;
         right: 0;
         top: 0;
     }
@@ -398,15 +401,9 @@ head {
     }
     .menu a.icon {
         float: right;
-        display: block;
+        display: inline-block;
+        color: black;
     }
    
     
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-  
-  }
 }
