@@ -75,16 +75,21 @@
 @section('nav')
 <div class="menu" id="myTopnav">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a style="display:block; visibility:hidden;">Menu</a>
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
+        <a>
+            {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
 
-                {{Form::text('haku', '', ['class' => 'form-control'])}}
+                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])}}
 
-                {{Form::submit('Hae kaikista ilmoituksista', ['class' => 'btn btn-primary'])}}
-                
-        {!! Form::close() !!}
+                    {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])}}
 
+
+            {!! Form::close() !!}
+        
+          
+        </a>
 </div>  
 @endsection
