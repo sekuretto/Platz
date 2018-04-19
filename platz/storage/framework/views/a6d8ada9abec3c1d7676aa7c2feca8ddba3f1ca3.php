@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
+   
+    <link rel="stylesheet" href="<?php echo e(URL::asset('css/style.css')); ?>" type="text/css">
 </head>
 <body>
     <div class="page">
@@ -21,16 +22,16 @@
         <header>
             <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
-        <navbar class="col-7">
+        <navbar>
             <div class="nav">
                 <?php if(auth()->guard()->guest()): ?>
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                    <a class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 <?php else: ?>
-                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
-                    <a class="col" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                    <a class="nappi" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
+                    <a class="nappi" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                 <?php echo csrf_field(); ?>
                         </form>          
@@ -51,6 +52,7 @@
                 <?php else: ?>
             <div class="container">
                 <h1 class="display-4" id="jumbo-h1">Tervetuloa, <?php echo e(Auth::user()->name); ?>!</h1>
+                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
                 </div>
                 <?php endif; ?>
              <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -98,46 +100,12 @@
     </div>
     
     <footer>
-        <?php if(auth()->guard()->guest()): ?>
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        <?php else: ?>
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        <?php endif; ?>
+        
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>       
     </footer>
     </div>
           
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="<?php echo asset('js/jquery.js')?>"></script>
-    <!-- RESPONSIIVINEN MENU -->    
-    <script>
-         function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "menu") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "menu";
-                }
-         }
-    </script>
-    
-    <script>
-    $(document).ready(function() {
-    /*Piilottaa box-elementin*/
-    $(".box").hide();
-    /*When article clicked, shows box-element*/
-    $(".subinfo").click(function() {
-        /*Finds closest box-element from article and shows it(animated)*/
-        $(this).closest("article").find(".box").slideToggle(200);     
-        
-    });
-    
-    
-});
-</script>
+
 
 <!-- IMLOITUSIKKUNA-->
 <div class="modal hide fade" data-focus-on="input:first" id="ilmoitus" tabindex="-1" role="dialog">
@@ -423,6 +391,40 @@
         </div>
       </div>       
     </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?php echo e(URL::asset('js/jquery.js')); ?>" type="text/javascript"></script>
+    
+    <!-- RESPONSIIVINEN MENU -->    
+    <script>
+         function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "menu") {
+                    x.className += "responsive";
+                } else {
+                    x.className = "menu";
+                }
+         }
+    </script>
+    
+    <script>
+    $(document).ready(function() {
+        /*Piilottaa box-elementin*/
+        $(".box").hide();
+        /*When article clicked, shows box-element*/
+        $(".subinfo").click(function() {
+            /*Finds closest box-element from article and shows it(animated)*/
+            $(this).closest("article").find(".box").slideToggle(200);     
+
+        });
+    
+    
+});
+</script>
     
 </body>
 

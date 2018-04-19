@@ -22,16 +22,16 @@
         <header>
             <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
-        <navbar class="col-7">
+        <navbar>
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                    <a class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
-                    <a class="col" href="/profiles/{{ Auth::user()->id }}" >Profiili</a>
-                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                    <a class="nappi" href="/profiles/{{ Auth::user()->id }}" >Profiili</a>
+                    <a class="nappi" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                         </form>          
@@ -392,14 +392,14 @@
     
     <script>
     $(document).ready(function() {
-    /*Piilottaa box-elementin*/
-    $(".box").hide();
-    /*When article clicked, shows box-element*/
-    $(".subinfo").click(function() {
-        /*Finds closest box-element from article and shows it(animated)*/
-        $(this).closest("article").find(".box").slideToggle(200);     
-        
-    });
+        /*Piilottaa box-elementin*/
+        $(".box").hide();
+        /*When article clicked, shows box-element*/
+        $(".subinfo").click(function() {
+            /*Finds closest box-element from article and shows it(animated)*/
+            $(this).closest("article").find(".box").slideToggle(200);     
+
+        });
     
     
 });
