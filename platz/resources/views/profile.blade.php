@@ -47,7 +47,7 @@
                 <form method="get" action="platzform.php">
                     <div class="form-group">
                         <h2>Poista käyttäjä</h2>
-                        <button type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
+                        <button style="margin-bottom: 100px" type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
                             Poista käyttäjä
                         </button>
                         <br>
