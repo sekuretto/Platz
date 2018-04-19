@@ -1,5 +1,3 @@
-;
-
 <?php $__env->startSection('main'); ?>
 <div class="container">
     <?php if($foo == 1): ?>
