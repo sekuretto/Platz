@@ -87,7 +87,7 @@
         <a style="display:block; visibility:hidden;">Menu</a>
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
-        <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
+        <a href="/vaihto" class="btn btn-secondary">Vaihda</a>
         <a>
             <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
 

@@ -85,6 +85,9 @@ class PagesController extends Controller
         return view('post')->with('post', $post);
 
     }
+    public function deleteuser() {
+        return view('/');
+    }
    
 }
 

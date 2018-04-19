@@ -26,13 +26,13 @@
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
                     <a class="nappi" href="/profiles/{{ Auth::user()->id }}" >Profiili</a>
                     <a class="nappi" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
                         </form>          
                 @endguest

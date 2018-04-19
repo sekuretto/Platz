@@ -46,3 +46,4 @@ Route::get('contact', 'PagesController@getContact');
 Route::post('contact', 'PagesController@postContact');
 Route::post('report', 'PagesController@report');
 Route::post('sendpsw', 'PagesController@sendpsw');
+Route::post('deleteuser', 'PagesController@deleteuser');

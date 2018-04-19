@@ -22,17 +22,17 @@
         <header>
             <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
-        <navbar class="col-7">
+        <navbar>
             <div class="nav">
                 <?php if(auth()->guard()->guest()): ?>
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 <?php else: ?>
-                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
-                    <a class="col" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                    <a class="nappi" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
+                    <a class="nappi" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST">
                                 <?php echo csrf_field(); ?>
                         </form>          
                 <?php endif; ?>
@@ -413,14 +413,14 @@
     
     <script>
     $(document).ready(function() {
-    /*Piilottaa box-elementin*/
-    $(".box").hide();
-    /*When article clicked, shows box-element*/
-    $(".subinfo").click(function() {
-        /*Finds closest box-element from article and shows it(animated)*/
-        $(this).closest("article").find(".box").slideToggle(200);     
-        
-    });
+        /*Piilottaa box-elementin*/
+        $(".box").hide();
+        /*When article clicked, shows box-element*/
+        $(".subinfo").click(function() {
+            /*Finds closest box-element from article and shows it(animated)*/
+            $(this).closest("article").find(".box").slideToggle(200);     
+
+        });
     
     
 });

@@ -26,6 +26,7 @@ header img {
 }
 
 .nappi {
+      min-width: 300px;
       text-decoration: none;
       text-align: center;
       border:solid 2px #41403E;
