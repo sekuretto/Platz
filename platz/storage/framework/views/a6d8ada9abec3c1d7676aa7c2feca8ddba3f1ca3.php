@@ -28,7 +28,7 @@
                     <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 <?php else: ?>
-                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" style="margin-left: 100px">Profiili</a>
+                    <a class="col" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
                     <a class="col" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
@@ -114,14 +114,14 @@
     <script src="<?php echo asset('js/jquery.js')?>"></script>
     <!-- RESPONSIIVINEN MENU -->    
     <script>
-            
+         function myFunction() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "menu") {
                     x.className += " responsive";
                 } else {
                     x.className = "menu";
                 }
-            
+         }
     </script>
     
     <script>
@@ -345,7 +345,7 @@
 
                                 </button>
 
-                                <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                <a class="btn btn-link" data-toggle="modal" data-target="#reset">
                                     <?php echo e(__('Unhoititko salasanasi?')); ?>
 
                                 </a>
@@ -392,6 +392,38 @@
         </div>
       </div>       
     </div>
+    <!-- RESET PASSWORD -->
+    <div class="modal hide fade" tabindex="-1" role="dialog" id="reset">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Lähetä salasana sähköpostiin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form action="<?php echo e(url('sendpsw')); ?>" method="POST">
+                  <?php echo e(csrf_field()); ?>
+
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Sähköpostiosoitteesi </label>
+                         <input name="resetemail" type="text" class="form-control" id="staticEmail">
+                     </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Lähetä salasana sähköpostiin</button>
+            
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+                    </div>
+                  
+                </form>
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+    
 </body>
 
 </html>

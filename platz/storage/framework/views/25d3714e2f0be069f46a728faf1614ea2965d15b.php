@@ -84,6 +84,7 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('nav'); ?>
 <div class="menu" id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
