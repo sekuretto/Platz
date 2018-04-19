@@ -86,7 +86,7 @@ class PagesController extends Controller
 
     }
     public function deleteuser() {
-        return view('/');
+        return redirect('/');
     }
    
 }
