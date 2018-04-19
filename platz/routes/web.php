@@ -19,6 +19,7 @@ Route::get('myynti', 'PagesController@myynti');
 Route::get('osto', 'PagesController@osto');
 Route::post('haku', 'PagesController@haku');
 Route::delete('{postid}', 'PostsController@destroy');
+Route::post('deleteuser/{id}', 'PagesController@deleteuser');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');
@@ -46,4 +47,3 @@ Route::get('contact', 'PagesController@getContact');
 Route::post('contact', 'PagesController@postContact');
 Route::post('report', 'PagesController@report');
 Route::post('sendpsw', 'PagesController@sendpsw');
-Route::post('deleteuser', 'PagesController@deleteuser');

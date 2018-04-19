@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 use Mail;
 use Storage;
 use Illuminate\Validation\Validator;
@@ -85,8 +86,10 @@ class PagesController extends Controller
         return view('post')->with('post', $post);
 
     }
-    public function deleteuser() {
-        return redirect('/');
+    public function deleteuser($id) {
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/')->with('success','Käyttäjätili on poistettu onnistuneesti.');
     }
    
 }

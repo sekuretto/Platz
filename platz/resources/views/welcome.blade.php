@@ -83,7 +83,7 @@
         <a>
             {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
 
-                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])}}
+                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:80%;'])}}
 
                     {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])}}
 

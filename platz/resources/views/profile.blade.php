@@ -66,13 +66,9 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="{{ url('deleteuser') }}" method="POST">
-                  {{ csrf_field() }}
-                  <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Kyllä, poista minut</button>
-                  </div>
-                  
-                </form>
+              {!!Form::open(['action' => ['PagesController@deleteuser', $user->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                        {{Form::submit('Kyllä, poista minut', ['class' => 'btn btn-danger'])}}
+              {!!Form::close()!!}
 
           </div>
           

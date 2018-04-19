@@ -74,14 +74,12 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="<?php echo e(url('deleteuser')); ?>" method="POST">
-                  <?php echo e(csrf_field()); ?>
+              <?php echo Form::open(['action' => ['PagesController@deleteuser', $user->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
 
-                  <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Kyllä, poista minut</button>
-                  </div>
-                  
-                </form>
+                        <?php echo e(Form::submit('Kyllä, poista minut', ['class' => 'btn btn-danger'])); ?>
+
+              <?php echo Form::close(); ?>
+
 
           </div>
           
