@@ -55,13 +55,40 @@
                 <form method="get" action="platzform.php">
                     <div class="form-group">
                         <h2>Poista käyttäjä</h2>
-                        <button type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
+                        <button style="margin-bottom: 100px" type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
                             Poista käyttäjä
                         </button>
                         <br>
                     </div>
                 </form>
             </div>
+            
+        <!--KÄYTTÄJÄN POISTO-->
+        <div class="modal hide fade" tabindex="-1" role="dialog" id="poistakayttaja">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Poistetaanko käyttäjä? Oletko aaaaivan varma tästä? Toimintoa ei voi perua.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form action="<?php echo e(url('deleteuser')); ?>" method="POST">
+                  <?php echo e(csrf_field()); ?>
+
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Kyllä, poista minut</button>
+                  </div>
+                  
+                </form>
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+            
             <br>
             <div id="omatilmoitukset" class="container tab-pane fade"><br>
                 
@@ -78,7 +105,7 @@
                                     <?php endif; ?>
                                     <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                                     <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p>  
-                                    <?php echo Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
+                                    <?php echo Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
 
                                         <?php echo e(Form::hidden('_method', 'DELETE')); ?>
 

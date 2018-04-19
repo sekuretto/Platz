@@ -47,13 +47,39 @@
                 <form method="get" action="platzform.php">
                     <div class="form-group">
                         <h2>Poista käyttäjä</h2>
-                        <button type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
+                        <button style="margin-bottom: 100px" type="button" class="btn btn-primary" name="submit" data-toggle="modal" data-target="#poistakayttaja">
                             Poista käyttäjä
                         </button>
                         <br>
                     </div>
                 </form>
             </div>
+            
+        <!--KÄYTTÄJÄN POISTO-->
+        <div class="modal hide fade" tabindex="-1" role="dialog" id="poistakayttaja">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Poistetaanko käyttäjä? Oletko aaaaivan varma tästä? Toimintoa ei voi perua.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form action="{{ url('deleteuser') }}" method="POST">
+                  {{ csrf_field() }}
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Kyllä, poista minut</button>
+                  </div>
+                  
+                </form>
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+            
             <br>
             <div id="omatilmoitukset" class="container tab-pane fade"><br>
                 
@@ -70,7 +96,7 @@
                                     @endif
                                     <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                                     <p><b>Kotikaupunki: {{$post->user->city}}</b></p>  
-                                    {!!Form::open(['action' => ['ProfileController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                                         {{Form::hidden('_method', 'DELETE')}}
                                         {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
                                     {!!Form::close()!!}

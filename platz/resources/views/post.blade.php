@@ -2,25 +2,12 @@
 
 @section('main')
 <div class="container">
-    @if($foo == 1)
-    <h3>Myynti</h3>
-    @elseif($foo == 2)
-    <h3>Osto</h3>
-    @elseif($foo == 3)
-    <h3>Vaihto</h3>
-    @elseif($foo == 4)
-    <h3>Tulokset haulla <b>{{$haku}}</b></h3>
-    @elseif($foo == 5)
-    <h3>Kaikki ilmoitukset</h3>
-    @endif
+    <h3>Pysyväislinkki: <b>{{$post->title}}</b></h3>
     <hr>
-    @if(count($posts) >= 1)
-        @foreach($posts as $post)
-    
-            <article>
+    <article style="margin-bottom: 100px">
             <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
             <hr>
-            <div class="box">{{$post->body}}<br>
+            <p>{{$post->body}}<br></p>
                 @if($post->image == 'noimage.png')
                     <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                 @else
@@ -28,12 +15,10 @@
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 
-                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
-                <a href="/posts/{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
-            </div>
-            </article>
-            <br>
-    <div class="modal" id="{{$post->id}}" tabindex="-1" role="dialog">
+                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>      
+    </article>
+</div>
+<div class="modal" id="{{$post->id}}" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -67,30 +52,5 @@
             </div>
       </div>
 </div>
-        @endforeach
-    @else
-        <p>NO POSTS</p>
-    @endif
 
-@endsection
-@section('nav')
-<div class="menu" id="myTopnav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a style="display:block; visibility:hidden;">Menu</a>
-        <a href="/myynti" class="btn btn-secondary">Myy</a>
-        <a href="/osto" class="btn btn-secondary">Osta</a>
-        <a href="/vaihto" class="btn btn-secondary">Vaihda</a>
-        <a>
-            {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
-
-                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])}}
-
-                    {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])}}
-
-
-            {!! Form::close() !!}
-        
-          
-        </a>
-</div>  
 @endsection

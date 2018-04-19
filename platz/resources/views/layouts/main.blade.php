@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
     <!--<link rel="stylesheet" href="style.css" type="text/css"/>-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
+   
+    <link rel="stylesheet" href="{{URL::asset('css/style.css') }}" type="text/css">
 </head>
 <body>
     <div class="page">
@@ -20,17 +22,17 @@
         <header>
             <a href="/"><img src="<?php echo asset('images/platz.png')?>" alt="logo" class="img-fluid" alt="Responsive image"/></a>
         </header>
-        <navbar class="col-7">
+        <navbar>
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-                    <a class="col" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a class="col" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
-                    <a class="col" href="/profiles/{{ Auth::user()->id }}" style="margin-left: 100px">Profiili</a>
-                    <a class="col" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a class="col" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <a class="nappi" href="/profiles/{{ Auth::user()->id }}" >Profiili</a>
+                    <a class="nappi" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
                         </form>          
                 @endguest
@@ -50,6 +52,7 @@
                 @else
             <div class="container">
                 <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
+                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
                 </div>
                 @endguest
              @include('inc.messages')
@@ -93,46 +96,12 @@
     </div>
     
     <footer>
-        @guest
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        @else
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
-        @endguest
+        
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>       
     </footer>
     </div>
           
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="<?php echo asset('js/jquery.js')?>"></script>
-    <!-- RESPONSIIVINEN MENU -->    
-    <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "menu") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "menu";
-                }
-            }
-    </script>
-    
-    <script>
-    $(document).ready(function() {
-    /*Piilottaa box-elementin*/
-    $(".box").hide();
-    /*When article clicked, shows box-element*/
-    $(".subinfo").click(function() {
-        /*Finds closest box-element from article and shows it(animated)*/
-        $(this).closest("article").find(".box").slideToggle(200);     
-        
-    });
-    
-    
-});
-</script>
+
 
 <!-- IMLOITUSIKKUNA-->
 <div class="modal hide fade" data-focus-on="input:first" id="ilmoitus" tabindex="-1" role="dialog">
@@ -326,7 +295,7 @@
                                     {{ __('Kirjaudu') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" data-toggle="modal" data-target="#reset">
                                     {{ __('Unhoititko salasanasi?') }}
                                 </a>
                             </div>
@@ -371,6 +340,71 @@
         </div>
       </div>       
     </div>
+    <!-- RESET PASSWORD -->
+    <div class="modal hide fade" tabindex="-1" role="dialog" id="reset">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Lähetä salasana sähköpostiin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form action="{{ url('sendpsw') }}" method="POST">
+                  {{ csrf_field() }}
+                    <div class="form-group col-md-6">
+                         <label for="staticEmail">Sähköpostiosoitteesi </label>
+                         <input name="resetemail" type="text" class="form-control" id="staticEmail">
+                     </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Lähetä salasana sähköpostiin</button>
+            
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+                    </div>
+                  
+                </form>
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{URL::asset('js/jquery.js')}}" type="text/javascript"></script>
+    
+    <!-- RESPONSIIVINEN MENU -->    
+    <script>
+         function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "menu") {
+                    x.className += "responsive";
+                } else {
+                    x.className = "menu";
+                }
+         }
+    </script>
+    
+    <script>
+    $(document).ready(function() {
+        /*Piilottaa box-elementin*/
+        $(".box").hide();
+        /*When article clicked, shows box-element*/
+        $(".subinfo").click(function() {
+            /*Finds closest box-element from article and shows it(animated)*/
+            $(this).closest("article").find(".box").slideToggle(200);     
+
+        });
+    
+    
+});
+</script>
+    
 </body>
 
 </html>
