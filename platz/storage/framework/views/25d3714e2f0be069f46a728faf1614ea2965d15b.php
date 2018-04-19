@@ -1,5 +1,3 @@
-;
-
 <?php $__env->startSection('main'); ?>
 <div class="container">
     <?php if($foo == 1): ?>
@@ -28,7 +26,8 @@
                 <?php endif; ?>
                 <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                 <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p> 
-                <a data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline">Ilmianna ilmoitus</a>
+                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
+                <a href="/posts/<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
             </div>
             </article>
             <br>
@@ -91,17 +90,33 @@
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
         <a>
             <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1ef993f447b4bf0a7527b58e49c824945ae43a2b
 
                     <?php echo e(Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])); ?>
 
+<<<<<<< HEAD
+                    <?php echo e(Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])); ?>
+=======
+>>>>>>> 1ef993f447b4bf0a7527b58e49c824945ae43a2b
 
                     <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])); ?>
 
+<<<<<<< HEAD
+                    <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])); ?>
+=======
+>>>>>>> 1ef993f447b4bf0a7527b58e49c824945ae43a2b
 
 
             <?php echo Form::close(); ?>
 
+<<<<<<< HEAD
+            <?php echo Form::close(); ?>
+
+=======
+>>>>>>> 1ef993f447b4bf0a7527b58e49c824945ae43a2b
         
           
         </a>

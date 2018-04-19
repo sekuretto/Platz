@@ -413,6 +413,7 @@
     
     <script>
     $(document).ready(function() {
+<<<<<<< HEAD
         /*Piilottaa box-elementin*/
         $(".box").hide();
         /*When article clicked, shows box-element*/
@@ -421,6 +422,16 @@
             $(this).closest("article").find(".box").slideToggle(200);     
 
         });
+=======
+    /*Piilottaa box-elementin*/
+    $(".box").hide();
+    /*When article clicked, shows box-element*/
+    $(".subinfo").click(function() {
+        /*Finds closest box-element from article and shows it(animated)*/
+        $(this).closest("article").find(".box").slideToggle(200);     
+        
+    });
+>>>>>>> 1ef993f447b4bf0a7527b58e49c824945ae43a2b
     
     
 });
