@@ -28,7 +28,8 @@
                 <?php endif; ?>
                 <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                 <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p> 
-                <a data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline">Ilmianna ilmoitus</a>
+                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
+                <a href="/posts/<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
             </div>
             </article>
             <br>
@@ -85,21 +86,26 @@
 <?php $__env->startSection('nav'); ?>
 <div class="menu" id="myTopnav">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a style="display:block; visibility:hidden;">Menu</a>
         <a href="/myynti" class="btn btn-secondary">Myy</a>
         <a href="/osto" class="btn btn-secondary">Osta</a>
         <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
+        <a>
+            <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
 
 
-                <?php echo e(Form::text('haku', '', ['class' => 'form-control'])); ?>
+                    <?php echo e(Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])); ?>
 
 
-                <?php echo e(Form::submit('Hae kaikista ilmoituksista', ['class' => 'btn btn-primary'])); ?>
-
-                
-        <?php echo Form::close(); ?>
+                    <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])); ?>
 
 
+
+            <?php echo Form::close(); ?>
+
+        
+          
+        </a>
 </div>  
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -28,7 +28,8 @@
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 
-                <a data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline">Ilmianna ilmoitus</a>
+                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
+                <a href="/posts/{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
             </div>
             </article>
             <br>

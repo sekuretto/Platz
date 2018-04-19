@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('add2', 'PagesController@add2');
+Route::get('/posts/{postid}', 'PagesController@showpost');
 Route::get('/profiles/{id}', 'ProfileController@show');
 
 Route::get('vaihto', 'PagesController@vaihto');
