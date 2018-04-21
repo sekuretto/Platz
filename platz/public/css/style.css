@@ -15,6 +15,10 @@ a {
 body {
     font-family: 'News Cycle', sans-serif;
 }
+#myTopnav {
+    position: fixed;
+    margin-top: 25%;
+}
 
 header {
     margin: auto;
@@ -152,22 +156,21 @@ aside {
 }
 
 #container {
-    margin-right: 5%;
-    margin-bottom: 20px;
-    width: 65%;
+    margin-left: 22%;
+    margin-bottom: 100px;
+    width: 100%;
     height: auto;   
-    float: left;
     color: black;
     height: 100%;
-    order:5;
+    /*order:5;*/
 }
 #containerprofile {
-    margin: auto;
-    width: 65%;
+    margin-left: -18%;
+    width: 100%;
     height: auto;   
-    color: black;
+    color: black;   
     height: 100%;
-    order:5;
+    /*order:5;*/
 }
 
 article {
@@ -277,11 +280,21 @@ head {
      #container {
         width:100%;
         float: left;
+         margin: auto;
         right: 0;
-        overflow: auto;
         order:5;
     }
-    
+    #containerprofile {
+        width:100%;
+        float: left;
+         margin: auto;
+        right: 0;
+        order:5;
+    }
+    #myTopnav {
+        position:relative;
+        margin: 0;
+    }
     .menu {
         order: 4;
         height: auto;
@@ -371,10 +384,17 @@ head {
     }
    
     #container {
-        width:100%;
+        margin: auto;
+        width: 100%;
         float: left;
         right: 0;
-        overflow: auto;
+        order:5;
+    }
+    #containerprofile {
+        width: 100%;
+        float: left;
+         margin: auto;
+        right: 0;
         order:5;
     }
     article {
@@ -391,8 +411,7 @@ head {
         order: 4;
         height: auto;
         width: 100%;
-        align-content: center;
-       
+        align-content: center;     
     }
     
     .menuresponsive {
@@ -426,6 +445,10 @@ head {
         text-decoration: none;
         display: block;
         color: black;
+    }
+    #myTopnav {
+        position:relative;
+        margin: 0;
     }
    
     

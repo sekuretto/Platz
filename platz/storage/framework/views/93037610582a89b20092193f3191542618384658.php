@@ -1,6 +1,6 @@
-@extends('layouts.main');
+;
 
-@section('main')
+<?php $__env->startSection('main'); ?>
 <div id="containerprofile">
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
@@ -12,26 +12,34 @@
         </ul>
         <div class="tab-content">
             <div id="profiili" class="container tab-pane active"><br>
-                <h2><b>{{$user->name}}</b></h2>
+                <h2><b><?php echo e($user->name); ?></b></h2>
                 <h2>Tiedot</h2>
-                <h5>Sähköposti: {{ $user->email }}</h5>
-                <h5>Kaupunki: {{ $user->city }}</h5>
+                <h5>Sähköposti: <?php echo e($user->email); ?></h5>
+                <h5>Kaupunki: <?php echo e($user->city); ?></h5>
                 
-                @if($user == Auth::user())
+                <?php if($user == Auth::user()): ?>
                 <hr>
                         <h2>Muokkaa omia tietojasi</h2>
-                    {!! Form::open(['action' => ['ProfileController@update', $user->id], 'method' => 'POST']) !!}
+                    <?php echo Form::open(['action' => ['ProfileController@update', $user->id], 'method' => 'POST']); ?>
+
                         <div class="form-group">
-                        {{Form::label('email', 'Sähköposti')}}
-                        {{Form::text('email', $user->email, ['class' => 'form-control'])}}
+                        <?php echo e(Form::label('email', 'Sähköposti')); ?>
+
+                        <?php echo e(Form::text('email', $user->email, ['class' => 'form-control'])); ?>
+
                         </div>
                         <div class="form-group">
-                        {{Form::label('city', 'Kotikaupunki')}}
-                        {{Form::text('city', $user->city, ['class' => 'form-control'])}}
+                        <?php echo e(Form::label('city', 'Kotikaupunki')); ?>
+
+                        <?php echo e(Form::text('city', $user->city, ['class' => 'form-control'])); ?>
+
                         </div>
-                        {{Form::hidden('_method','PUT')}}
-                        {{Form::submit('Tallenna muutokset', ['class' => 'btn btn-primary'])}}
-                    {!! Form::close() !!}
+                        <?php echo e(Form::hidden('_method','PUT')); ?>
+
+                        <?php echo e(Form::submit('Tallenna muutokset', ['class' => 'btn btn-primary'])); ?>
+
+                    <?php echo Form::close(); ?>
+
                         <br>
                 <hr>
                 <form method="get" action="platzform.php">
@@ -56,7 +64,7 @@
                         <br>
                     </div>
                 </form>
-                @endif
+                <?php endif; ?>
             </div>
             
         <!--KÄYTTÄJÄN POISTO-->
@@ -70,9 +78,12 @@
             </button>
           </div>
           <div class="modal-body">
-              {!!Form::open(['action' => ['PagesController@deleteuser', $user->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                        {{Form::submit('Kyllä, poista minut', ['class' => 'btn btn-danger'])}}
-              {!!Form::close()!!}
+              <?php echo Form::open(['action' => ['PagesController@deleteuser', $user->id], 'method' => 'POST', 'class' => 'pull-right']); ?>
+
+                        <?php echo e(Form::submit('Kyllä, poista minut', ['class' => 'btn btn-danger'])); ?>
+
+              <?php echo Form::close(); ?>
+
 
           </div>
           
@@ -83,30 +94,33 @@
             <br>
             <div id="omatilmoitukset" class="container tab-pane fade"><br>
                 
-                            @foreach($user->posts as $post)
+                            <?php $__currentLoopData = $user->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <article>
-                                <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
+                                <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
                                 <hr>
-                                <div class="box">{{$post->body}}<br>
-                                    @if($post->image == 'noimage.png')
+                                <div class="box"><?php echo e($post->body); ?><br>
+                                    <?php if($post->image == 'noimage.png'): ?>
                                         <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
-                                    @else
-                                        <img class="img-fluid articleimg" src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva"><br>
-                                    @endif
-                                    <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
-                                    <p><b>Kotikaupunki: {{$post->user->city}}</b></p>  
-                                    @if($post->user == Auth::user())
-                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
-                                        {{Form::hidden('_method', 'DELETE')}}       
-                                        {{Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])}}
-                                    {!!Form::close()!!} 
-                                    @endif
+                                    <?php else: ?>
+                                        <img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva"><br>
+                                    <?php endif; ?>
+                                    <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
+                                    <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p>  
+                                    <?php if($post->user == Auth::user()): ?>
+                                    <?php echo Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST']); ?>
+
+                                        <?php echo e(Form::hidden('_method', 'DELETE')); ?>       
+                                        <?php echo e(Form::submit('Poista ilmoitus', ['class' => 'btn btn-danger'])); ?>
+
+                                    <?php echo Form::close(); ?> 
+                                    <?php endif; ?>
                                     
                                 </div>
                                 </article>
                                 <br>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

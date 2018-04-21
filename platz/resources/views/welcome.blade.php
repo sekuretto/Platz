@@ -3,11 +3,11 @@
 @section('main')
 <div class="container">
     @if($foo == 1)
-    <h3>Myynti</h3>
+    <h3>Ilmoitukset: Myydään</h3>
     @elseif($foo == 2)
-    <h3>Osto</h3>
+    <h3>Ilmoitukset: Ostetaan</h3>
     @elseif($foo == 3)
-    <h3>Vaihto</h3>
+    <h3>Ilmoitukset: Vaihdetaan</h3>
     @elseif($foo == 4)
     <h3>Tulokset haulla <b>{{$haku}}</b></h3>
     @elseif($foo == 5)
@@ -18,7 +18,7 @@
         @foreach($posts as $post)
     
             <article>
-            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
+            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b><a href="profiles/{{$post->user->id}}"> {{$post->user->name}}</a> - {{$post->created_at}}</h3>
             <hr>
             <div class="box">{{$post->body}}<br>
                 @if($post->image == 'noimage.png')
@@ -67,25 +67,27 @@
             </div>
       </div>
 </div>
+
+
         @endforeach
     @else
         <p>NO POSTS</p>
     @endif
-
+</div>
 @endsection
 @section('nav')
 <div class="menu" id="myTopnav">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a style="display:block; visibility:hidden;">Menu</a>
-        <a href="/myynti" class="btn btn-secondary">Myy</a>
-        <a href="/osto" class="btn btn-secondary">Osta</a>
-        <a href="/vaihto" class="btn btn-secondary">Vaihda</a>
+        <a style="display:block; margin: 0;">Etsi ilmoituksia</a>
+        <a href="/myynti" class="btn btn-secondary">Myydään</a>
+        <a href="/osto" class="btn btn-secondary">Ostetaan</a>
+        <a href="/vaihto" class="btn btn-secondary">Vaihdetaan</a>
         <a>
             {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
 
                     {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:80%;'])}}
 
-                    {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])}}
+                    {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-left:10px;'])}}
 
 
             {!! Form::close() !!}
