@@ -98,7 +98,7 @@
                                 <article>
                                 <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
                                 <hr>
-                                <div class="box"><?php echo e($post->body); ?><br>
+                                <div class="box"><?php echo nl2br(e($post->body)); ?><br>
                                     <?php if($post->image == 'noimage.png'): ?>
                                         <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                                     <?php else: ?>

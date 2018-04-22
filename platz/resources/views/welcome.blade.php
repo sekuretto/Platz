@@ -20,7 +20,7 @@
             <article>
             <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b><a href="profiles/{{$post->user->id}}"> {{$post->user->name}}</a> - {{$post->created_at}}</h3>
             <hr>
-            <div class="box">{{$post->body}}<br>
+            <div class="box">{!!nl2br(e($post->body))!!}<br>
                 @if($post->image == 'noimage.png')
                     <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                 @else
