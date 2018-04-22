@@ -24,7 +24,7 @@
                 @if($post->image == 'noimage.png')
                     <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                 @else
-                    <img class="img-fluid articleimg" src="/storage/{{$post->user->name}}/{{$post->image}}" alt="kuva"><br>
+                <a data-lightbox="{{$post->id}}" data-caption="{{$post->title}}" href="/storage/{{$post->user->name}}/{{$post->image}}"><img class="img-fluid articleimg" src="/storage/{{$post->user->name}}/{{$post->image}}"></a>
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 

@@ -102,7 +102,7 @@
                                     <?php if($post->image == 'noimage.png'): ?>
                                         <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                                     <?php else: ?>
-                                        <img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva"><br>
+                                        <a data-lightbox="<?php echo e($post->id); ?>" data-caption="<?php echo e($post->title); ?>" href="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>"><img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>"></a>
                                     <?php endif; ?>
                                     <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                                     <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p>  

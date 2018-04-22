@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
 }
@@ -156,6 +155,7 @@ aside {
 }
 
 #container {
+    word-wrap: break-word; 
     margin-left: 22%;
     margin-bottom: 100px;
     width: 100%;
@@ -193,7 +193,11 @@ article h3 {
     margin: auto;
     width: 350px;
     display: block;
-    margin: 20 auto;
+    margin: 30px auto;
+    transition: 0.4s
+}
+.articleimg:hover {
+    opacity: 0.8;
 }
 .sivut
 {
