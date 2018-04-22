@@ -13,23 +13,23 @@ class PagesController extends Controller
 {
     public function myynti() {  
         $foo = 1;
-        $posts = Post::where('category', 'myynti')->get();
+        $posts = Post::where('category', 'myynti')->Paginate(6);
         return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function osto() {
         $foo = 2;
-        $posts = Post::where('category', 'osto')->get();
+        $posts = Post::where('category', 'osto')->Paginate(6);
         return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function vaihto() {
         $foo = 3;
-        $posts = Post::where('category', 'vaihto')->get();
+        $posts = Post::where('category', 'vaihto')->Paginate(6);
         return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
     public function haku(Request $request) {
         $foo = 4;
         $haku = $request->input('haku');
-        $posts = Post::where('body', 'like', '%' . $haku . '%')->orWhere('title', 'like', '%' . $haku . '%')->get();
+        $posts = Post::where('body', 'like', '%' . $haku . '%')->orWhere('title', 'like', '%' . $haku . '%')->Paginate(6);
         return view('welcome')->with('posts', $posts)->with('haku', $haku)->with('foo', $foo);
     }
     

@@ -70,6 +70,7 @@
 
 
         @endforeach
+    {{$posts->links()}}
     @else
         <p>NO POSTS</p>
     @endif
