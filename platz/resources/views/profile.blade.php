@@ -110,3 +110,14 @@
         </div>
     </div>
 @endsection
+@section('jumbo')
+<aside>
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+            
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Käyttäjän <b>{{$user->name}}</b> profiili</h1>    
+            </div>
+             @include('inc.messages')  
+        </div>
+    </aside>
+@endsection

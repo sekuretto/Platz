@@ -41,25 +41,7 @@
         </navbar>
  
     <!-- JUMBO -->
-    <aside>
-        <div class="jumbotron jumbotron-fluid" id="jumbo">
-            
-                @guest
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                
-            </div>
-                @else
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                </div>
-                @endguest
-             @include('inc.messages')
-            
-        </div>
-    </aside>
+    @yield('jumbo')
          
     <!-- Kategoriat -->
     @yield('nav')

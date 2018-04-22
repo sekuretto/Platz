@@ -41,25 +41,7 @@
         </navbar>
  
     <!-- JUMBO -->
-    <aside>
-        <div class="jumbotron jumbotron-fluid" id="jumbo">
-            
-                <?php if(auth()->guard()->guest()): ?>
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                
-            </div>
-                <?php else: ?>
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa, <?php echo e(Auth::user()->name); ?>!</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                </div>
-                <?php endif; ?>
-             <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-            
-        </div>
-    </aside>
+    <?php echo $__env->yieldContent('jumbo'); ?>
          
     <!-- Kategoriat -->
     <?php echo $__env->yieldContent('nav'); ?>

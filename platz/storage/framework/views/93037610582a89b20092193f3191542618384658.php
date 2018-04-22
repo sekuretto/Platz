@@ -123,4 +123,15 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+<?php $__env->startSection('jumbo'); ?>
+<aside>
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+            
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Käyttäjän <b><?php echo e($user->name); ?></b> profiili</h1>    
+            </div>
+             <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>  
+        </div>
+    </aside>
+<?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
