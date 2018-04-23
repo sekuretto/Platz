@@ -21,7 +21,7 @@ class PostsController extends Controller
     {
         $foo = 5;
         $posts = Post::all();
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::orderBy('created_at', 'desc')->Paginate(6);
         return view('welcome')->with('posts', $posts)->with('foo', $foo);
     }
 

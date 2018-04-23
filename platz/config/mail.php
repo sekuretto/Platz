@@ -55,10 +55,11 @@ return [
     |
     */
 
-    'from' => [
+    'from' => ['address' => 'noreply@platz.fi', 'name' => 'Platz ylläpito'],
+   /* 'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+    ],*/
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +100,7 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => '\"D:\xampp\sendmail\sendmail.exe\" -t',
 
     /*
     |--------------------------------------------------------------------------

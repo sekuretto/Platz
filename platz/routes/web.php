@@ -11,14 +11,16 @@
 |
 */
 
-Route::get('add2', 'PagesController@add2');
+Route::get('/posts/{postid}', 'PagesController@showpost');
 Route::get('/profiles/{id}', 'ProfileController@show');
 
 Route::get('vaihto', 'PagesController@vaihto');
 Route::get('myynti', 'PagesController@myynti');
 Route::get('osto', 'PagesController@osto');
 Route::post('haku', 'PagesController@haku');
+Route::get('haku', 'PagesController@haku');
 Route::delete('{postid}', 'PostsController@destroy');
+Route::post('deleteuser/{id}', 'PagesController@deleteuser');
 
 Route::get('profiili1', 'profiilicontroller@showinfo');
 Route::get('profiili2', 'profiilicontroller@returninfo');

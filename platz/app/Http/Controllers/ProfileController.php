@@ -12,7 +12,6 @@ class ProfileController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        
         return view('profile')->with('user', $user);
     }
     public function update(Request $request, $id)

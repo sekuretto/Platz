@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
    
     <link rel="stylesheet" href="{{URL::asset('css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{URL::asset('css/lightbox.css') }}" type="text/css">
 </head>
 <body>
     <div class="page">
@@ -26,6 +27,7 @@
             <div class="nav">
                 @guest
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
+<<<<<<< HEAD
                     <a class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 @else
@@ -33,6 +35,15 @@
                     <a class="nappi" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+=======
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
+                @else
+                    <a class="nappi" href="/profiles/{{ Auth::user()->id }}" >Profiili</a>
+                    <a class="nappi" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
+                    <a href="#" class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+>>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
                                 @csrf
                         </form>          
                 @endguest
@@ -40,58 +51,14 @@
         </navbar>
  
     <!-- JUMBO -->
-    <aside>
-        <div class="jumbotron jumbotron-fluid" id="jumbo">
-            
-                @guest
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                
-            </div>
-                @else
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                </div>
-                @endguest
-             @include('inc.messages')
-            
-        </div>
-    </aside>
+    @yield('jumbo')
          
     <!-- Kategoriat -->
     @yield('nav')
-    <!--<div class="menu" id="myTopnav">
-        <a href="/myynti" class="btn btn-secondary">Myy</a>
-        <a href="/osto" class="btn btn-secondary">Osta</a>
-        <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
-
-                {{Form::text('haku', '', ['class' => 'form-control'])}}
-
-                {{Form::submit('Hae', ['class' => 'btn btn-primary'])}}
-                
-        {!! Form::close() !!}
-
-    </div>     --> 
     
     <!-- Container -->
     <div id="container">
     @yield('main')
-        <!--<nav aria-label="Page navigation example" class="sivut">
-              <ul class="pagination justify-content-end">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>-->
         
     </div>
     
@@ -377,6 +344,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="{{URL::asset('js/jquery.js')}}" type="text/javascript"></script>
+    <script src="{{URL::asset('js/lightbox.js')}}" type="text/javascript"></script>
     
     <!-- RESPONSIIVINEN MENU -->    
     <script>

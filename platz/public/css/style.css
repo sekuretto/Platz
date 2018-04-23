@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
 }
@@ -14,6 +13,10 @@ a {
 
 body {
     font-family: 'News Cycle', sans-serif;
+}
+#myTopnav {
+    position: fixed;
+    margin-top: 25%;
 }
 
 header {
@@ -26,6 +29,8 @@ header img {
 }
 
 .nappi {
+
+      width: 30%;
       text-decoration: none;
       text-align: center;
       border:solid 2px #41403E;
@@ -40,7 +45,7 @@ header img {
       white-space: inherit;
       outline:none;
       box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
-     /*border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 .col:hover{
@@ -52,7 +57,7 @@ header img {
 }
 
 .btn {
-    background-color: #7a7a7a;
+    background-color: #7a7a7a;  
 }
 
 #search{
@@ -140,7 +145,6 @@ aside {
   text-decoration: none;
   font-size: 20px;
 }
-
 .menu .icon {
     display: none;
 }
@@ -151,22 +155,22 @@ aside {
 }
 
 #container {
-    margin-right: 5%;
-    margin-bottom: 20px;
-    width: 65%;
+    word-wrap: break-word; 
+    margin-left: 22%;
+    margin-bottom: 100px;
+    width: 100%;
     height: auto;   
-    float: left;
     color: black;
     height: 100%;
-    order:5;
+    /*order:5;*/
 }
 #containerprofile {
-    margin: auto;
-    width: 65%;
+    margin-left: -18%;
+    width: 100%;
     height: auto;   
-    color: black;
+    color: black;   
     height: 100%;
-    order:5;
+    /*order:5;*/
 }
 
 article {
@@ -179,7 +183,7 @@ article {
       color:#41403E;
       outline:none;
       box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
-      /*border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 article h3 {
@@ -189,7 +193,11 @@ article h3 {
     margin: auto;
     width: 350px;
     display: block;
-    margin: 20 auto;
+    margin: 30px auto;
+    transition: 0.4s
+}
+.articleimg:hover {
+    opacity: 0.8;
 }
 .sivut
 {
@@ -197,6 +205,7 @@ article h3 {
 }
 
 footer {
+    z-index: 100;
     margin: auto;
     right: 0;
     bottom: 0;
@@ -218,9 +227,6 @@ footer {
     color: #a82a00;
 }
 
-.box {
-    
-}
 head {
     display: inline-block;
 }
@@ -276,11 +282,22 @@ head {
      #container {
         width:100%;
         float: left;
+        margin: auto;
+        margin-bottom: 200px;
         right: 0;
-        overflow: auto;
         order:5;
     }
-    
+    #containerprofile {
+        width:100%;
+        float: left;
+         margin: auto;
+        right: 0;
+        order:5;
+    }
+    #myTopnav {
+        position:relative;
+        margin: 0;
+    }
     .menu {
         order: 4;
         height: auto;
@@ -317,6 +334,9 @@ head {
         text-decoration: none;
         display: block;
         color: black;
+    }
+    .nappi {
+        margin-bottom: 13px;
     }
     
 }
@@ -370,10 +390,18 @@ head {
     }
    
     #container {
-        width:100%;
+        margin: auto;
+        margin-bottom: 200px;
+        width: 100%;
         float: left;
         right: 0;
-        overflow: auto;
+        order:5;
+    }
+    #containerprofile {
+        width: 100%;
+        float: left;
+         margin: auto;
+        right: 0;
         order:5;
     }
     article {
@@ -390,8 +418,7 @@ head {
         order: 4;
         height: auto;
         width: 100%;
-        align-content: center;
-       
+        align-content: center;     
     }
     
     .menuresponsive {
@@ -425,6 +452,13 @@ head {
         text-decoration: none;
         display: block;
         color: black;
+    }
+    #myTopnav {
+        position:relative;
+        margin: 0;
+    }
+    .nappi {
+        margin-bottom: 13px;
     }
    
     
