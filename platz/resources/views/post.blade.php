@@ -2,10 +2,10 @@
 
 @section('main')
 <div class="container">
-    <h3>Pysyväislinkki: <b>{{$post->title}}</b></h3>
+    <h3>Ilmoitus: <b>{{$post->title}}</b></h3>
     <hr>
     <article style="margin-bottom: 100px">
-            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> {{$post->user->name}} - {{$post->created_at}}</h3>
+            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b> <a href="../profiles/{{$post->user->id}}" style="color:#ff794c;">{{$post->user->name}}</a> - {{$post->created_at}}</h3>
             <hr>
             <p>{{$post->body}}<br></p>
                 @if($post->image == 'noimage.png')
@@ -15,7 +15,7 @@
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 
-                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>      
+                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline;color:#ff794c;" >Ilmianna ilmoitus</a>      
     </article>
 </div>
 <div class="modal" id="{{$post->id}}" tabindex="-1" role="dialog">

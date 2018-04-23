@@ -1,11 +1,11 @@
 <?php $__env->startSection('main'); ?>
 <div class="container">
     <?php if($foo == 1): ?>
-    <h3>Myynti</h3>
+    <h3>Ilmoitukset: Myydään</h3>
     <?php elseif($foo == 2): ?>
-    <h3>Osto</h3>
+    <h3>Ilmoitukset: Ostetaan</h3>
     <?php elseif($foo == 3): ?>
-    <h3>Vaihto</h3>
+    <h3>Ilmoitukset: Vaihdetaan</h3>
     <?php elseif($foo == 4): ?>
     <h3>Tulokset haulla <b><?php echo e($haku); ?></b></h3>
     <?php elseif($foo == 5): ?>
@@ -16,18 +16,19 @@
         <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     
             <article>
-            <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
+            <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b><a href="profiles/<?php echo e($post->user->id); ?>" style="color:#ff794c;"> <?php echo e($post->user->name); ?></a> - <?php echo e($post->created_at); ?><i style="font-size:24px; float:right;" class="fa">&#xf107;</i></h3>
+                
             <hr>
-            <div class="box"><?php echo e($post->body); ?><br>
+            <div class="box"><?php echo nl2br(e($post->body)); ?><br>
                 <?php if($post->image == 'noimage.png'): ?>
                     <img class="img-fluid articleimg" src="/storage/noimage.png" alt="kuva"><br>
                 <?php else: ?>
-                    <img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>" alt="kuva"><br>
+                <a data-lightbox="<?php echo e($post->id); ?>" data-caption="<?php echo e($post->title); ?>" href="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>"><img class="img-fluid articleimg" src="/storage/<?php echo e($post->user->name); ?>/<?php echo e($post->image); ?>"></a>
                 <?php endif; ?>
                 <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                 <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p> 
-                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
-                <a href="/posts/<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
+                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline; color:#ff794c;">Ilmianna ilmoitus</a> |
+                <a href="/posts/<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline; color:#ff794c;">Avaa omassa ikkunassa</a>
             </div>
             </article>
             <br>
@@ -75,54 +76,59 @@
             </div>
       </div>
 </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    <?php else: ?>
-        <p>NO POSTS</p>
-    <?php endif; ?>
 
+
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <?php echo e($posts->links()); ?>
+
+    <?php else: ?>
+        <h4>Ei ilmoituksia saatavilla :(</h4>
+    <?php endif; ?>
+</div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('nav'); ?>
 <div class="menu" id="myTopnav">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a style="display:block; visibility:hidden;">Menu</a>
-        <a href="/myynti" class="btn btn-secondary">Myy</a>
-        <a href="/osto" class="btn btn-secondary">Osta</a>
-<<<<<<< HEAD
-        <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        <a>
-            <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
-=======
-        <a href="/vaihto" class="btn btn-secondary">Vaihda</a>
-        <a>
+        <p style="display:block; margin:auto; margin-left:10%;">Etsi ilmoituksia</p>
+        <a href="/myynti" class="btn btn-secondary">Myydään</a>
+        <a href="/osto" class="btn btn-secondary">Ostetaan</a>
+        <a href="/vaihto" class="btn btn-secondary">Vaihdetaan</a>
+        <a style="margin-top:3px;">
             <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
 
->>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
 
-                    <?php echo e(Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:80%;'])); ?>
-
-<<<<<<< HEAD
                     <?php echo e(Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])); ?>
-=======
->>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
 
-                    <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])); ?>
 
-<<<<<<< HEAD
-                    <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-top:5px;'])); ?>
-=======
->>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
+                    <?php echo e(Form::image('images/search-icon.png', '', ['style'=>'width:25px;display:inline;margin-left:10px;'])); ?>
+
 
 
             <?php echo Form::close(); ?>
 
-<<<<<<< HEAD
-            <?php echo Form::close(); ?>
-
-=======
->>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
         
           
         </a>
 </div>  
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('jumbo'); ?>
+<aside>
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+                <?php if(auth()->guard()->guest()): ?>
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
+                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
+                
+            </div>
+                <?php else: ?>
+            <div class="container">
+                <h1 class="display-4" id="jumbo-h1">Tervetuloa, <?php echo e(Auth::user()->name); ?>!</h1>
+                <p class="lead">Hei! Nyt voit lisätä omia ilmoituksia tai selata muiden jättämiä ilmoituksia.</p>
+                </div>
+                <?php endif; ?>
+             <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            
+        </div>
+    </aside>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

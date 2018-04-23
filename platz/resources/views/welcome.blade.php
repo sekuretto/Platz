@@ -18,7 +18,8 @@
         @foreach($posts as $post)
     
             <article>
-            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b><a href="profiles/{{$post->user->id}}"> {{$post->user->name}}</a> - {{$post->created_at}}</h3>
+            <h3 class="subinfo"><b>{{$post->category}}</b> - {{$post->title}} | <b>Lisätty:</b><a href="profiles/{{$post->user->id}}" style="color:#ff794c;"> {{$post->user->name}}</a> - {{$post->created_at}}<i style="font-size:24px; float:right;" class="fa">&#xf107;</i></h3>
+                
             <hr>
             <div class="box">{!!nl2br(e($post->body))!!}<br>
                 @if($post->image == 'noimage.png')
@@ -28,8 +29,8 @@
                 @endif
                 <p><b>Sähköposti: {{$post->user->email}}</b><br></p>
                 <p><b>Kotikaupunki: {{$post->user->city}}</b></p> 
-                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>
-                <a href="/posts/{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline">Pysyväislinkki</a>
+                <a href="#" data-toggle="modal" data-target="#{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline; color:#ff794c;">Ilmianna ilmoitus</a> |
+                <a href="/posts/{{$post->id}}" style="cursor:pointer;text-decoration:underline; display: inline; color:#ff794c;">Avaa omassa ikkunassa</a>
             </div>
             </article>
             <br>
@@ -79,16 +80,16 @@
 @section('nav')
 <div class="menu" id="myTopnav">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a style="display:block; margin: 0;">Etsi ilmoituksia</a>
+        <p style="display:block; margin:auto; margin-left:10%;">Etsi ilmoituksia</p>
         <a href="/myynti" class="btn btn-secondary">Myydään</a>
         <a href="/osto" class="btn btn-secondary">Ostetaan</a>
         <a href="/vaihto" class="btn btn-secondary">Vaihdetaan</a>
-        <a>
+        <a style="margin-top:3px;">
             {!! Form::open(['action' => 'PagesController@haku', 'method' => 'POST']) !!}
 
-                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:80%;'])}}
+                    {{Form::text('haku', '', ['class' => 'form-control', 'style'=>'display:inline;width:75%;'])}}
 
-                    {{Form::image('images/search-icon.png', '', ['style'=>'width:30px;display:inline;margin-left:10px;'])}}
+                    {{Form::image('images/search-icon.png', '', ['style'=>'width:25px;display:inline;margin-left:10px;'])}}
 
 
             {!! Form::close() !!}
@@ -109,7 +110,7 @@
                 @else
             <div class="container">
                 <h1 class="display-4" id="jumbo-h1">Tervetuloa, {{ Auth::user()->name }}!</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
+                <p class="lead">Hei! Nyt voit lisätä omia ilmoituksia tai selata muiden jättämiä ilmoituksia.</p>
                 </div>
                 @endguest
              @include('inc.messages')

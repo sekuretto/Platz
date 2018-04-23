@@ -1,9 +1,9 @@
 <?php $__env->startSection('main'); ?>
 <div class="container">
-    <h3>Pysyväislinkki: <b><?php echo e($post->title); ?></b></h3>
+    <h3>Ilmoitus: <b><?php echo e($post->title); ?></b></h3>
     <hr>
     <article style="margin-bottom: 100px">
-            <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <?php echo e($post->user->name); ?> - <?php echo e($post->created_at); ?></h3>
+            <h3 class="subinfo"><b><?php echo e($post->category); ?></b> - <?php echo e($post->title); ?> | <b>Lisätty:</b> <a href="../profiles/<?php echo e($post->user->id); ?>" style="color:#ff794c;"><?php echo e($post->user->name); ?></a> - <?php echo e($post->created_at); ?></h3>
             <hr>
             <p><?php echo e($post->body); ?><br></p>
                 <?php if($post->image == 'noimage.png'): ?>
@@ -13,7 +13,7 @@
                 <?php endif; ?>
                 <p><b>Sähköposti: <?php echo e($post->user->email); ?></b><br></p>
                 <p><b>Kotikaupunki: <?php echo e($post->user->city); ?></b></p> 
-                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline">Ilmianna ilmoitus</a>      
+                <a href="#" data-toggle="modal" data-target="#<?php echo e($post->id); ?>" style="cursor:pointer;text-decoration:underline; display: inline;color:#ff794c;" >Ilmianna ilmoitus</a>      
     </article>
 </div>
 <div class="modal" id="<?php echo e($post->id); ?>" tabindex="-1" role="dialog">

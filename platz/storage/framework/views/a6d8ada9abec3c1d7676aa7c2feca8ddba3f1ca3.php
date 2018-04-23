@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
    
     <link rel="stylesheet" href="<?php echo e(URL::asset('css/style.css')); ?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo e(URL::asset('css/lightbox.css')); ?>" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="page">
@@ -26,94 +28,38 @@
             <div class="nav">
                 <?php if(auth()->guard()->guest()): ?>
                     <!--<a data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>-->
-<<<<<<< HEAD
+
                     <a class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
                     <a class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
                 <?php else: ?>
                     <a class="nappi" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
                     <a class="nappi" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
                     <a class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
-=======
-                    <a href="#" class="nappi" data-toggle="modal" data-target="#kirjaudu">Kirjaudu sisään</a>
-                    <a href="#" class="nappi" data-toggle="modal" data-target="#register">Luo tunnus</a>
-                <?php else: ?>
-                    <a class="nappi" href="/profiles/<?php echo e(Auth::user()->id); ?>" >Profiili</a>
-                    <a class="nappi" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Kirjaudu ulos</a>    
-                    <a href="#" class="nappi" data-toggle="modal" data-target="#ilmoitus">Lisää ilmoitus</a>
-                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST">
->>>>>>> c73d6a0f1715a4cd07bc6f5ebaa91420635f62bf
-                                <?php echo csrf_field(); ?>
-                        </form>          
+                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                        <?php echo csrf_field(); ?>
+                    </form>
+                      
                 <?php endif; ?>
             </div>
         </navbar>
  
     <!-- JUMBO -->
-    <aside>
-        <div class="jumbotron jumbotron-fluid" id="jumbo">
-            
-                <?php if(auth()->guard()->guest()): ?>
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa Platziin</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                
-            </div>
-                <?php else: ?>
-            <div class="container">
-                <h1 class="display-4" id="jumbo-h1">Tervetuloa, <?php echo e(Auth::user()->name); ?>!</h1>
-                <p class="lead">Olemme ihmiseltä ihmiselle palveluita tarjoava sivu. Myy, osta ja vaihda sitä mitä tarvitset tai parhaiten osaat!</p>
-                </div>
-                <?php endif; ?>
-             <?php echo $__env->make('inc.messages', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-            
-        </div>
-    </aside>
+    <?php echo $__env->yieldContent('jumbo'); ?>
          
     <!-- Kategoriat -->
     <?php echo $__env->yieldContent('nav'); ?>
-    <!--<div class="menu" id="myTopnav">
-        <a href="/myynti" class="btn btn-secondary">Myy</a>
-        <a href="/osto" class="btn btn-secondary">Osta</a>
-        <a href="/vaihto" type="button" class="btn btn-secondary">Vaihda</a>
-        <?php echo Form::open(['action' => 'PagesController@haku', 'method' => 'POST']); ?>
-
-
-                <?php echo e(Form::text('haku', '', ['class' => 'form-control'])); ?>
-
-
-                <?php echo e(Form::submit('Hae', ['class' => 'btn btn-primary'])); ?>
-
-                
-        <?php echo Form::close(); ?>
-
-
-    </div>     --> 
     
     <!-- Container -->
     <div id="container">
     <?php echo $__env->yieldContent('main'); ?>
-        <!--<nav aria-label="Page navigation example" class="sivut">
-              <ul class="pagination justify-content-end">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>-->
         
     </div>
     
     <footer>
-        
-        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>       
+        <p id="footer-p">Jos onnistuimme tai epäonnistuimme, niin <a id="footer-a" data-toggle="modal" data-target="#palaute">lähetä palautetta</a></p>
+        <p id="footer-p2"><a data-toggle="modal" data-target="#ohje" id="footer-a">Ohje</a></p>
     </footer>
-    </div>
+</div>
           
 
 
@@ -144,19 +90,24 @@
 
             </div>
             <div class="form-group row">
-                <?php echo e(Form::label('category', 'Kategoria')); ?>
+                <?php echo e(Form::label('category', 'Kategoria ')); ?>
 
                 <?php echo e(Form::select('category', ['Osto' => 'Osto', 'Myynti' => 'Myynti', 'Vaihto' => 'Vaihto'])); ?>
 
             </div>
             <div class="form-group row">
-                <?php echo e(Form::label('img', 'Lataa kuva')); ?>
+                <?php echo e(Form::label('img', 'Lataa kuva ')); ?>
 
                 <?php echo e(Form::file('img', null,  ['class' => 'form-control'])); ?>
 
             </div>
-                <?php echo e(Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])); ?>
+                
+          
+           <div class="modal-footer">
+                  <?php echo e(Form::submit('Lähetä ilmoitus', ['class' => 'btn btn-primary'])); ?>
 
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+              </div>
         <?php echo Form::close(); ?>
 
 
@@ -247,15 +198,28 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-            
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Hyväksyn käyttöehdot
+                                </a>
+                            </label>
+                            <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                1.	Laittomat ja muuten sopimattomat ilmoitukset on kielletty. <br>
+                                2.	Platzin ylläpitotiimillä on oikeus poistaa ilmoitus tai käyttäjä, lupaa tilin omistajalta kysymättä.<br>
+                                3.	Platz ei ole vastuussa asiakkaiden välisistä sopimuksista koskien rahaa tai palveluita.
+                            </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                            
                                 <button type="submit" class="btn btn-primary">
                                     <?php echo e(__('Luo tunnus')); ?>
 
                                 </button>
-                            </div>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
                         </div>
                     </form>
     </div>
@@ -316,18 +280,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">
                                     <?php echo e(__('Kirjaudu')); ?>
 
                                 </button>
 
                                 <a class="btn btn-link" data-toggle="modal" data-target="#reset">
-                                    <?php echo e(__('Unhoititko salasanasi?')); ?>
+                                    <?php echo e(__('Unohditko salasanasi?')); ?>
 
                                 </a>
-                            </div>
+                            
                         </div>
                     </form>
     </div>
@@ -359,14 +322,14 @@
                         <div class="form-group col-md-7">Kerro palautteesi
                             <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
                         </div>
-                  <button type="submit" class="btn btn-primary">Lähetä palaute</button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Lähetä palaute</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
+                  </div>
                 </form>
 
           </div>
-          <div class="modal-footer">
-            
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
-          </div>
+          
         </div>
       </div>       
     </div>
@@ -402,12 +365,135 @@
       </div>       
     </div>
     
+    <!-- OHJE -->
+       <div class="modal hide fade" tabindex="-1" role="dialog" id="ohje">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Ohje</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+                Hei! Onko peukalosi keskellä kämmentä? Osaatko vaihtaa auton renkaat, mutta sukat jää parsimatta kun taidot eivät riitä? Onneksi olet nyt löytänyt Platzin! <br>
+
+                Ennen vanhaan oli tavallista auttaa naapuria hädässä ja myös tarjota apua naapurille. Mutta nykyään kaupunkielämässä ei välttämättä tule edes tutustuttua muihin saman kerrostalon asukkaisiin, saatikka että viitsisi lähteä kolkuttamaan ovia avun pyytämiseksi… hyi olkoon! Mutta kun pieni pulma tulee ja vaikka ne auton renkaat olisi vaihdettava, maksatko mieluummin kalliisti siitä, että kiikutat auton huoltoon, kuin että tarjoat lähialueen riuskalle ja osaavalle opiskelijapojalle vähän käyttörahaa vastineeksi ajasta ja vaivasta, että hän vaihtaa ne renkaat? <br>
+
+                Platz on palvelu, joka on suunniteltu juuri Sinulle, joka tarvitset apua arjen pikkuaskareissa tai haluat tarjota omia taitojasi muille pientä palkkiota vastaan. Voit esimerkiksi pyytää tai tarjota ikkunanpesuapua, tai tarjota vaihdossa omaa apuasi, jos joku auttaa sinua omassa ongelmassasi, esimerkiksi vaihtaa ne talvirenkaat naapurin mummon pikku-Fiatiin, jos mummo palkkioksi parsii sinun rikkinäiset sukat. <br><br><br>
+
+
+
+
+
+                <b>Ilmoitusten selaaminen</b> <br>
+
+                Voit selata ja lukea muiden käyttäjien jättämiä ilmoituksia, ja ottaa heihin yhteyttä palvelun pyytämiseksi tai ostamiseksi ilman rekisteröitymistä.  <br>
+
+                Sivun reunassa olevalla haku-kentällä voi etsiä tarvitsemaasi palvelua sen tyypin tai kategorian suhteen, esim. ikkunanpesu. <br><br><br>
+
+
+
+                <b>Palveluiden osto/myynti/vaihto</b> <br>
+
+                Palveluiden osto, myynti ja vaihto tapahtuvat suoraan käyttäjältä käyttäjälle ilmoitukseen liitettyjen yhteystietojen avulla. Käyttäjien tulee siis sopia keskenään palvelun maksuehdoista, aikataulusta ja muista yksityiskohdista. <br><br><br>
+
+
+
+                <b>Ilmianto</b> <br>
+
+                Platz ei ole vastuussa palvelujen väärinkäytöksistä tai laadusta, tai toisten käyttäjien käytöksestä. Jokaisessa ilmoituksessa on kuitenkin ilmianto -mahdollisuus, josta voit lähettää Platzille ilmoituksen vilpillisestä, sopimattomasta tai käyttöehtoja rikkovasta ilmoituksesta tai käyttäjästä.  <br>
+
+                Käyttäjien lisäämät ilmoitukset tarkistetaan ennen julkaisua, jotta ne ovat Platzin käyttöehtojen mukaisia. Käyttöehtoja rikkovat tai hyvästä syystä ilmiannetut ilmoitukset poistetaan, mikäli niitä ilmenee. Myös käyttöehtoja rikkonut, rekisteröitynyt käyttäjä voidaan poistaa mikäli hän toistuvasti rikkoo Platzin käyttöehtoja. 
+<br><br><br>
+
+
+
+
+                <b>Rekisteröityminen</b> <br>
+
+                Sinun tulee luoda käyttäjätunnukset ja rekisteröityä Platzin käyttäjäksi voidaksesi jättää ilmoituksia ja tarjotaksesi omia palvelujasi. Sinun tulee myös hyväksyä käyttöehdot. <br>
+
+                Pakollisia tietoja ovat käyttäjänimi, salasana, sekä vähintään sähköpostiosoite, jotta sinuun voi ottaa yhteyttä. Voit itse päättää kuinka paljon muita yhteystietoja haluat jättää yhteydenottamisen nopeuttamiseksi ja helpottamiseksi. Pakollinen tieto on myös kaupunki, jonka alueella tulet pääasiallisesti tarjoamaan palvelujasi. <br><br><br>
+
+
+
+
+
+                <b>Oman ilmoituksen jättö</b> <br>
+
+                Ilmoituksen jättääksesi sinun tulee olla rekisteröitynyt käyttäjä. Mikäli et ole rekisteröitynyt, sinun on ensiksi luotava käyttäjätunnukset Platziin.<br> 
+
+                Täytä ilmoitusta tehdessäsi ainakin pakolliset kentät. Muista kuitenkin, että myyt ilmoituksellasi omaa persoonaasi ja palveluasi toiselle ihmiselle. Eli mitä paremmin kerrot itsestäsi ja tarjoamastasi palvelusta sitä luotettavamman kuvan se sinusta antaa.<br>  
+
+                Ilmoituksesi EI tule välittömästi näkyviin, vaan se lähetetään käyttöehtojen mukaisesti ennen sen julkaisua Platzin ylläpidon tarkistettavaksi. Sinulle lähetetään sähköpostiisi ilmoitus, kun ilmoitus on hyväksytty ja julkaistu. Vastaavasti saat ilmoituksen myös, mikäli ilmoitustasi on korjattava ennen kuin se voidaan hyväksyä. 
+
+<br><br><br>
+
+
+
+
+
+                <b>Käyttäjätietojen hallinta / omat ilmoitukset</b> <br>
+
+                Kirjautuneena käyttäjänä näet Profiili-sivulta omat käyttäjätietosi ja voit muuttaa niitä. Voit myös poistaa käyttäjätilisi ja profiilisi kokonaan, sekä vaihtaa salasanasi. <br>
+
+                Omat Ilmoitukset -välilehdeltä näet kaikki omat ilmoituksesi, ja voit muokata ja poistaa omia ilmoituksiasi. Muokattu ilmoitus lähetetään käyttöehtojen mukaisesti ennen uudelleenjulkaisua Platzin ylläpidon tarkistettavaksi, ja saat sähköpostiisi ilmoituksen kun ilmoitus on hyväksytty ja julkaistu, tai mikäli sitä on korjattava ennen hyväksyntää.  <br><br><br>
+
+
+
+
+
+                <b>Salasanan ja käyttäjätunnuksen palauttaminen</b> <br>
+
+                Jos olet unohtanut käyttäjätunnuksesi tai salasanasi, voit saada ne muistutuksena sähköpostiisi.<br>  
+
+                Löydät tämän painamalla sivun ylälaidasta Kirjaudu-painiketta ja Unohditko tunnuksesi?- linkkiä. Antamalla rekisteröinnin yhteydessä käyttämäsi sähköpostiosoitteen, lähetämme käyttäjätunnuksesi sinulle sähköpostina. <br>
+
+                Ongelmatilanteen sattuessa voit lähettää meille myös palautetta. <br><br><br>
+
+
+
+
+
+                <b>Palautteen lähettäminen</b> <br>
+
+                Voit lähettää yleistä palautetta tai kysymyksiä Platzin ylläpidolle täyttämällä palautelomakkeen. <br>
+
+                Voit lähettää palautetta myös mikäli sinulla on joku muu palveluumme liittyvä ongelma, johon et löydä ratkaisua.<br><br><br> 
+
+
+
+
+
+                <b>Käyttöehdot</b> <br>
+                1.	Laittomat ja muuten sopimattomat ilmoitukset on kielletty. <br>
+                2.	Platzin ylläpitotiimillä on oikeus poistaa ilmoitus tai käyttäjä, lupaa tilin omistajalta kysymättä.<br>
+                3.	Platz ei ole vastuussa asiakkaiden välisistä sopimuksista koskien rahaa tai palveluita.
+
+                
+            
+              </p>
+                  <div class="modal-footer">            
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Poistu</button>
+                    </div>
+                  
+                
+
+          </div>
+          
+        </div>
+      </div>       
+    </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="<?php echo e(URL::asset('js/jquery.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(URL::asset('js/lightbox.js')); ?>" type="text/javascript"></script>
     
     <!-- RESPONSIIVINEN MENU -->    
     <script>

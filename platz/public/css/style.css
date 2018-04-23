@@ -14,10 +14,6 @@ a {
 body {
     font-family: 'News Cycle', sans-serif;
 }
-#myTopnav {
-    position: fixed;
-    margin-top: 25%;
-}
 
 header {
     margin: auto;
@@ -29,7 +25,6 @@ header img {
 }
 
 .nappi {
-
       width: 30%;
       text-decoration: none;
       text-align: center;
@@ -40,12 +35,12 @@ header img {
       margin:auto;
       transition:all .5s ease;
       color:#41403E;
-      font-size:2rem;
+      font-size: 120%;
       letter-spacing:1px;
       white-space: inherit;
       outline:none;
       box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      border-radius: 1em / 3.5em;
 }
 
 .col:hover{
@@ -58,6 +53,11 @@ header img {
 
 .btn {
     background-color: #7a7a7a;  
+    border: 0.1px solid black;
+}
+
+.btn:hover {
+    background-color: #ff794c;
 }
 
 #search{
@@ -84,12 +84,15 @@ navbar {
     float:right;
 }
 
+
+
 .nav {
     cursor: pointer;
     align-content: center;
     margin:auto;
     font-size: 2wm;
     white-space: nowrap;
+
 }
 
 
@@ -97,7 +100,6 @@ aside {
     margin: 30px;
     text-align: center;
     width: 100%;
-    /*margin-bottom:60px;*/
     background-color: white;
 }
 
@@ -108,23 +110,24 @@ aside {
 }
 
 #jumbo-h1 {
-    /*font-family: 'Work Sans', sans-serif;
-    
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Podkova', serif;*/
     font-family: 'News Cycle', sans-serif;
     letter-spacing: 0.1em;
 }
 
 .menu {
-    width: 20%;
+    width: 17%;
     overflow: hidden;
     display: block;
     text-decoration: none;
     margin: 10px;
     float:left;
+  
 }
 
+#myTopnav {
+    position: -webkit-sticky;
+    position: sticky;
+}
 
 .menuresponsive a {
     float: none;
@@ -145,6 +148,10 @@ aside {
   text-decoration: none;
   font-size: 20px;
 }
+
+.menu p {
+    font-size: 20px;
+}
 .menu .icon {
     display: none;
 }
@@ -156,16 +163,17 @@ aside {
 
 #container {
     word-wrap: break-word; 
-    margin-left: 22%;
     margin-bottom: 100px;
-    width: 100%;
+    width: 75%;
+    padding-left:10px;
+    float:right;
     height: auto;   
     color: black;
     height: 100%;
     /*order:5;*/
 }
 #containerprofile {
-    margin-left: -18%;
+    margin-left: 18%;
     width: 100%;
     height: auto;   
     color: black;   
@@ -183,7 +191,7 @@ article {
       color:#41403E;
       outline:none;
       box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      border-radius: 1em/5em;
 }
 
 article h3 {
@@ -210,19 +218,50 @@ footer {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 40px;
+    padding: 7px;
     background-color: #7a7a7a;
     color: white;
     text-align: center;
     position: fixed;
 }
+
 #footer-p {
     margin-top: 10px;
+    display: inline;
+}
+#footer-p2 {
+    display: inline;
+    float:right;
 }
 #footer-a {
     color: #ff794c;
 }
 #footer-a:hover {
+    cursor: pointer;
+    color: #a82a00;
+}
+
+.form-group {
+    margin:auto;
+}
+
+.form-group.row {
+    padding-bottom: 5px;
+}
+
+.form-check {
+    margin:auto;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px; 
+}
+.nav-link {
+    color: #ff794c;
+}
+.nav-link:hover {
     cursor: pointer;
     color: #a82a00;
 }
@@ -262,7 +301,7 @@ head {
     }
     
     .nav a {
-        height: 80px;
+        min-height: 85px;
         width: 27%;
         font-size: 1em;
         white-space: normal;
@@ -325,6 +364,7 @@ head {
         text-decoration: none;
         display: block;
         text-align: left;
+        margin:auto;
     }
     .menu a:not(:first-child) {
         display: none;
@@ -337,6 +377,24 @@ head {
     }
     .nappi {
         margin-bottom: 13px;
+    }
+    footer {
+        height: auto;
+        padding: 0;
+    }
+    
+    #footer-p {
+        font-size: 0.9em;
+        display: block;
+        margin: 0;
+        margin-top: 3px;
+    }
+    #footer-p2 {
+        font-size: 0.9em;
+        display: inline-block;
+        float: none;
+        margin: 0;
+        margin-bottom: 3px;
     }
     
 }
@@ -380,14 +438,18 @@ head {
     }
     
     .nav a {
-        height: 100px;
+        min-height: 90px;
+        padding-top: 4%;
         display: inline;
         vertical-align: middle;
         overflow: inherit;
-        font-size: 1.25em;
+        font-size: 120%;
         width: 30%;
         white-space: normal;
+        
     }
+    
+   
    
     #container {
         margin: auto;
@@ -426,6 +488,7 @@ head {
         order:4;
         width:100%;
         margin:20px;
+        padding: 20px;
     }
     .menuresponsive .icon {
         position: absolute;
@@ -441,8 +504,10 @@ head {
         display: block;
         text-align: center;
         
-        letter-spacing: 0.1em;
-        
+    }
+    
+    .menuresponsive p {
+        color:120%;
     }
     .menu a:not(:first-child) {
         display: none;
@@ -461,5 +526,13 @@ head {
         margin-bottom: 13px;
     }
    
+     #footer-p {
+        font-size: 0.9em;
+    }
+    #footer-p2 {
+        font-size: 0.9em;
+        vertical-align: middle;
+    }
+    
     
 }

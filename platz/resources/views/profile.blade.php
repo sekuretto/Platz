@@ -1,4 +1,4 @@
-@extends('layouts.main');
+@extends('layouts.main')
 
 @section('main')
 <div id="containerprofile">
@@ -72,6 +72,7 @@
           <div class="modal-body">
               {!!Form::open(['action' => ['PagesController@deleteuser', $user->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                         {{Form::submit('Kyllä, poista minut', ['class' => 'btn btn-danger'])}}
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Peruuta</button>
               {!!Form::close()!!}
 
           </div>
