@@ -270,6 +270,20 @@ head {
     display: inline-block;
 }
 
+.page-link {
+    color: #a82a00;
+}
+
+.page-link:hover {
+    color: #a82a00;
+    background-color: #ff794c;
+}
+
+.page-item.active .page-link {
+    background-color: #ff794c;
+    border: 1px solid #a82a00;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
     body {
