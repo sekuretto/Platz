@@ -13,4 +13,7 @@ Juuso Kyyrä (K1559/JAMK)
 [Lauri Girsén](https://www.linkedin.com/in/lauri-girsen/) (K8297/JAMK) http://late-g.com/   
 [Marja Jämbeck](https://www.linkedin.com/in/marja-j%C3%A4mbeck-315a9169/) 
 
+alkuperäinen repositorio ja työympäristö:  
+[JAMK Gitlab](https://gitlab.labranet.jamk.fi/K8237/platz)
+
 
