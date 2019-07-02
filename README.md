@@ -6,7 +6,7 @@ kevät 2018, web-kehitysprojekti ryhmätyönä
 
 käytetyt tekniikat: HTML/CSS/Bootstrap/MySQL/Laravel sekä projektityöskentelyn opettelua ja hallintaa
 
-projektin jäsenenet:  
+projektin jäsenet:  
 Noora Jokinen (K8241/JAMK)  
 Juuso Kyyrä (K1559/JAMK)  
 [Laura Huotari](https://www.linkedin.com/in/laura-huotari-6a6783178/) (K8237/JAMK)  
