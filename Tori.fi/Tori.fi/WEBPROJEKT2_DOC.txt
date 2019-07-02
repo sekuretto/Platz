@@ -1,0 +1,76 @@
+Web-projekti 2 dokumentaatiota ja raportointia, Platz
+
+Lauri Girsén, K8297. kirj. 16.03.2018
+
+----
+
+// Laravel projektin initialisointi koulun tietokoneella XAMPP -ympäristössä
+
+Laravel projektin pystyttäminen ei tarvitse admin oikeuksia, vaikka näin voisi aluksi luulla.
+Aloita lataamalla XAMPP portable .zip paketti netistä. Tässä tärkeää, että nimenomaan .zip eikä .exe, 
+sillä asennusohjelman suorittaminen vaatii admin -oikeudet, mitä sinulla todennäköisesti ei ole. Lataa uusin versio.
+
+Pura XAMPP D: -aseman juureen. Erittäin tärkeää, ei toimi muuten. Eli siis D: -aseman juuressa 'xampp' niminen kansio, 
+joka sisältää kaikki XAMPP:n tiedostot.
+
+Seuraavaksi lataa Composer niminen työkalu. Tällä voi luoda uuden Laravel -projektin äärimmäisen näppärästi komentoriviltä.
+
+Composerin asennusohjelman suorittaminen ei jostain syystä vaadi admin -oikeuksia, joten ei ongelmia sen suhteen. 
+Tulee kuitenkin muita ongelmia, koska maailma on epäreilu paikka. 
+
+ENNEN Composerin asentamista, meidän täytyy muuttaa muutamia polkuja XAMPP:n php.ini tiedostosta, 
+sillä by default annetut polut johtavat C: -aseman juureen, ja meillähän XAMPP löytyy D: asemalta.
+
+*******************************************************************
+ - - - - - - lisään tähän muutettavat rivit vielä ^^ - - - - - - - 
+*******************************************************************
+
+Nyt voimme asentaa Composerin. Valitse php poluksi XAMPP:n php.exe tiedosto, ja paina next. Composerin pitäisi nyt asentua normaalisesti!!!
+
+Tämän jälkeen luomme Laravel projekti. Jännittävää. Avaa komentorivi, ja navigoi siellä xampp -kansioosi, ja siellä htdocs nimiseen kansioon. 
+Täällä tulee olemaan kaikki projektitiedostosi.
+
+Kun olet kansiossa, aja loitsu 'composer create-project laravel ananas'. Tämä luo uuden kansion nimeltä ananas, jossa on Laravel projektisi! 
+(projektin nimi ananas ei ole välttämätön toiminnan kannalta. valitse joku kiva nimi)
+
+Laita XAMPP tulille (xampp-control.exe), ja iske apache serveri päälle. Nyt voit navigoida selaimessa osoitteeseen 'localhost/ananas'. 
+Laravel etusivu löytyy public -kansiosta. Avaa ananas -kansio mieleisellä editorillasi ja näin pääset käsiksi 
+kaikkiin Laravel tiedostoihin. NYT TEE JOKU KIVA SOVELLUS!!!!!!
+
+----
+
+// Web-projekti raparperia
+
+Päätimme yhdessä ryhmän kanssa, että lähtisimme toteuttamaan projektia Laravel -frameworkia käyttäen, XAMPP stackissa. 
+Kummatkin ovat aikalailla uusia juttuja meille, joten oppimista pitää tapahtua. Käytämme myös gitlabia, 
+johon puskemme muutoksia ja täten teemme ryhmätyötä.
+
+Alussa oli hieman vaikeuksia saada ympäristöä pystyyn, mutta late sai jutut toimimaan pienen taistelun jälkeen. 
+Tämä oli sinänsä hyvä kokemus, sillä siitä tuli paljon oppia.
+
+Kun ympäristö oli pystyssä, Laraveliin tutustuminen alkoi sulavasti. Ei kuitenkaan täysin ongelmitta. 
+Kun yritimme aluksi työntää ensimmäisiä muutoksia gittiin, emme saaneet niitä toimimaan kun muut ryhmän 
+jäsenet yrittivät pullata projektia. 
+Pitkän selvittelyn jälkeen, tämä johtui siitä, että gitbash ei puskenutkaan kaikkia tiedostoja 
+(koko vendor -kansio jäi, sekä pieni mutta tärkeä .env -tiedosto). 
+Saimme korjattua kuitenkin poistamalla .gitignore -tiedostosta nämä kaksi nimikettä. Nyt kloonaus onnistui!!
+
+Lisää ohjelmointia, ja yllätys, lisää ongelmia. Nämä kulkevat todella romanttisesti käsi kädessä.
+
+Kun pääsin Laravel kokeilussani tietokantavaiheeseen, huomasin, että pelkän Laravel -projektikansion puskeminen gittiin ei enää riitä. 
+Tietokantamigraatiot sijaitsevat kansion ulkopuolella xampp -kansion omassa mysql kansiossa. 
+Emme enää lähteneet luomaan uusia repositorioita jonne puskisimme koko xampp -kansion, sillä siellä on 23000 tiedostoa. 
+Toimimme yksinkertaisesti siten, että kopioimme tietokantatiedostot jonnekkin erilliseen kansioon repositoriossa, 
+ja pullauksen jälkeen siirrämme nämä oikeaan paikkaan. 
+Jokaisen ryhmänjäsenen pitää myös muuttaa käsin tietokantakansiossa tietokannan nimi sekä käyttäjän nimi ja salasana
+
+^^^^^^tämä on vähän hidasta, mutta emme nopeasti keksineet parempaa keinoa hoitaa hommia. Ainakin menetelmä toimii (tai pitäisi toimia)
+
+kirjoitan lisää kun tulee ongelmia lisää. ei hätää etteikö tulisi. cheers!
+
+~late
+
+ 
+
+
+
