@@ -16,4 +16,5 @@ Juuso Kyyrä (K1559/JAMK)
 alkuperäinen repositorio ja työympäristö:  
 [JAMK Gitlab](https://gitlab.labranet.jamk.fi/K8237/platz)
 
+![Platz-mockup](https://github.com/sekuretto/Platz/blob/master/dokumentointi/M%C3%A4%C3%A4rittely%20ja%20suunnittelu/kuvamateriaali/kirjautumaton_k%C3%A4ytt%C3%A4j%C3%A4.PNG)
 
