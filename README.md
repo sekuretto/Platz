@@ -1,7 +1,7 @@
 Platz - palveluiden vaihto/myynti/osto-palvelu  
 http://late-g.com/platz/
 
-Web-palvelun määrittely ja suunnittelu -kurssin tuotos (Laravel-sivelluksen lähdekoodit)
+Web-palvelun määrittely ja suunnittelu -kurssin tuotos (Laravel-sovelluksen lähdekoodit)
 kevät 2018, web-kehitysprojekti ryhmätyönä
 
 käytetyt tekniikat: HTML/CSS/Bootstrap/MySQL/Laravel sekä projektityöskentelyn opettelua ja hallintaa
