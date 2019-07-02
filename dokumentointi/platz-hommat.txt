@@ -1,0 +1,19 @@
+1.salasanan vaihto -> Valmis
+1.poista käyttäjä -> Valmis
+1.haku -> Valmis
+1.omat ilmoitukset, poisto -> tehty
+1.ilmoituksista uusin ensin -> tehty
+1.palautelomake -> Valmis
+
+
+2.kuvat -> Valmis
+2.Ilmiantolomake -> Valmis
+2.Unohditko salasanasi -> Valmis
+
+
+3.admin -> hylätty
+3.ohjeet sivulle -> Valmis
+3.etusivulla vain tietty määrä postauksia -> Valmis
+
+MUISTA 
+1.linkata ohjeet
