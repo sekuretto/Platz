@@ -1,5 +1,5 @@
 Platz - palveluiden vaihto/myynti/osto-palvelu  
-http://late-g.com/platz/
+https://student.labranet.jamk.fi/~K8691//platz/
 
 Web-palvelun määrittely ja suunnittelu -kurssin tuotos (Laravel-sovelluksen lähdekoodit)  
 kevät 2018, web-kehitysprojekti ryhmätyönä
